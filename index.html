@@ -42,7 +42,7 @@
 
 
 
-<div class="container">
+<div class="container" id="invest-container">
   <div class="row" style="padding-top:100px;">
     <div class="col-md-8 col-md-offset-2">
       <!-- SELECTIZE Select Boxes
@@ -446,10 +446,10 @@ $(rotateTerm);
 <script>
 $(function() {
     $('#investigate').click(function(e){
-        document.getElementById("div-country").style.height = '800px';
+        document.getElementById("invest-container").style.height = '500px';
         e.preventDefault();
         $('html, body').animate({
-        scrollTop: $("#div-country").offset().top
+        scrollTop: $("#invest-container").offset().top
         }, 500);
     });
 });
