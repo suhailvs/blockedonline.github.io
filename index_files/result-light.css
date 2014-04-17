@@ -1,0 +1,26 @@
+.blue {
+    color: #FFFFFF;
+    background-color:#5abcce;
+}
+.btn-reverse {
+    color:#FFFFFF !important;
+    background-color:#5abcce !important;
+}
+.btn-reverse:hover {
+    color:#5abcce !important;
+    background-color:#FFFFFF !important;
+}
+.btn-xlarge:hover {
+    color:#FFFFFF;
+    background-color:#5abcce;
+}
+.btn-xlarge {
+    margin-top:40px;
+    padding: 18px 28px;
+    font-size: 22px;
+    border:1px;
+    border-style:solid;
+    color:#5abcce;
+    background-color:#FFFFFF;
+    border-radius:0px;
+}
