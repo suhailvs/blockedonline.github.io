@@ -29,7 +29,7 @@
          <h1>Monitor Internet Censorship!</h1>
 
          <h3> We collect internet censorhip data, <em> all with your help! </em></h3>
-         <a type="button" href="#heel" id="investigate" class="btn btn-xlarge btn-reverse">Investigate Data</a>  
+         <a type="button" href="" id="investigate" class="btn btn-xlarge btn-reverse">Investigate Data</a>  
          <a type="button" href="#heel" id="getinvolved" class="btn btn-xlarge btn-reverse">Get Involved!</a> 
     </div>
 </div>
@@ -443,7 +443,17 @@ $(rotateTerm);
 });//]]>  
 
 </script>
-
+<script>
+$(function() {
+    $('#investigate').click(function(e){
+        document.getElementById("div-country").style.height = '800px';
+        e.preventDefault();
+        $('html, body').animate({
+        scrollTop: $("#div-country").offset().top
+        }, 500);
+    });
+});
+</script>
 <script type="text/javascript" src="./index_files/selectize.js"></script>
 <script type="text/javascript" src="./index_files/d3.v3.js"></script>
 <script type="text/javascript" src="./index_files/nv.d3.js"></script>
