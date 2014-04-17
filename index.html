@@ -43,12 +43,11 @@
 
 
 <div class="container">
-  <div class="row" style="padding-top:20px;">
+  <div class="row" style="padding-top:100px;">
     <div class="col-md-8 col-md-offset-2">
       <!-- SELECTIZE Select Boxes
       =======================================-->
       <div class="row">
-        <div class="col-md-11">
           <div id="div-country">
             <select id="select-country" placeholder="Select a country...">
               <option value="">Select a country...</option>
@@ -289,29 +288,29 @@
               <option value="PY">Paraguay</option>
               <option value="GF">French Guiana</option>
               <option value="KM">Comoros</option>     
-              <!-- need to add remaining and delete the below options.
-              please visit http://brianreavis.github.io/selectize.js 
-              <option value="IR">Iran</option>
-              <option value="US">United states</option>-->
             </select>
           </div>
           <div id="div-url" style="display:none;">
             <select id="select-url" placeholder="Search by url..."></select>
           </div>
-        </div>
-        <div class="col-md-1" style="padding:0;">
-          <span id="loading_spinner"></span>
-        </div>
       </div><!-- /row-->
       
       
       <!-- COUNTRY,URL Radio Buttons
       ===========================================================-->
-      <div class="btn-group" data-toggle="buttons" style="padding-top:20px;">
-        <label class="btn btn-primary active">
-          <input type="radio" checked="checked" value="country" name="searchoptions" id="rd_country" />Country</label>
-        <label class="btn btn-primary">
-          <input type="radio" value="url" name="searchoptions" id="rd_url" />URL</label>
+      <div class="row">
+        <div class="col-md-11">
+          <div class="btn-group" data-toggle="buttons" style="padding-top:20px;">
+            <label class="btn btn-primary active">
+              <input type="radio" checked="checked" value="country" name="searchoptions" id="rd_country" />Country</label>
+            <label class="btn btn-primary">
+              <input type="radio" value="url" name="searchoptions" id="rd_url" />URL</label>
+          </div>
+        </div>
+        <div class="col-md-1" style="padding:0;">
+          <span id="loading_spinner"></span>
+        </div>
+
       </div>
       <!--=====================/Radio Buttons====================-->
 
@@ -320,6 +319,24 @@
       <div class="country-panels" style="padding-top:20px;">
         <!-- Graphs 
         =========================================================-->
+          <!--bulletsin v=2-->
+        <div class="panel panel-default panel-bulletpoints2" style="display:none;">
+          <div class="panel-heading">
+            <strong><span class="glyphicon glyphicon-th"></span>
+            <label id="for_bulletpoints2"></label></strong>
+            <span class="pull-right clickable"><i class="glyphicon glyphicon-chevron-up"></i></span>
+          </div>
+          <div class="panel-body">            
+            <div class="media">
+              <a class="pull-right" href="#"><img class="media-object" id="quicklinksflag" src="" alt="hai"></a>
+              <div class="media-body panel-body">
+                <ul class="list-group" id="bulletpoints2"><ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
         <!--graph donut-->
         <div class="panel panel-default panel-donutgraph" style="display:none;">
           <div class="panel-heading"> <strong><span class="glyphicon glyphicon-th"></span>  <label id="for_donutgraph"></label></strong>
@@ -331,7 +348,17 @@
           </div>
         </div>
         <!--/graph donut-->
-        
+             <!--bulletsin v=3-->
+        <div class="panel panel-default panel-bulletpoints3" style="display:none;">
+          <div class="panel-heading">
+            <strong><span class="glyphicon glyphicon-th"></span>
+            <label id="for_bulletpoints3"></label></strong>
+            <span class="pull-right clickable"><i class="glyphicon glyphicon-chevron-up"></i></span>
+          </div>
+          <div class="panel-body">
+            <ul class="list-group" id="bulletpoints3"></ul>
+          </div>
+        </div>
         <!--graph stacked-->
         <div class="panel panel-default panel-stackedgraph" style="display:none;">
           <div class="panel-heading">
@@ -359,33 +386,8 @@
             <ul class="list-group" id="bulletpoints1"></ul>
           </div>
         </div>
-        <!--bulletsin v=2-->
-        <div class="panel panel-default panel-bulletpoints2" style="display:none;">
-          <div class="panel-heading">
-            <strong><span class="glyphicon glyphicon-th"></span>
-            <label id="for_bulletpoints2"></label></strong>
-            <span class="pull-right clickable"><i class="glyphicon glyphicon-chevron-up"></i></span>
-          </div>
-          <div class="panel-body">            
-            <div class="media">
-              <a class="pull-right" href="#"><img class="media-object" id="quicklinksflag" src="" alt="hai"></a>
-              <div class="media-body panel-body">
-                <ul class="list-group" id="bulletpoints2"><ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!--bulletsin v=3-->
-        <div class="panel panel-default panel-bulletpoints3" style="display:none;">
-          <div class="panel-heading">
-            <strong><span class="glyphicon glyphicon-th"></span>
-            <label id="for_bulletpoints3"></label></strong>
-            <span class="pull-right clickable"><i class="glyphicon glyphicon-chevron-up"></i></span>
-          </div>
-          <div class="panel-body">
-            <ul class="list-group" id="bulletpoints3"></ul>
-          </div>
-        </div>
+      
+   
         <!--/bulletins-->
       </div><!--/.country-panes-->
 
