@@ -456,9 +456,9 @@ $(window).load(function(){
 <script>
 $(function() {
     $('#investigate').click(function(e){
-        document.getElementById("select-country").value="US";
+        document.getElementById("select-country").value = 'US';
+        alert(document.getElementById("select-country").value);
         document.getElementById("invest-container").style.height = '1100px';
-        e.preventDefault();
         $('html, body').animate({
             scrollTop: $("#invest-container").offset().top
         }, 500);
