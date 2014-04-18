@@ -303,6 +303,7 @@ svg {height:500px;margin:auto;}
     <select id="select-url" placeholder="Search by url..."></select>
 </div>      
 
+<script type="text/javascript"> document.getElementById("select-country").value = "CA"; </script>
       <!-- COUNTRY,URL Radio Buttons
       ===========================================================-->
       <div class="row">
@@ -456,8 +457,6 @@ $(window).load(function(){
 <script>
 $(function() {
     $('#investigate').click(function(e){
-        document.getElementById("select-country").value = "CA";
-        alert(document.getElementById("select-country").value);
         document.getElementById("invest-container").style.height = '1100px';
         e.preventDefault();
         $('html, body').animate({
