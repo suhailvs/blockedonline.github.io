@@ -1,3 +1,8 @@
+.btn-blue:hover:focus{
+    background-color: #17454d;
+
+}
+
 .btn-blue{
     border:1px;
     border-style:solid;
