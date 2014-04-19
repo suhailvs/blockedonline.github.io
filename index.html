@@ -413,18 +413,22 @@ svg {height:500px;margin:auto;}
 <script type="text/javascript">
   addthis.layers({
     'theme' : 'transparent',
-    'domain' : 'www.blockedonline.com',
     'share' : {
       'position' : 'right',
       'numPreferredServices' : 5,
       'services' : "facebook,twitter,reddit,email,more",
       'postShareTitle': "Thanks for sharing!",
       'postShareFollowMsg': "Please also Like or Follow us.",
-      'offset':{'top':'100px'},
+      'offset':{'bottom':'100px'},
       'desktop' : true,
       'mobile' : true
-    }   
-  });
+    },
+    'follow' : {
+        'services' : [
+            {'service' : 'facebook', 'id' : 'blockedonlinecom'},
+            {'service' : 'twitter', 'id' : 'blockageonline'}
+        ]  
+    });
 </script>
 <!-- AddThis Smart Layers END -->
 
