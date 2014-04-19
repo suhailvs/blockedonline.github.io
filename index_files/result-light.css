@@ -1,8 +1,16 @@
 .btn-blue:hover{
-    background-color: #17454d;
+    border:1px;
+    border-style:solid;
+    background-color: #2d8899;
+    color:#FFFFFF;
+    border-radius:0px;
 }
-.btn-blue:focus{
-    background-color: #17454d;
+.btn-blue:active{
+    border:1px;
+    border-style:solid;
+    background-color: #2d8899;
+    color:#FFFFFF;
+    border-radius:0px;
 }
 
 .btn-blue{
