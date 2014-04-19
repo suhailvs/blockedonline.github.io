@@ -1,14 +1,14 @@
 .btn-blue:hover{
     border:1px;
     border-style:solid;
-    background-color: #2d8899;
+    background-color: #5abcce;
     color:#FFFFFF;
     border-radius:0px;
 }
 .btn-blue.active{
     border:1px;
     border-style:solid;
-    background-color: #2d8899;
+    background-color: #5abcce;
     color:#FFFFFF;
     border-radius:0px;
 }
@@ -16,8 +16,8 @@
 .btn-blue{
     border:1px;
     border-style:solid;
-    color:#FFFFFF;
-    background-color:#5abcce;
+    color:#5abcce;
+    background-color:#FFFFFF;
     border-radius:0px;
 }
 
