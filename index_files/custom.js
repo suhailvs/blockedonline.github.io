@@ -166,6 +166,9 @@ function createMap(ename,d){
         partially_blocked: '#ff8c00',
         blocked: '#8b0000'
     },
+    geographyConfig: {
+      highlightFillColor: '#787878',
+    },
     data: d,
     geographyConfig: {
       popupTemplate: function(geo, data) {
