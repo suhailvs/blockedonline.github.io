@@ -161,7 +161,7 @@ function createMap(ename,d){
     element: document.getElementById(ename),
     fills: {
         defaultFill: '#575757',
-        highlight: '#787878'
+        highlight: '#787878',
         open: '#228b22',
         partially_blocked: '#ff8c00',
         blocked: '#8b0000'
