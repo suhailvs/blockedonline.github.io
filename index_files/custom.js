@@ -160,10 +160,10 @@ function createMap(ename,d){
   var map = new Datamap({
     element: document.getElementById(ename),
     fills: {
-        defaultFill: '#EDDC4E',
-        open: '#CC4731',
-        partially_blocked: '#306596',
-        blocked: 'red'
+        defaultFill: '#575757',
+        open: '#228b22',
+        partially_blocked: '#ff8c00',
+        blocked: '#8b0000'
     },
     data: d,
     geographyConfig: {
