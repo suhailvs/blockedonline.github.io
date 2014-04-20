@@ -169,6 +169,7 @@ function createMap(ename,d){
     data: d,
     geographyConfig: {
       highlightFillColor: '#787878',
+      highlightBorderWidth: 0,
       popupTemplate: function(geo, data) {
         if ( !data ) return;
         return ['<div class="hoverinfo"><strong>',
