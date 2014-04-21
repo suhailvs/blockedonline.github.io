@@ -33,14 +33,16 @@
         <a type="button" id="download" href="http://blocked_report.s3.amazonaws.com/blockedonline.exe" class="btn btn-large btn-reverse" download>Download</a>
     </div>
     <div id="instruction" style="display: none">
-      <h3> Instruction on how to run the app </h3>
-      safasfas
-      asfas
-      <div id="chromewarning" style="display: none">
+      <h2> Download Instruction</h2>
+      
+      <h4> Because of the limited resources, our app is not certified yet. This means that after downloading it, you might get warning messages. The app is safe to run. </h4>
 
-        chromeeeee
-      </div>
+      <p> 1)  If you get a warning from your antivirus, you will need to disable it temporarily. </p>
+      <p> 2) <strong>Windows 8</strong> users will get the warning shown in the images. Please click on ‘More info’ and then ‘Run anyway’ </p>
 
+      <img src="http://www.blockedonline.com/index_files/moreinfo1.png" alt="">
+    </br>
+      <img src="http://www.blockedonline.com/index_files/moreinfo2.png" alt="">
     </div>
 </div>
 <br>
@@ -97,13 +99,12 @@
 <script>
   $('#download').click(function(e){
 
-      $("#instruction").show();
+      /*$("#instruction").show();
       var isChromium = window.chrome,
           vendorName = window.navigator.vendor;
       if(isChromium !== null && vendorName === "Google Inc.") {
          $("#chromewarning").show();
-      } 
-      
+      } */
       document.getElementById("invest-container").style.height = '700px';
       
       $('html, body').animate({
