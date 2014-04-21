@@ -30,12 +30,17 @@
      <br>
      <p>No installation is needed. All you need to do is to download and run this app on your computer.</p>
      <div class="text-center">
-        <a type="button" id="download" href="http://mit.edu/kiarash/www/blockedonline.exe" class="btn btn-large btn-reverse" download>Download</a>
+        <a type="button" id="download" href="http://www.blockedonline.com/blockedonline.exe" class="btn btn-large btn-reverse" download>Download</a>
     </div>
     <div id="instruction" style="display: none">
       <h3> Instruction on how to run the app </h3>
       safasfas
       asfas
+      <div id="chromewarning" style="display: none">
+
+        chromeeeee
+      </div>
+
     </div>
 </div>
 <br>
@@ -75,10 +80,6 @@
 </div>
 </div>
 
-
-
-
-
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>  
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script> 
 
@@ -95,18 +96,18 @@
 
 <script>
   $('#download').click(function(e){
+
+      $("#instruction").show();
       var isChromium = window.chrome,
           vendorName = window.navigator.vendor;
       if(isChromium !== null && vendorName === "Google Inc.") {
-         console.log("chrome"); 
+         $("#chromewarning").show();
       } 
       
-      $("#instruction").show();
-
-      document.getElementById("invest-container").style.height = '1100px';
+      document.getElementById("invest-container").style.height = '700px';
       e.preventDefault();
       $('html, body').animate({
-          scrollTop: $("#invest-container").offset().top
+          scrollTop: $("#instruction").offset().top
       }, 500);
   });
 </script>
