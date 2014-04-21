@@ -68,6 +68,7 @@ function drawStacked(data){
         .showValues(true)           //Show bar value next to each bar.
         .tooltips(true)             //Show tooltips on hover.
         .transitionDuration(350)
+        .stacked(true)
         .showControls(true); //Allow user to switch between "Grouped" and "Stacked" mode.
     chart.yAxis.tickFormat(d3.format(',f')); //(d3.format(',.2f'));
     chart.valueFormat(d3.format('d'));
