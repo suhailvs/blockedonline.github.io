@@ -225,7 +225,7 @@ $(function() {
 });
 </script>
 <script>
-$("#select-country").on('change',function() {
+$("#select-country").on('change',function(e) {
         document.getElementById("invest-container").style.height = '1100px';
         e.preventDefault();
         $('html, body').animate({
