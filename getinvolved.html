@@ -66,6 +66,10 @@
 </div>
 <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5345fdde29a43c06"></script>
+<script type="text/javascript">
+var addthis_config = addthis_config||{};
+addthis_config.data_track_addressbar = false;
+</script>
 <!-- AddThis Button END -->
 
 </div>
@@ -103,11 +107,6 @@
   $('#download').click(function(e){
 
       $("#instruction").show();
-      /*var isChromium = window.chrome,
-          vendorName = window.navigator.vendor;
-      if(isChromium !== null && vendorName === "Google Inc.") {
-         $("#chromewarning").show();
-      } */
       document.getElementById("instruction").style.height = '700px';
       
       $('html, body').animate({
