@@ -168,13 +168,13 @@ function createMap(ename,d){
     },
     data: d,
     geographyConfig: {
-      highlightOnHover: false,
+      highlightOnHover: false/*,
       popupTemplate: function(geo, data) {
         if ( !data ) return;
         return ['<div class="hoverinfo"><strong>',
             'Number of things in ' + geo.properties.name,
             ': ' + data.number,'</strong></div>'].join('');
-      }
+      }*/
     }
   });
   //map.legend();
