@@ -76,23 +76,11 @@
 </div>
 
 
-<script>
-    $('#download').click(function(e){
-        var isChromium = window.chrome,
-            vendorName = window.navigator.vendor;
 
-        if(isChromium !== null && vendorName === "Google Inc.") {
-           console.log("chrome"); 
-        } 
-        $("#instruction").show();
 
-        document.getElementById("invest-container").style.height = '1100px';
-        e.preventDefault();
-        $('html, body').animate({
-            scrollTop: $("#invest-container").offset().top
-        }, 500);
-    });
-</script>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>  
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script> 
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -103,6 +91,25 @@
   ga('create', 'UA-50157618-1', 'blockedonline.com');
   ga('send', 'pageview');
 
+</script>
+
+<script>
+  $('#download').click(function(e){
+      var isChromium = window.chrome,
+          vendorName = window.navigator.vendor;
+
+      if(isChromium !== null && vendorName === "Google Inc.") {
+         console.log("chrome"); 
+      } 
+      
+      $("#instruction").show();
+
+      document.getElementById("invest-container").style.height = '1100px';
+      e.preventDefault();
+      $('html, body').animate({
+          scrollTop: $("#invest-container").offset().top
+      }, 500);
+  });
 </script>
 
 </body></html>
