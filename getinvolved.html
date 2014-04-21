@@ -23,14 +23,14 @@
 
      </div>
  </div>
- <div class="container">
+ <div id="invest-container" class="container">
      <h3>Help us collect data from your country</h3>
 
-     <p>When you download and run our app on your computer, it automatically goes through a list of around 1000 web-sites and tells us if they are blocked at your location. The app is very small and is completely safe to run. It will not interfere with your normal computer activity</p>
+     <p>When you download and run our app on your computer, it automatically goes through a list of around 4000 web-sites and tells us if they are blocked at your location. The app is very small and is completely safe to run. It will not interfere with your normal computer activity</p>
      <br>
      <p>No installation is needed. All you need to do is to download and run this app on your computer.</p>
      <div class="text-center">
-        <a type="button" id="download" href="" class="btn btn-large btn-reverse" download="">Download</a>
+        <a type="button" id="download" href="http://mit.edu/kiarash/www/blockedonline.exe" class="btn btn-large btn-reverse" download="">Download</a>
     </div>
     <div id="instruction" style="display: none">
       <h3> Instruction on how to run the app </h3>
@@ -97,7 +97,6 @@
   $('#download').click(function(e){
       var isChromium = window.chrome,
           vendorName = window.navigator.vendor;
-
       if(isChromium !== null && vendorName === "Google Inc.") {
          console.log("chrome"); 
       } 
