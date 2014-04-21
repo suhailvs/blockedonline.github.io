@@ -224,6 +224,15 @@ $(function() {
     });
 });
 </script>
+<script>
+$("#select-country").on('change',function() {
+        document.getElementById("invest-container").style.height = '1100px';
+        e.preventDefault();
+        $('html, body').animate({
+            scrollTop: $("#invest-container").offset().top
+        }, 500);
+    });
+</script>
 <script type="text/javascript" src="./index_files/selectize.js"></script>
 <script type="text/javascript" src="./index_files/d3.v3.js"></script>
 <script type="text/javascript" src="./index_files/nv.d3.js"></script>
