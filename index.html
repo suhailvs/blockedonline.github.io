@@ -197,8 +197,9 @@ svg {height:500px;margin:auto;}
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>  
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script> 
+<script type="text/javascript" src="./index_files/selectize.js"></script>
+<script src="./index_files/custom.js"></script>
 <script type="text/javascript">//<![CDATA[ 
-
 $.get("http://kiarash.me/blocked/data",{homepage: 0})
   .done(function(datas){
     if (datas.status == 'OK'){
@@ -233,13 +234,11 @@ $("#select-country").on('change',function(e) {
         }, 500);
     });
 </script>
-<script type="text/javascript" src="./index_files/selectize.js"></script>
 <script type="text/javascript" src="./index_files/d3.v3.js"></script>
 <script type="text/javascript" src="./index_files/nv.d3.js"></script>
 <script src="./index_files/spin.min.js"></script>
 <script src="./datamaps/topojson.v1.min.js"></script>
 <script src="./datamaps/datamaps.world.min.js"></script>
-<script src="./index_files/custom.js"></script>
 <script type="text/javascript">
 
 //=======================================
