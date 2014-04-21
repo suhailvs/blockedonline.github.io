@@ -204,19 +204,20 @@ svg {height:500px;margin:auto;}
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>  
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script> 
 <script type="text/javascript">//<![CDATA[ 
-$(window).load(function(){
-    var terms = [{
-        "c": "your country?",
-        "n": "How many"
-    }];
 
-    function rotateTerm() {
-        var ct = $("#country").data("term") || 0;
-        $("#country").data("term", ct == terms.length - 1 ? 0 : ct + 1).text(terms[ct].c).fadeIn().delay(2000).fadeOut(200, rotateTerm);
-        $("#number").text(terms[ct].n).fadeIn().delay(2000).fadeOut(200, rotateTerm);
+$.get("http://kiarash.me/blocked/data",{homepage: 0})
+  .done(function(datas){
+    if (datas.status == 'OK'){
+      var terms = datas.terms;
+      alert(terms);
+      function rotateTerm() {
+          var ct = $("#country").data("term") || 0;
+          $("#country").data("term", ct == terms.length - 1 ? 0 : ct + 1).text(terms[ct].c).fadeIn().delay(2000).fadeOut(200, rotateTerm);
+          $("#number").text(terms[ct].n).fadeIn().delay(2000).fadeOut(200, rotateTerm);
+      }
+      $(rotateTerm);
     }
-    $(rotateTerm);
-});//]]>  
+});
 
 </script>
 <script>
