@@ -209,9 +209,10 @@ $.get("http://kiarash.me/blocked/data",{homepage: 0})
   .done(function(datas){
     if (datas.status == 'OK'){
       var terms = datas.terms;
+      console.log(terms.length)
       function rotateTerm() {
-          var ct = $("#country").data("term") || 0;
-          $("#country").data("term", ct == terms.length - 1 ? 0 : ct + 1).text(terms[ct].c).fadeIn().delay(2000).fadeOut(200, rotateTerm);
+          var ct= 0;
+          $("#country").data("term", ct == terms.length - 1 ? 0 : ct + 1).text(terms[ct].c).fadeIn().delay(2000).fadeOut(200);
           $("#number").text(terms[ct].n).fadeIn().delay(2000).fadeOut(200, rotateTerm);
       }
       $(rotateTerm);
