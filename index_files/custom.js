@@ -1,5 +1,5 @@
 $(window).load(function(){
-var Bullet_Boxes_v=[1,0];//add values in this array to create more boxes
+var Bullet_Boxes_v=[0, 1, 2];//add values in this array to create more boxes
 //Selectize select boxes
 var $selectize1=$('#select-country').selectize();
 var $selectize2=$('#select-url').selectize({
@@ -89,6 +89,13 @@ function drawCountryBulletin(data,box,box_name){
     jQuery.each(data.websites, function(index, item) {
       str_html+= "<li class='list-group-item'>"+item+"</li>" 
     });
+  } else if (box == 'news') {
+    data.data.forEach(function(news) {
+      str_html += '<ul class="list-group">' +
+            '<li class="list-group-item"><a href="' + news.link + '" target="_blank">' + news.news_title + '</a></li>' +
+            '<li class="list-group-item">' + news.description + '</li>' +
+            '</ul>';
+    });
   }
   $("#"+box_name).html(str_html);
 }
@@ -149,6 +156,7 @@ $("#select-country").on('change',function() {
     DoAjax_Country(cty,1,'bullets');  
     DoAjax_Country(cty,2,'bullets');
     DoAjax_Country(cty,3,'websites');
+    DoAjax_Country(cty,5,'news');
   }
 });
 
@@ -186,7 +194,6 @@ function DoAjax_Url(urlname,opt){
   var cname='urlbulletpoints'+opt;
   $.get("http://kiarash.me/blocked/data",{url: urlname,v:opt})
   .done(function(datas) {
-    console.log(opt, datas)
     if (datas.status == 'OK'){      
       var html_panel_bulletpoints=''+
       '<div class="panel panel-default panel-'+cname+'">'+
@@ -197,24 +204,30 @@ function DoAjax_Url(urlname,opt){
         '</div>'+
         '<div class="panel-body" id="'+cname+'"></div>'+
       '</div>';
-      console.log(opt, $('#bulletpoints' + opt + '-container'))
-      $('#bulletpoints' + opt + '-container').empty().append(html_panel_bulletpoints);
+      $('#bulletpoints' + opt + '-container').empty().append(html_panel_bulletpoints).css('opacity', 1);
       if (datas.v == '1'){
         createMap(cname,datas.data);
-      }else{
+      }else if (datas.v == '0'){
         var str_list='<ul>'; 
         jQuery.each(datas.bullets, function(index, item) {
           str_list+= "<li>"+item+"</li>"      
         });
         $("#"+cname).html(str_list+"</ul>");
-      }    
-       
+      } else if (datas.v == '2') {
+        datas.data.forEach(function(news) {
+          $('<ul class="list-group">' +
+            '<li class="list-group-item"><a href="' + news.link + '" target="_blank">' + news.news_title + '</a></li>' +
+            '<li class="list-group-item">' + news.description + '</li>' +
+            '</ul>').appendTo($('#' + cname));
+        });
+      }
     }
   });
 }
 
 //Selectize URL picker --> on Change function
 $("#select-url").on('change',function() {   
+  $('.bulletpoints-container').css('opacity', 0);
   url=this.value;
   url=url.toLowerCase();
   if (url != ""){
