@@ -29,7 +29,7 @@ var control2 = $selectize2[0].selectize;
 $('.btn-group input[type=radio]').change(function () { 
   if (this.value == 'country'){
     $('#div-url').hide();//Hide the Url selectize box
-    $(".url-panels").empty();//clear all url panels
+    $('.bulletpoints-container').empty()
     control1.clear();
   }else{
     $("#div-country").hide();//Hide the country selectize box
@@ -186,6 +186,7 @@ function DoAjax_Url(urlname,opt){
   var cname='urlbulletpoints'+opt;
   $.get("http://kiarash.me/blocked/data",{url: urlname,v:opt})
   .done(function(datas) {
+    console.log(opt, datas)
     if (datas.status == 'OK'){      
       var html_panel_bulletpoints=''+
       '<div class="panel panel-default panel-'+cname+'">'+
@@ -196,7 +197,8 @@ function DoAjax_Url(urlname,opt){
         '</div>'+
         '<div class="panel-body" id="'+cname+'"></div>'+
       '</div>';
-      $('.url-panels').append(html_panel_bulletpoints);
+      console.log(opt, $('#bulletpoints' + opt + '-container'))
+      $('#bulletpoints' + opt + '-container').empty().append(html_panel_bulletpoints);
       if (datas.v == '1'){
         createMap(cname,datas.data);
       }else{
@@ -213,7 +215,6 @@ function DoAjax_Url(urlname,opt){
 
 //Selectize URL picker --> on Change function
 $("#select-url").on('change',function() {   
-  $(".url-panels").empty();//reset the panel
   url=this.value;
   url=url.toLowerCase();
   if (url != ""){
