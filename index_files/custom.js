@@ -142,6 +142,7 @@ $("#select-country").on('change',function() {
     // BUG Fix:  
     $('.panel-donutgraph').hide();
     $('.panel-stackedgraph').hide();
+    $('.panel-news').hide();
     for (var i=1; i < 4; i++){
       var bx_name = '.panel-bulletpoints' + i;
       $(bx_name).hide();
