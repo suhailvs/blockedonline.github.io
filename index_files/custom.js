@@ -198,7 +198,7 @@ function DoAjax_Url(urlname,opt){
         '<div class="panel-body" id="'+cname+'"></div>'+
       '</div>';
       console.log(opt, $('#bulletpoints' + opt + '-container'))
-      $('#bulletpoints' + opt + '-container').empty().append(html_panel_bulletpoints);
+      $('#bulletpoints' + opt + '-container').empty().append(html_panel_bulletpoints).css('opacity', 1);
       if (datas.v == '1'){
         createMap(cname,datas.data);
       }else{
@@ -215,6 +215,7 @@ function DoAjax_Url(urlname,opt){
 
 //Selectize URL picker --> on Change function
 $("#select-url").on('change',function() {   
+  $('.bulletpoints-container').css('opacity', 0);
   url=this.value;
   url=url.toLowerCase();
   if (url != ""){
