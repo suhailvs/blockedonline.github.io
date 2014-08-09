@@ -1,0 +1,331 @@
+/* Large desktop */
+.hidden1024{
+    display: block;
+}
+@media (min-width: 1300px) and  (max-width: 1920){
+    .circle-align {
+        margin-left: 17%;
+        margin-right: 15%;
+    }
+}
+@media (min-width: 1200px) and (max-width: 1300px) {
+
+}
+@media (max-width: 1024px){
+
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    .explore{
+        font-size: 15px !important;
+    }
+    .title{
+        font-size: 20px !important;
+    }
+    .sub-title{
+        font-size: 16px;
+    }
+    .see-more{
+        font-size: 16px;
+    }
+    .content3{
+        margin-left: 180px;
+        margin-right: 180px;
+    }
+    .circle-align{
+        margin-left: 15%;
+        margin-right: auto;
+    }
+
+}
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 991px) {
+    .topmenu li{
+        font-size: 24px;
+    }
+    .main-header{
+        font-size: 33px;
+    }
+    .sub-header{
+        font-size: 12px;
+    }
+    .explore{
+        font-size: 15px !important;
+    }
+
+    .sub-title{
+        font-size: 13px;
+    }
+    .see-more{
+        font-size: 13px;
+    }
+    .square{
+        font-size: 18px;
+        width: 190px;
+    }
+    .get-chrome-btn{
+        font-size: 22px;
+    }
+    .mac img{
+        height: 40px !important;
+        width: 152px !important;
+    }
+    .windows img{
+        height: 40px !important;
+        width: 152px !important;
+    }
+    .spread-word img{
+        margin-top: 15px !important;
+    }
+    .work-with img{
+        margin-top: 15px !important;
+    }
+    .content3{
+        margin-left: 150px;
+        margin-right: 150px;
+    }
+    .page-tabs li.active:after {
+
+        margin-left: -15px;
+    }
+    .page-tabs li a{
+        font-size: 20px;
+    }
+    .url{
+        margin-left: -50px;
+    }
+    .no-count-display-991{
+        display: inline;
+    }
+    .affix-class-991{
+        display: inline;
+    }
+    .m-991{
+        margin-left: -80px;
+    }
+
+
+}
+@media (min-width: 766px) and  (max-width: 888px){
+    .count-square {
+        font-size: 15px;
+        width: 240px;
+    }
+    .no-count-display-991{
+        display: inline;
+    }
+    .affix-class-991{
+        display: inline;
+    }
+    .m-991{
+        margin-left: -80px;
+    }
+    .main-header {
+        font-size: 30px;
+    }
+    .sub-header {
+        font-size: 10px;
+    }
+    .two-text{
+        margin-left: 47px;
+    }
+    .content {
+        margin-top: 40px !important;
+        margin-left: 45px !important;
+        margin-right: 45px !important;
+    }
+
+
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+    .main-header {
+        font-size: 30px;
+    }
+    .sub-header{
+        font-size: 11px;
+    }
+    .content{
+        margin-left: 25px !important;
+        margin-right: 25px !important;
+    }
+    .explore{
+        font-size: 15px !important;
+    }
+    .pbottom{
+        margin-bottom: 45px;
+    }
+    .title{
+        font-size: 20px !important;
+    }
+    .sub-title{
+        font-size: 16px;
+    }
+    .see-more{
+        font-size: 16px;
+    }
+    .ptop{
+        padding-top: 40px;
+    }
+    .navbar {
+
+        margin: 0 !important;
+    }
+    .icon img{
+        display: none;
+
+    }
+    .topmenu {
+        margin-top: 30px;
+        padding-left: 14px;
+    }
+    .navbar-collapse{
+        overflow-x: hidden;
+    }
+    .help-us img{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .windows img{
+        margin-top: 20px;
+    }
+    .paras{
+        margin-left: -15px;
+    }
+    .spread-word img{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .work-with img{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .spread-word-txt,.work-with-text{
+        text-align: center;
+    }
+    .grey-title{
+        font-size: 22px;
+    }
+    .sub-title{
+        font-size: 14px;
+    }
+    .content3{
+        margin-left: 80px;
+        margin-right: 80px;
+    }
+    .mainnav-collapse{
+        width: 100%;
+    }
+    .page-tabs li.active:after {
+        top: 37px;
+        margin-left: -15px;
+    }
+    .page-tabs li a{
+        font-size: 20px;
+    }
+    .search{
+        margin-top: -18px;
+        margin-left: -1px;
+        width: 350px!important;
+    }
+    .arrow-search{
+        margin-top: -46px !important;
+        margin-left: 320px !important;
+    }
+    .title{
+        margin-left: 1px;
+    }
+    .url-list{
+        margin-left: 50px;
+    }
+
+    .affix-class{
+        display: none;
+    }
+    .affix-class-991{
+        display: none;
+    }
+    .content {
+        margin-left: 5px !important;
+        margin-right: 5px !important;
+    }
+
+}
+@media (max-width: 530px) {
+    .main-header {
+        font-size: 24px;
+    }
+    .sub-header{
+        font-size: 9px;
+    }
+    .two-text{
+        margin-left: 12px;
+    }
+}
+/* Landscape phones and down */
+@media (max-width: 480px) {
+    .topmenu li{
+        font-size: 25px;
+    }
+    .main-header {
+        font-size: 24px;
+    }
+    .sub-header{
+        font-size: 9px;
+    }
+    .explore{
+        font-size: 15px !important;
+    }
+    .title{
+        font-size: 20px !important;
+
+    }
+    .help-us img{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .content3{
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+    .search{
+        margin-top: -18px;
+        margin-left: -1px;
+        width: 350px!important;
+    }
+    .arrow-search{
+        margin-top: -46px !important;
+        margin-left: 320px !important;
+    }
+    .two-text{
+        margin-left:12px ;
+    }
+    .affix-class{
+        display: none;
+    }
+    .no-dis-480{
+        display: none;
+    }
+}
+
+/* Landscape phones and down */
+@media (max-width: 410px) {
+
+    .affix-class{
+        display: none;
+    }
+    .no-dis-480{
+        display: none;
+    }
+    .main-header {
+        font-size: 17px;
+    }
+
+    .circle-align {
+        margin-left: 15%;
+        margin-right: auto;
+    }
+
+
+
+}
