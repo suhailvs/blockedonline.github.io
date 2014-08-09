@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d58a131b-7967-421e-a287-4e57366bb2d4" name="Default" comment="" />
+    <ignored path="PHP.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="PHP" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="indexnulx-mob2.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../Rick/claimfreetrials/m/advfb/indexnulx-mob2.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="447" column="23" selection-start="22373" selection-end="22373" vertical-scroll-proportion="-13.615385" vertical-offset="7245" max-vertical-offset="23970">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="377" column="46" selection-start="21959" selection-end="21959" vertical-scroll-proportion="-0.91628957" vertical-offset="7219" max-vertical-offset="8806">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/../../Rick/claimfreetrials/ads new/cft32.php" />
+        <option value="$PROJECT_DIR$/../../Rick/claimfreetrials/ads new/cft31.php" />
+        <option value="$PROJECT_DIR$/../../Rick/claimfreetrials/ads new/cft30.php" />
+        <option value="$PROJECT_DIR$/../../Rick/claimfreetrials/ads new/cft29.php" />
+        <option value="$PROJECT_DIR$/../../Rick/claimfreetrials/ads new/cft28.php" />
+        <option value="$PROJECT_DIR$/../../Rick/claimfreetrials/ads new/cft27.php" />
+        <option value="$PROJECT_DIR$/../../Rick/claimfreetrials/ads new/cft26.php" />
+        <option value="$PROJECT_DIR$/../../Rick/claimfreetrials/ads new/cft25.php" />
+        <option value="$PROJECT_DIR$/../../Rick/claimfreetrials/ads new/cft24.php" />
+        <option value="$PROJECT_DIR$/../../Rick/claimfreetrials/ads new/cft23.php" />
+        <option value="$PROJECT_DIR$/../../Rick/claimfreetrials/ads new/cft22.php" />
+        <option value="$PROJECT_DIR$/../../Rick/freesamplemonster/ads new/fsm191.php" />
+        <option value="$PROJECT_DIR$/../../Rick/freesamplemonster/ads new/fsm193.php" />
+        <option value="$PROJECT_DIR$/../../Rick/freesamplemonster/ads new/fsm192.php" />
+        <option value="$PROJECT_DIR$/../../Rick/freesamplemonster/ads new/fsm194.php" />
+        <option value="$PROJECT_DIR$/../../Rick/freesamplemonster/ads new/fsm195.php" />
+        <option value="$PROJECT_DIR$/../../Rick/freesamplemonster/ads new/fsm196.php" />
+        <option value="$PROJECT_DIR$/../../Rick/freesamplemonster/ads new/fsm197.php" />
+        <option value="$PROJECT_DIR$/../../Rick/freesamplemonster/ads new/fsm198.php" />
+        <option value="$PROJECT_DIR$/../../Rick/freesamplemonster/ads new/fsm199.php" />
+        <option value="$PROJECT_DIR$/../../Rick/freesamplemonster/ads new/fsm200.php" />
+        <option value="$PROJECT_DIR$/../../Rick/claimfreetrials/ads/cft19.php" />
+        <option value="$PROJECT_DIR$/css/responsive.css" />
+        <option value="$PROJECT_DIR$/contact.html" />
+        <option value="$PROJECT_DIR$/css/style.css" />
+        <option value="$PROJECT_DIR$/services.html" />
+        <option value="$PROJECT_DIR$/services/demolition/enabling-works/index.html" />
+        <option value="$PROJECT_DIR$/services/demolition/demolition-desconstruction-dismantling/index.html" />
+        <option value="$PROJECT_DIR$/services/demolition/pre-contract-services/index.html" />
+        <option value="$PROJECT_DIR$/services/demolition/temporary-works-facade-retention/index.html" />
+        <option value="$PROJECT_DIR$/services/Decontaminiation/index.html" />
+        <option value="$PROJECT_DIR$/services/Decontaminiation/Asbestos/index.html" />
+        <option value="$PROJECT_DIR$/services/Decontaminiation/asbestos/index.html" />
+        <option value="$PROJECT_DIR$/services/Decontaminiation/hazardous-waste/index.html" />
+        <option value="$PROJECT_DIR$/services/Haulage/index.html" />
+        <option value="$PROJECT_DIR$/services/haulage/index.html" />
+        <option value="$PROJECT_DIR$/services/recycling/index.html" />
+        <option value="$PROJECT_DIR$/services/demolition/index.html" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/../../Rick/claimfreetrials/m/advfb/indexnulx-mob2.php" />
+      </list>
+    </option>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PHP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="SearchEverywhereHistory" value="'" />
+    <property name="FullScreen" value="false" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+      <method />
+    </configuration>
+    <list size="0" />
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d58a131b-7967-421e-a287-4e57366bb2d4" name="Default" comment="" />
+      <created>1403779001010</created>
+      <updated>1403779001010</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14641288" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="myTodoPanelSettings">
+      <TodoPanelSettings />
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/../../Rick/claimfreetrials/m/advfb/indexnulx-mob2.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="447" column="23" selection-start="22373" selection-end="22373" vertical-scroll-proportion="0.0" vertical-offset="7245" max-vertical-offset="23970">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="381" column="0" selection-start="21775" selection-end="21821" vertical-scroll-proportion="0.0" vertical-offset="6477" max-vertical-offset="8398">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/responsive.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="217" column="24" selection-start="4349" selection-end="4349" vertical-scroll-proportion="0.0" vertical-offset="3214" max-vertical-offset="3825" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="489" column="26" selection-start="9593" selection-end="9593" vertical-scroll-proportion="0.0" vertical-offset="7914" max-vertical-offset="9146" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="258" column="61" selection-start="14775" selection-end="14775" vertical-scroll-proportion="0.0" vertical-offset="4063" max-vertical-offset="8228">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/responsive.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="148" column="26" selection-start="2905" selection-end="2905" vertical-scroll-proportion="0.0" vertical-offset="2154" max-vertical-offset="3349" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="377" column="0" selection-start="7044" selection-end="7044" vertical-scroll-proportion="0.0" vertical-offset="5614" max-vertical-offset="6511" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="416" column="69" selection-start="23731" selection-end="23731" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5355">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="343" column="22" selection-start="6342" selection-end="6364" vertical-scroll-proportion="0.0" vertical-offset="5636" max-vertical-offset="6443" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../INBB/dev-new-header/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="29" selection-start="148" selection-end="211" vertical-scroll-proportion="0.17056856" vertical-offset="0" max-vertical-offset="25857" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../Rick/claimfreetrials/ads/cft21.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="598" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../Rick/claimfreetrials/ads/cft19.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="547" selection-start="876" selection-end="876" vertical-scroll-proportion="0.02972028" vertical-offset="0" max-vertical-offset="572" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../Rick/claimfreetrials/ads/m12.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="910" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../We Buy Plant &amp; Machinery/HTML/assets/js/scripts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="17" selection-start="1337" selection-end="1337" vertical-scroll-proportion="0.91816694" vertical-offset="0" max-vertical-offset="2023" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../We Buy Plant &amp; Machinery/HTML/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="70" selection-start="1470" selection-end="1470" vertical-scroll-proportion="0.5244755" vertical-offset="312" max-vertical-offset="9588" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../GEMCLEAN/PHP/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.1398602" vertical-offset="652" max-vertical-offset="1530" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../GEMCLEAN/PHP/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="0" selection-start="1535" selection-end="1820" vertical-scroll-proportion="0.75555557" vertical-offset="0" max-vertical-offset="646" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../GEMCLEAN/PHP/assets/js/scripts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="48" selection-start="1170" selection-end="1214" vertical-scroll-proportion="0.55482817" vertical-offset="205" max-vertical-offset="816" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/responsive.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="217" column="24" selection-start="4349" selection-end="4349" vertical-scroll-proportion="0.0" vertical-offset="2857" max-vertical-offset="3825" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="489" column="26" selection-start="9593" selection-end="9593" vertical-scroll-proportion="0.0" vertical-offset="7914" max-vertical-offset="9146" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/services/demolition/enabling-works/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="85" column="83" selection-start="4280" selection-end="4419" vertical-scroll-proportion="-22.884615" vertical-offset="850" max-vertical-offset="6273" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/services/demolition/demolition-desconstruction-dismantling/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="65" column="20" selection-start="2894" selection-end="4445" vertical-scroll-proportion="-13.076923" vertical-offset="765" max-vertical-offset="3519" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/services/demolition/pre-contract-services/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="21" selection-start="300" selection-end="309" vertical-scroll-proportion="-7.8461537" vertical-offset="0" max-vertical-offset="6341" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/services/decontaminiation/hazardous-waste/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="91" column="65" selection-start="4679" selection-end="4679" vertical-scroll-proportion="0.44230768" vertical-offset="1156" max-vertical-offset="6307" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/services/decontaminiation/asbestos/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="83" column="29" selection-start="4284" selection-end="4284" vertical-scroll-proportion="0.5576923" vertical-offset="918" max-vertical-offset="6307" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/services/decontaminiation/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="79" column="76" selection-start="4006" selection-end="4006" vertical-scroll-proportion="0.53846157" vertical-offset="867" max-vertical-offset="6273" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/services/demolition/temporary-works-facade-retention/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="88" selection-start="2024" selection-end="2614" vertical-scroll-proportion="0.65837103" vertical-offset="302" max-vertical-offset="6273" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/services/recycling/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="84" column="47" selection-start="4317" selection-end="4317" vertical-scroll-proportion="0.5192308" vertical-offset="969" max-vertical-offset="6273" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/services/haulage/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="40" selection-start="2645" selection-end="2645" vertical-scroll-proportion="0.48076922" vertical-offset="510" max-vertical-offset="6273" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/services/demolition/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="14" selection-start="2660" selection-end="2660" vertical-scroll-proportion="0.53959274" vertical-offset="475" max-vertical-offset="3519" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../Rick/claimfreetrials/m/advfb/indexnulx-mob2.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="447" column="23" selection-start="22373" selection-end="22373" vertical-scroll-proportion="-13.615385" vertical-offset="7245" max-vertical-offset="23970">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="377" column="46" selection-start="21959" selection-end="21959" vertical-scroll-proportion="-0.91628957" vertical-offset="7219" max-vertical-offset="8806">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
+

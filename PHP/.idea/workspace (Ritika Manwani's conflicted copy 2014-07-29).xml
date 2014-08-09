@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d58a131b-7967-421e-a287-4e57366bb2d4" name="Default" comment="" />
+    <ignored path="PHP.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="PHP" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="get-involved.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/get-involved.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="151" column="34" selection-start="7680" selection-end="7680" vertical-scroll-proportion="0.0" vertical-offset="2381" max-vertical-offset="3587">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="get-involved - download.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/get-involved - download.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="157" column="41" selection-start="7808" selection-end="7821" vertical-scroll-proportion="0.0" vertical-offset="2485" max-vertical-offset="4063">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="about-us.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/about-us.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="97" column="72" selection-start="5452" selection-end="5486" vertical-scroll-proportion="0.0" vertical-offset="1468" max-vertical-offset="2431">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="314" column="0" selection-start="6346" selection-end="6407" vertical-scroll-proportion="0.0" vertical-offset="4907" max-vertical-offset="5542">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="responsive.css" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/css/responsive.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="178" column="27" selection-start="3238" selection-end="3238" vertical-scroll-proportion="4.9688015" vertical-offset="0" max-vertical-offset="3247">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/../../Rick/freesamplemonster/ads new/fsm197.php" />
+        <option value="$PROJECT_DIR$/../../Rick/freesamplemonster/ads new/fsm198.php" />
+        <option value="$PROJECT_DIR$/../../Rick/freesamplemonster/ads new/fsm199.php" />
+        <option value="$PROJECT_DIR$/../../Rick/claimfreetrials/ads/cft19.php" />
+        <option value="$PROJECT_DIR$/contact" />
+        <option value="$PROJECT_DIR$/services.html" />
+        <option value="$PROJECT_DIR$/services/demolition/temporary-works-facade-retention/index.html" />
+        <option value="$PROJECT_DIR$/services/Decontaminiation/index.html" />
+        <option value="$PROJECT_DIR$/services/Decontaminiation/Asbestos/index.html" />
+        <option value="$PROJECT_DIR$/services/Decontaminiation/asbestos/index.html" />
+        <option value="$PROJECT_DIR$/services/Decontaminiation/hazardous-waste/index.html" />
+        <option value="$PROJECT_DIR$/services/Haulage/index.html" />
+        <option value="$PROJECT_DIR$/../../Rick/claimfreetrials/m/advfb/indexnulx-mob2.php" />
+        <option value="$PROJECT_DIR$/services/demolition/index.html" />
+        <option value="$PROJECT_DIR$/services/demolition/asbestos/index.html" />
+        <option value="$PROJECT_DIR$/services/demolition/demolition-desconstruction-dismantling/index.html" />
+        <option value="$PROJECT_DIR$/services/demolition/enabling-works/index.html" />
+        <option value="$PROJECT_DIR$/services/demolition/pre-contract-services/index.html" />
+        <option value="$PROJECT_DIR$/services/haulage/index.html" />
+        <option value="$PROJECT_DIR$/services/haulage/hazardous-waste/index.html" />
+        <option value="$PROJECT_DIR$/services/recycling/index.html" />
+        <option value="$PROJECT_DIR$/../../Rick/zip/aindexnn.php" />
+        <option value="$PROJECT_DIR$/../../Rick/zip/aresultnn.php" />
+        <option value="$PROJECT_DIR$/../../Reading Storage Solutions/PHP/css/style.css" />
+        <option value="$PROJECT_DIR$/../../Reading Storage Solutions/PHP/css/responsive.css" />
+        <option value="$PROJECT_DIR$/../../Reading Storage Solutions/PHP/index.html" />
+        <option value="$PROJECT_DIR$/../../Rick/freesamplemonster/ads new/fsm200.php" />
+        <option value="$PROJECT_DIR$/../../Rick/freesamplemonster/ads new/fsm202.php" />
+        <option value="$PROJECT_DIR$/../../Rick/freesamplemonster/ads new/fsm203.php" />
+        <option value="$PROJECT_DIR$/../../Rick/freesamplemonster/ads new/fsm204.php" />
+        <option value="$PROJECT_DIR$/../../../Rick/freesamplemonster/ads/fsm217.php" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/about-us.html" />
+        <option value="$PROJECT_DIR$/privacy-policy.html" />
+        <option value="$PROJECT_DIR$/terms-conditions.html" />
+        <option value="$PROJECT_DIR$/../../../Rick/claimfreetrials/beautyfb3/1/aindexnn.php" />
+        <option value="$PROJECT_DIR$/../../../Rick/claimfreetrials/beautyfb3/2/results.php" />
+        <option value="$PROJECT_DIR$/../../../Rick/claimfreetrials/beautyfb3/1/results.php" />
+        <option value="$PROJECT_DIR$/../../../Rick/freesamplemonster/beautyfb3/1/aindexnn.php" />
+        <option value="$PROJECT_DIR$/../../../Rick/freesamplemonster/beautyfb3/1/results.php" />
+        <option value="$PROJECT_DIR$/../../../Rick/freesamplejunkie/beautyfb3/1/aindexnn.php" />
+        <option value="$PROJECT_DIR$/../../../Rick/freesamplejunkie/beautyfb3/1/results.php" />
+        <option value="$PROJECT_DIR$/../../../Rick/claimfreetrials/ads/cft74.php" />
+        <option value="$PROJECT_DIR$/../../../Rick/freesamplemonster/ads/fsm218.php" />
+        <option value="$PROJECT_DIR$/../../../Rick/freesamplemonster/beautyfb3/2/aindexnn.php" />
+        <option value="$PROJECT_DIR$/../../../Rick/claimfreetrials/beautyfb3/2/aindexnn.php" />
+        <option value="$PROJECT_DIR$/../../../Rick/freesamplejunkie/beautyfb3/2/aindexnn.php" />
+        <option value="$PROJECT_DIR$/get-involved.html" />
+        <option value="$PROJECT_DIR$/get-involved - download.html" />
+        <option value="$PROJECT_DIR$/css/style.css" />
+        <option value="$PROJECT_DIR$/css/responsive.css" />
+      </list>
+    </option>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PHP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="SearchEverywhereHistory" value="'" />
+    <property name="FullScreen" value="false" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+      <method />
+    </configuration>
+    <list size="0" />
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d58a131b-7967-421e-a287-4e57366bb2d4" name="Default" comment="" />
+      <created>1403779001010</created>
+      <updated>1403779001010</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14641288" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USERS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="myTodoPanelSettings">
+      <TodoPanelSettings />
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="150" column="33" selection-start="3018" selection-end="3018" vertical-scroll-proportion="0.0" vertical-offset="2162" max-vertical-offset="3825">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="25" selection-start="2370" selection-end="2370" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1479" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/responsive.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="0" selection-start="415" selection-end="415" vertical-scroll-proportion="0.0" vertical-offset="374" max-vertical-offset="697">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="18" selection-start="333" selection-end="333" vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="2618">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="25" selection-start="2461" selection-end="2461" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1479" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/responsive.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="0" selection-start="298" selection-end="298" vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="629">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="136" column="0" selection-start="2673" selection-end="2673" vertical-scroll-proportion="0.0" vertical-offset="2312" max-vertical-offset="2414">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="0" selection-start="2617" selection-end="2617" vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="1479" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/responsive.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="0" selection-start="108" selection-end="108" vertical-scroll-proportion="0.0" vertical-offset="20" max-vertical-offset="629">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="8" selection-start="997" selection-end="997" vertical-scroll-proportion="0.0" vertical-offset="477" max-vertical-offset="2227">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="26" selection-start="638" selection-end="638" vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="1326" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/responsive.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="0" selection-start="108" selection-end="108" vertical-scroll-proportion="0.0" vertical-offset="20" max-vertical-offset="629">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="79" column="4" selection-start="1442" selection-end="1486" vertical-scroll-proportion="0.0" vertical-offset="1065" max-vertical-offset="1989">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="61" selection-start="1959" selection-end="1959" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1309" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/responsive.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="0" selection-start="108" selection-end="108" vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="629">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="94" column="13" selection-start="1783" selection-end="1783" vertical-scroll-proportion="0.0" vertical-offset="1099" max-vertical-offset="1734">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="61" selection-start="1959" selection-end="1959" vertical-scroll-proportion="0.0" vertical-offset="375" max-vertical-offset="1309" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/responsive.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="0" selection-start="108" selection-end="108" vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="629">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="94" column="13" selection-start="1783" selection-end="1783" vertical-scroll-proportion="0.0" vertical-offset="1099" max-vertical-offset="1734">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="50" selection-start="611" selection-end="611" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1377" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="381" column="0" selection-start="21775" selection-end="21821" vertical-scroll-proportion="0.0" vertical-offset="6477" max-vertical-offset="8398" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/responsive.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="217" column="24" selection-start="4349" selection-end="4349" vertical-scroll-proportion="0.0" vertical-offset="3214" max-vertical-offset="3825">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="489" column="26" selection-start="9593" selection-end="9593" vertical-scroll-proportion="0.0" vertical-offset="7914" max-vertical-offset="9146">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="258" column="61" selection-start="14775" selection-end="14775" vertical-scroll-proportion="0.0" vertical-offset="4063" max-vertical-offset="8228" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/responsive.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="148" column="26" selection-start="2905" selection-end="2905" vertical-scroll-proportion="0.0" vertical-offset="2154" max-vertical-offset="3349">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="377" column="0" selection-start="7044" selection-end="7044" vertical-scroll-proportion="0.0" vertical-offset="5614" max-vertical-offset="6511">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="416" column="69" selection-start="23731" selection-end="23731" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5355" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="343" column="22" selection-start="6342" selection-end="6364" vertical-scroll-proportion="0.0" vertical-offset="5636" max-vertical-offset="6443">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../Rick/freesamplemonster/ads/fsm217.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="603" selection-start="932" selection-end="932" vertical-scroll-proportion="0.01923077" vertical-offset="0" max-vertical-offset="884" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/privacy-policy.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="98" column="0" selection-start="4949" selection-end="4949" vertical-scroll-proportion="0.0" vertical-offset="1406" max-vertical-offset="2040" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="80" column="18" selection-start="2997" selection-end="3809" vertical-scroll-proportion="0.0" vertical-offset="975" max-vertical-offset="2635" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/terms-conditions.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="93" column="18" selection-start="4874" selection-end="4874" vertical-scroll-proportion="0.4923077" vertical-offset="1293" max-vertical-offset="2040" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../Rick/claimfreetrials/beautyfb3/2/results.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="5" selection-start="452" selection-end="452" vertical-scroll-proportion="0.20401338" vertical-offset="4" max-vertical-offset="1173" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../Rick/claimfreetrials/beautyfb3/1/results.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="30" selection-start="773" selection-end="773" vertical-scroll-proportion="0.43143812" vertical-offset="21" max-vertical-offset="1173" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../Rick/freesamplejunkie/beautyfb3/1/aindexnn.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="848" column="63" selection-start="28888" selection-end="28888" vertical-scroll-proportion="0.8269231" vertical-offset="13685" max-vertical-offset="14569" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../Rick/freesamplemonster/beautyfb3/1/aindexnn.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="824" column="44" selection-start="28501" selection-end="28501" vertical-scroll-proportion="0.3653846" vertical-offset="13685" max-vertical-offset="14569" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../Rick/freesamplemonster/beautyfb3/1/results.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="0" selection-start="777" selection-end="777" vertical-scroll-proportion="0.49275362" vertical-offset="0" max-vertical-offset="1173" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../Rick/freesamplemonster/ads/fsm218.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="66" selection-start="395" selection-end="395" vertical-scroll-proportion="0.01923077" vertical-offset="0" max-vertical-offset="884" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../Rick/claimfreetrials/ads/cft74.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="97" selection-start="426" selection-end="426" vertical-scroll-proportion="0.01923077" vertical-offset="0" max-vertical-offset="884" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../Rick/claimfreetrials/beautyfb3/2/aindexnn.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="128" column="55" selection-start="4687" selection-end="4687" vertical-scroll-proportion="0.37296036" vertical-offset="1856" max-vertical-offset="14994" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../Rick/claimfreetrials/beautyfb3/1/aindexnn.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="121" column="74" selection-start="4199" selection-end="4206" vertical-scroll-proportion="0.33333334" vertical-offset="1771" max-vertical-offset="14569" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../Rick/freesamplemonster/beautyfb3/2/results.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="36" selection-start="685" selection-end="685" vertical-scroll-proportion="0.3979933" vertical-offset="0" max-vertical-offset="1173" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../Rick/freesamplejunkie/beautyfb3/2/aindexnn.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="869" column="0" selection-start="30238" selection-end="30238" vertical-scroll-proportion="0.74242425" vertical-offset="14136" max-vertical-offset="14994" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../Rick/freesamplejunkie/beautyfb3/2/results.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="0" selection-start="771" selection-end="771" vertical-scroll-proportion="0.4548495" vertical-offset="51" max-vertical-offset="1173" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../Rick/freesamplejunkie/beautyfb3/1/results.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="5" selection-start="460" selection-end="460" vertical-scroll-proportion="0.20847268" vertical-offset="0" max-vertical-offset="1173" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../Rick/freesamplemonster/beautyfb3/2/aindexnn.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="132" column="57" selection-start="4581" selection-end="4592" vertical-scroll-proportion="0.68070173" vertical-offset="1856" max-vertical-offset="14994" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/about-us.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="97" column="72" selection-start="5452" selection-end="5486" vertical-scroll-proportion="0.0" vertical-offset="1468" max-vertical-offset="2431">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/get-involved.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="151" column="34" selection-start="7680" selection-end="7680" vertical-scroll-proportion="0.0" vertical-offset="2381" max-vertical-offset="3587">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/get-involved - download.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="157" column="41" selection-start="7808" selection-end="7821" vertical-scroll-proportion="0.0" vertical-offset="2485" max-vertical-offset="4063">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="314" column="0" selection-start="6346" selection-end="6407" vertical-scroll-proportion="0.0" vertical-offset="4907" max-vertical-offset="5542">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/responsive.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="178" column="27" selection-start="3238" selection-end="3238" vertical-scroll-proportion="4.9688015" vertical-offset="0" max-vertical-offset="3247">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
+

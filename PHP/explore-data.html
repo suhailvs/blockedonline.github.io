@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>BlockedOnline</title>
+
+    <!-- CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome-4.0.3/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="fonts/bebas-font.css" rel="stylesheet">
+
+    <!-- FONTS -->
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+<!--[if lt IE 9]>
+  <script src="assets/js/ie8-responsive-file-warning.js"></script>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+
+<header id="header" class="header">
+    <nav class="navbar mainnav navbar-default" role="navigation" id="mainnav">
+        <div class="navbar-container">
+            <div class="logo pull-left">
+                <a href="#"><img class="img-responsive" src="img/header-logo.png"></a>
+            </div>
+            <div class="navbar-header pull-right">
+                <button type="button" class="navbar-toggle menu-btn-xs" data-toggle="collapse" data-target="#mainnav-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse pull-left mainnav-collapse" id="mainnav-collapse">
+                <ul class="nav navbar-nav topmenu">
+                    <li class="line line-left word"><a href="#">HOME</a></li>
+                    <li class="line word"><a href="#about">ABOUT</a></li>
+                    <li class="line active word"><a href="#services">EXPLORE DATA</a></li>
+                    <li class="line word"><a href="#casestudies">GET INVOLVED</a></li>
+                </ul>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </nav>
+</header>
+        <div class="container1">
+            <div class="content content1">
+            <div class="row">
+                <div class="col-sm-9 by-country-heading">
+                    <div class="main-header">
+                        Select a country <span style="color: #898989">or</span>  Enter a WEbsite URL
+                    </div>
+                    <div class="sub-header">
+                        and find out its internet situation  <span class="two-text"> to see where in the world it is blocked</span>
+                    </div>
+                </div>
+                <div class="col-sm-offset-3"></div>
+            </div>
+
+            <div class="sub-title m-top ucase">
+                <ul class="nav nav-tabs page-tabs" role="tablist">
+                    <li class="active by-count-web" id="by-country"><a href="#bycountry" role="tab" data-toggle="tab">by Country</a></li>
+                    <li class="by-count-web" id="by-website"><a href="#bywebsite" role="tab" data-toggle="tab">by website</a></li>
+                </ul>
+
+                <div class="tab-content">
+                    <div class="tab-pane active" id="bycountry"></div>
+                    <div class="tab-pane" id="bywebsite"></div>
+                </div>
+            </div>
+            <form class="navbar-form navbar-left" role="search">
+                <div class="form-group form-text1">
+                    <input type="text " class="form-control search" placeholder="Select a country"><img class="arrow-search" src="img/arrow-search.png">
+                </div>
+                <div class="form-group form-text2 d-none ">
+                    <input type="text " class="form-control search" placeholder="Enter a website URL"><img class="arrow-search" src="img/arrow-search.png">
+                </div>
+            </form>
+
+        </div>
+        <div class="content">
+        <div class="row country d-all">
+            <div class="col-sm-8 ">
+                <div class="title ucase m-top">or find it on the map</div>
+                <div><img src="img/map.png" class="img-responsive m-top"></div>
+            </div>
+            <div class="col-sm-offset-4"></div>
+        </div>
+        <div class="row url d-none">
+            <div class="col-sm-8 col-lg-12">
+                <div class="title ucase m-top">top websites that are blocked</div>
+                <div class="url-list">
+                    <p id="fb"><a href="#fb" >http://www.Facebook.com</a><span class=" url-hover d-none"><img src="img/logo.png" class="title">See accessibility status</span></p>
+                    <p><a href="#google" id="google"> http://www.google.com</a></p>
+                    <p><a href="#utube" id="utube">http://www.youtube.com</a></p>
+                    <p><a href="#twitter" id="twitter">http://www.twitter.com</a></p>
+                    <p><a href="#wiki" id="wiki">http://Wikipedia.com</a></p>
+                </div>
+            </div>
+            <div class="col-sm-offset-4"></div>
+        </div>
+        </div>
+        <footer id="footer">
+        <div style="margin-top: 106px"></div>
+
+    </footer>
+    </div>
+            <!-- JavaScript -->
+            <!--<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>-->
+            <script src="js/jquery-1.10.2.min.js"></script>
+            <script src="js/bootstrap.min.js"></script>
+            <script src="js/jquery.throttle.js"></script>
+            <!--<script src="js/jquery.scrollTo.min.js"></script>-->
+            <!--<script src="js/jquery.localScroll.min.js"></script>-->
+            <!--<script src="js/scrollspy.js"></script>-->
+            <script src="js/scripts.js"></script>
+            <script type="text/javascript">
+                $('#by-website a').on('click', function(){
+                    $('.form-text1').addClass('d-none');
+                    $('.form-text2').removeClass('d-none');
+                    $('.country').addClass('d-none');
+                    $('.url').removeClass('d-none');
+                    $(this).addClass('d-all');
+                });
+                $('#by-country a').on('click',function(){
+                    $('.form-text2').addClass('d-none');
+                    $('.form-text1').removeClass('d-none');
+                    $('.url').addClass('d-none');
+                    $('.country').removeClass('d-none');
+                    $(this).addClass('d-all');
+                });
+
+
+
+            </script>
+    </body>
+    </html>
