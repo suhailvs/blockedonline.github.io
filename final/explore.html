@@ -225,13 +225,13 @@
                         </div>
                     </div>
                 </div>
-                <div id="blocked-box" class="portlet">
+                <div id="blocked-box" class="portlet panel-donutgraph">
                     <div class="box ucase" >
                         <p class="caption-title">Blocked Websites by category<span class="collapse-icon"></span></p>
                         <div class="clearfix"></div>
                     </div>
-                    <div class="portlet-body">
-                        <img src="img/graph.png" class="img-responsive m-top">
+                    <div class="portlet-body" id='donutgraph'>
+                        <svg></svg>
                     </div>
                 </div>
                 <div id="news-box" class="portlet">
@@ -277,21 +277,22 @@
                 </div>
 
 
-                <div id="blocked-category-box" class="portlet">
+                <div id="blocked-category-box" class="portlet panel-stackedgraph">
                     <div class="box ucase m-top" >
                         <p class="caption-title">Open vs Blocked by category<span class="collapse-icon"></span></p>
                         <div class="clearfix"></div>
                     </div>
-                    <div class="portlet-body">
-                        <img src="img/blocked-category.png" class="img-responsive">
+                    <div class="portlet-body" id='stackedgraph'>
+                        <svg></svg>
                     </div>
                 </div>
-                <div id="info-box" class="portlet">
+                <div id="info-box" class="portlet panel-bulletpoints1">
                     <div class="box ucase" >
                         <p class="caption-title">General Information<span class="collapse-icon"></span></p>
                         <div class="clearfix"></div>
                     </div>
                     <div class="portlet-body">
+                     <ul class="list-group" id="bulletpoints1"></ul>
                         <div class="row circle-align">
                             <div class="col-sm-3 col-md-2 vision-circles img-responsive">
                                 <img src="img/WebCountryCode.png" class="circles-img">
@@ -370,7 +371,7 @@
 
 <!-- AddThis Smart Layers BEGIN -->
 <!-- Go to http://www.addthis.com/get/smart-layers to customize -->
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5345fdde29a43c06"></script>
+<script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5345fdde29a43c06"></script>
 <script type="text/javascript">
     addthis.layers({
         'theme' : 'transparent',
@@ -397,14 +398,14 @@
 </script>
 <!-- AddThis Smart Layers END -->
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <!--<script src="js/jquery-1.10.2.min.js"></script>-->
 
 <!--<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script> !-->
 <script src="js/bootstrap.min.js"></script>
 
 <script type="text/javascript" src="js/selectize.js"></script>
-<script src="js/custom.js"></script>
+
 <script src="js/jquery.scrollTo.min.js"></script>
 <script src="js/jquery.localScroll.min.js"></script>
 <script src="js/scrollspy.js"></script>
@@ -458,6 +459,7 @@
 <script src="js/spin.min.js"></script>
 <script src="./datamaps/topojson.v1.min.js"></script>
 <script src="./datamaps/datamaps.world.min.js"></script>
+<script src="js/custom.js"></script>
 <script type="text/javascript">
 
     //=======================================
@@ -469,26 +471,13 @@
         ajaxStart: function() {  spinner.spin(target);},
         ajaxStop: function() {  spinner.stop(); }
     });
-
-    $(document).on('click', '.panel-heading span.clickable', function(e){
-        var $this = $(this);
-        if(!$this.hasClass('panel-collapsed')) {
-            $this.parents('.panel').find('.panel-body').slideUp();
-            $this.addClass('panel-collapsed');
-            $this.find('i').removeClass('glyphicon-chevron-up').addClass('glyphicon-chevron-down');
-        } else {
-            $this.parents('.panel').find('.panel-body').slideDown();
-            $this.removeClass('panel-collapsed');
-            $this.find('i').removeClass('glyphicon-chevron-down').addClass('glyphicon-chevron-up');
-        }
-    })
 </script>
 
 <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
             m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    })(window,document,'script','http://www.google-analytics.com/analytics.js','ga');
 
     ga('create', 'UA-50157618-1','blockedonline.com');
     ga('send', 'pageview');
