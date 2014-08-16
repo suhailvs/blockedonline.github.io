@@ -82,11 +82,7 @@ function drawStacked(data){
 // Create Country Bulletins
 function drawCountryBulletin(data,box,box_name){
   var str_html='';  
-  if (box=='bullets'){
-    jQuery.each(data.bullets, function(index, item) {
-      str_html+= "<li class='list-group-item'>"+item+"</li>"; 
-    });    
-  }else if (box=="websites"){
+  if (box=="websites"){
     jQuery.each(data.websites, function(index, item) {
       str_html+= "<li>"+item+"</li>";
     });
@@ -102,7 +98,7 @@ function drawCountryBulletin(data,box,box_name){
 //Show or hide panel and also set Title of Panel
 function ShowHide_Box(datas,box_name){
   if (datas.status == 'OK'){
-    $("#for_"+box_name).text(datas.title);
+    //$("#for_"+box_name).text(datas.title);
     $(".panel-"+box_name).show();
   }else{
     $(".panel-"+box_name).hide();
@@ -120,13 +116,21 @@ function DoAjax_Country(country,opt,box){
         drawDonut(datas.data);        
       }else if (box == 'stackedgraph'){
         //draw stacked graph
-        drawStacked(datas.data);        
+        drawStacked(datas.data);
+      }else if (box == 'quicksummary'){
+        jQuery.each(datas.bullets, function(index, item) {
+          $('#quick-summary-data-'+index).text(item['value']);            
+        });
+      }else if (box == 'generalinfo'){
+        jQuery.each(datas.bullets, function(index, item) {          
+          $('#generalinfo-data-'+index).text(item['value']);          
+        });
       }else{
         box_name='bulletpoints'+opt;
-        $('#quicklinksflag').attr('src',datas.flag);
+        //$('#quicklinksflag').attr('src',datas.flag);        
         drawCountryBulletin(datas,box,box_name);//box=bullets,websites..
         box=box_name;//bulletpoints1,bulletpoints2...etc
-      }      
+      }
     }
     ShowHide_Box(datas,box);
   });
@@ -153,8 +157,8 @@ $("#select-country").on('change',function() {
     //second ajax for stacked graph
     DoAjax_Country(cty,0,"stackedgraph");
     //ajax for bulletpoints
-    DoAjax_Country(cty,1,'bullets');  
-    DoAjax_Country(cty,2,'bullets');
+    DoAjax_Country(cty,1,'generalinfo');  
+    DoAjax_Country(cty,2,'quicksummary');
     DoAjax_Country(cty,3,'websites');
     DoAjax_Country(cty,5,'news');
   }
