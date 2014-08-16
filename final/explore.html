@@ -1,16 +1,15 @@
-
 <!DOCTYPE html>
-
 <html>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="">
-<meta name="author" content=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
     <title>Monitor Internet Censorship</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
     <!--<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">!-->
     <link rel="stylesheet" type="text/css" href="css/result-light.css">
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
@@ -24,342 +23,338 @@
     <link href="css/responsive.css" rel="stylesheet">
 
     <style type="text/css">
-        svg {height:500px;margin:auto;}
-        #urlbulletpoints1 {position: relative; width: 100%; max-height: 450px;}
-        .clickable{cursor: pointer;}
-        #loading_spinner {
-            position: relative;
-            float: left;
-            width: 40px;
-            height: 40px;
-        }
-        #select-country {
-            display: none;
-        }
+      svg {height:500px;margin:auto;}
+      #urlbulletpoints1 {position: relative; width: 100%; max-height: 450px;}
+      .clickable{cursor: pointer;}
+      #loading_spinner {
+        position: relative;
+        float: left;
+        width: 40px;
+        height: 40px;
+      }
+      #select-country {
+        display: none;
+      }
+      body {
+        padding-top: 60px;
+      }
     </style>
 </head>
 <body>
-<header id="header" class="header">
-    <nav class="navbar mainnav navbar-default" role="navigation" id="mainnav">
-        <div class="navbar-container">
-            <div class="logo pull-left">
-                <a href="#"><img class="img-responsive" src="img/header-logo.png"></a>
-            </div>
-            <div class="navbar-header pull-right">
-                <button type="button" class="navbar-toggle menu-btn-xs" data-toggle="collapse" data-target="#mainnav-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
-            <div class="collapse navbar-collapse pull-left mainnav-collapse" id="mainnav-collapse">
-                <ul class="nav navbar-nav topmenu">
-                    <li class="line line-left word"><a href="homepage.html">HOME</a></li>
-                    <li class="line active word"><a href="explore.html">EXPLORE DATA</a></li>
-                    <li class="line  word"><a href="get-involved.html">GET INVOLVED</a></li>
-                    <li class="line  word"><a href="about.html">ABOUT</a></li>
-                </ul>
-            </div>
-            <div class="clearfix"></div>
-        </div>
-    </nav>
-</header>
-
-<div class="content content1 m-left" id="invest-container" data-spy="scroll" data-target=".affix-div">
-<div class="m-991" >
-
-<div class="row content">
-    <div class="col-sm-9 by-country-heading">
-        <div class="main-header">
-            Select a country <span style="color: #898989">or</span>  Enter a WEbsite URL
-        </div>
-        <div class="sub-header no-dis-480">
-            and find out its internet situation  <span class="two-text"> to see where in the world it is blocked</span>
-        </div>
+<!-- 
+  TOP NAVIGATION BAR
+  =======================================-->
+<div class="navbar mainnav navbar-default navbar-fixed-top" role="navigation" id="mainnav">
+  <div class="navbar-container">
+    <div class="logo pull-left">
+      <a href="#"><img class="img-responsive" src="img/header-logo.png"></a>
     </div>
-    <div class="col-sm-offset-3"></div>
+    <div class="navbar-header pull-right">
+      <button type="button" class="navbar-toggle menu-btn-xs" data-toggle="collapse" data-target="#mainnav-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse pull-left mainnav-collapse" id="mainnav-collapse">
+      <ul class="nav navbar-nav topmenu">
+        <li class="line line-left word"><a href="homepage.html">HOME</a></li>
+        <li class="line active word"><a href="explore.html">EXPLORE DATA</a></li>
+        <li class="line word"><a href="get-involved.html">GET INVOLVED</a></li>
+        <li class="line word"><a href="about.html">ABOUT</a></li>
+      </ul>
+    </div>
+    <div class="clearfix"></div>
+  </div>
 </div>
 
-
-<div class="row content">
-    <div class="col-md-11 ">
-        <div class="sub-title m-top ucase">
-            <ul class="nav nav-tabs page-tabs" role="tablist">
-                <li class="active by-count-web" id="by-country"><a href="#bycountry" role="tab" data-toggle="tab">by Country</a></li>
-                <li class="by-count-web" id="by-website" style="border-left: 1px solid ! important;"><a href="#bywebsite" role="tab" data-toggle="tab">by website</a></li>
-            </ul>
-            <div class="tab-content " style="z-index: 6">
-                <div class="tab-pane active" id="bycountry"></div>
-                <div class="tab-pane" id="bywebsite"></div>
-            </div>
-        </div>
-    </div>
+<!-- 
+  SIDE FIXED NAVIGATION BAR
+  =======================================-->
+<div class="country-affix d-none">
+  <div data-spy="affix"  class="affix-class affix" style="position: fixed; right: 0;margin-top:60px">
+    <ul class="affix-div">
+      <li id="summary" class="square ucase summary active">
+        <a href="#summary-box"> quick summary</a>
+      </li>
+      <li id="blocked-websites" class="square ucase summary">
+        <a href="#blocked-box"> Blocked websites by category</a>
+      </li>
+      <li id="news" class="square ucase blocked-websites">
+        <a href="#news-box"> NEWs</a>
+      </li>
+      <li id="highest-rank" class="square ucase highest-rank">
+        <a href="#bolcked-web-box">Blocked websites with highest global Rank</a>
+      </li>
+      <li id="blocked-category" class="square ucase blocked-category">
+        <a href="#blocked-category-box"> Open vs Blocked by category</a>
+      </li>
+      <li id="general-info" class="square ucase general-info">
+        <a href="#info-box"> General Information</a>
+      </li>
+    </ul>
+  </div>
 </div>
+<!-- 
+  COL-MD-9 ***** LEFT SIDE BOX
+  =======================================-->
+<div class="content" id="invest-container" data-spy="scroll" data-target=".affix-div">
+  <div class="row">
+    <div class="col-md-8">
 
-<div class="row search-box content">
-    <div class="col-sm-8 col-lg-8" style="margin-top:-40px; z-index:5">
-        <div id="div-country" class="form-text1">
+      <!-- HEADING -->
+      <div class="main-header">
+        Select a country <span style="color: #898989">or</span>  Enter a WEbsite URL
+      </div>
+      <div class="sub-header no-dis-480">
+        and find out its internet situation  <span class="two-text"> to see where in the world it is blocked</span>
+      </div>
+      
+      <!-- BUTTONS -->
+      <div class="sub-title m-top ucase">
+        <ul class="nav nav-tabs page-tabs" role="tablist">
+          <li class="active by-count-web" id="by-country"><a href="#bycountry" role="tab" data-toggle="tab">by Country</a></li>
+          <li class="by-count-web" id="by-website" style="border-left: 1px solid ! important;"><a href="#bywebsite" role="tab" data-toggle="tab">by website</a></li>
+        </ul>
+        <div class="tab-content " style="z-index: 6">
+          <div class="tab-pane active" id="bycountry"></div>
+          <div class="tab-pane" id="bywebsite"></div>
+        </div>
+      </div>
+
+      <!-- SELECTIZE Select Boxes + SPINNER -->
+      <div class="row">
+        <div class="col-md-11">
+          <div id="div-country" class="form-text1">
             <select id="select-country"  placeholder="Select a country...">
-                <option value="" class="search-box">Select a country...</option>
-                <option value="AD" class="search-box">Andorra</option><option value="AF">Afghanistan</option><option value="AG">Antigua and Barbuda</option><option value="AI">Anguilla</option><option value="AL">Albania</option><option value="AM">Armenia</option><option value="AO">Angola</option><option value="AQ">Antarctica</option><option value="AR">Argentina</option><option value="AS">American Samoa</option><option value="AT">Austria</option><option value="AU">Australia</option><option value="AW">Aruba</option><option value="AZ">Azerbaijan</option><option value="BA">Bosnia and Herzegovina</option><option value="BB">Barbados</option><option value="BD">Bangladesh</option><option value="BE">Belgium</option><option value="BF">Burkina Faso</option><option value="BG">Bulgaria</option><option value="BH">Bahrain</option><option value="BI">Burundi</option><option value="BJ">Benin</option><option value="BM">Bermuda</option><option value="BN">Brunei Darussalam</option><option value="BO">Bolivia</option><option value="BQ">Bonaire</option><option value="BR">Brazil</option><option value="BS">Bahamas</option><option value="BT">Bhutan</option><option value="BW">Botswana</option><option value="BY">Belarus</option><option value="BZ">Belize</option><option value="CA">Canada</option><option value="CC">Cocos (Keeling) Islands</option><option value="CD">Congo</option><option value="CF">Central African Republic</option><option value="CG">Congo</option><option value="CH">Switzerland</option><option value="CK">Cook Islands</option><option value="CL">Chile</option><option value="CM">Cameroon</option><option value="CN">China</option><option value="CO">Colombia</option><option value="CR">Costa Rica</option><option value="CU">Cuba</option><option value="CV">Cape Verde</option><option value="CX">Christmas Island</option><option value="CY">Cyprus</option><option value="CZ">Czech Republic</option><option value="DE">Germany</option><option value="DJ">Djibouti</option><option value="DK">Denmark</option><option value="DM">Dominica</option><option value="DO">Dominican Republic</option><option value="DZ">Algeria</option><option value="EC">Ecuador</option><option value="EE">Estonia</option><option value="EG">Egypt</option><option value="EH">Western Sahara</option><option value="ER">Eritrea</option><option value="ES">Spain</option><option value="ET">Ethiopia</option><option value="FI">Finland</option><option value="FJ">Fiji</option><option value="FK">Falkland Islands (Malvinas)</option><option value="FM">Micronesia</option><option value="FO">Faroe Islands</option><option value="FR">France</option><option value="GA">Gabon</option><option value="GB">United Kingdom</option><option value="GD">Grenada</option><option value="GE">Georgia</option><option value="GF">French Guiana</option><option value="GG">Guernsey</option><option value="GH">Ghana</option><option value="GI">Gibraltar</option><option value="GL">Greenland</option><option value="GM">Gambia</option><option value="GN">Guinea</option><option value="GP">Guadeloupe</option><option value="GQ">Equatorial Guinea</option><option value="GR">Greece</option><option value="GT">Guatemala</option><option value="GU">Guam</option><option value="GW">Guinea-Bissau</option><option value="GY">Guyana</option><option value="HK">Hong Kong</option><option value="HN">Honduras</option><option value="HR">Croatia</option><option value="HT">Haiti</option><option value="HU">Hungary</option><option value="ID">Indonesia</option><option value="IE">Ireland</option><option value="IL">Israel</option><option value="IM">Isle of Man</option><option value="IN">India</option><option value="IQ">Iraq</option><option value="IR">Iran</option><option value="IS">Iceland</option><option value="IT">Italy</option><option value="JE">Jersey</option><option value="JM">Jamaica</option><option value="JO">Jordan</option><option value="JP">Japan</option><option value="KE">Kenya</option><option value="KG">Kyrgyzstan</option><option value="KH">Cambodia</option><option value="KI">Kiribati</option><option value="KM">Comoros</option><option value="KN">Saint Kitts and Nevis</option><option value="KP">North Korea</option><option value="KR">South Korea</option><option value="KW">Kuwait</option><option value="KY">Cayman Islands</option><option value="KZ">Kazakhstan</option><option value="LA">Lao People's Democratic Republic</option><option value="LB">Lebanon</option><option value="LC">Saint Lucia</option><option value="LI">Liechtenstein</option><option value="LK">Sri Lanka</option><option value="LR">Liberia</option><option value="LS">Lesotho</option><option value="LT">Lithuania</option><option value="LU">Luxembourg</option><option value="LV">Latvia</option><option value="LY">Libya</option><option value="MA">Morocco</option><option value="MC">Monaco</option><option value="MD">Moldova</option><option value="ME">Montenegro</option><option value="MG">Madagascar</option><option value="MH">Marshall Islands</option><option value="MK">Macedonia</option><option value="ML">Mali</option><option value="MM">Myanmar</option><option value="MN">Mongolia</option><option value="MO">Macao</option><option value="MP">Northern Mariana Islands</option><option value="MQ">Martinique</option><option value="MR">Mauritania</option><option value="MS">Montserrat</option><option value="MT">Malta</option><option value="MU">Mauritius</option><option value="MV">Maldives</option><option value="MW">Malawi</option><option value="MX">Mexico</option><option value="MY">Malaysia</option><option value="MZ">Mozambique</option><option value="NA">Namibia</option><option value="NC">New Caledonia</option><option value="NE">Niger</option><option value="NF">Norfolk Island</option><option value="NG">Nigeria</option><option value="NI">Nicaragua</option><option value="NL">Netherlands</option><option value="NO">Norway</option><option value="NP">Nepal</option><option value="NR">Nauru</option><option value="NU">Niue</option><option value="NZ">New Zealand</option><option value="OM">Oman</option><option value="PA">Panama</option><option value="PE">Peru</option><option value="PF">French Polynesia</option><option value="PG">Papua New Guinea</option><option value="PH">Philippines</option><option value="PK">Pakistan</option><option value="PL">Poland</option><option value="PM">Saint Pierre and Miquelon</option><option value="PN">Pitcairn</option><option value="PR">Puerto Rico</option><option value="PS">Palestine</option><option value="PT">Portugal</option><option value="PW">Palau</option><option value="PY">Paraguay</option><option value="QA">Qatar</option><option value="RO">Romania</option><option value="RS">Serbia</option><option value="RU">Russian Federation</option><option value="RW">Rwanda</option><option value="SA">Saudi Arabia</option><option value="SB">Solomon Islands</option><option value="SC">Seychelles</option><option value="SD">Sudan</option><option value="SE">Sweden</option><option value="SG">Singapore</option><option value="SH">Saint Helena</option><option value="SI">Slovenia</option><option value="SJ">Svalbard and Jan Mayen</option><option value="SK">Slovakia</option><option value="SL">Sierra Leone</option><option value="SM">San Marino</option><option value="SN">Senegal</option><option value="SO">Somalia</option><option value="SR">Suriname</option><option value="SS">South Sudan</option><option value="ST">Sao Tome and Principe</option><option value="SV">El Salvador</option><option value="SX">Sint Maarten (Dutch part)</option><option value="SY">Syrian Arab Republic</option><option value="SZ">Swaziland</option><option value="TC">Turks and Caicos Islands</option><option value="TD">Chad</option><option value="TG">Togo</option><option value="TH">Thailand</option><option value="TJ">Tajikistan</option><option value="TK">Tokelau</option><option value="TL">Timor-Leste</option><option value="TM">Turkmenistan</option><option value="TN">Tunisia</option><option value="TO">Tonga</option><option value="TR">Turkey</option><option value="TT">Trinidad and Tobago</option><option value="TV">Tuvalu</option><option value="TW">Taiwan</option><option value="TZ">Tanzania</option><option value="UA">Ukraine</option><option value="UG">Uganda</option><option value="AE">United Arab Emirates</option><option value="US">United States</option><option value="UY">Uruguay</option><option value="UZ">Uzbekistan</option><option value="VA">Holy See (Vatican City State)</option><option value="VC">Saint Vincent and the Grenadines</option><option value="VE">Venezuela</option><option value="VG">Virgin Islands</option><option value="VI">Virgin Islands</option><option value="VN">Viet Nam</option><option value="VU">Vanuatu</option><option value="WF">Wallis and Futuna</option><option value="WS">Samoa</option><option value="YE">Yemen</option><option value="YT">Mayotte</option><option value="ZA">South Africa</option><option value="ZM">Zambia</option><option value="ZW">Zimbabwe</option>
+<option value="" class="search-box">Select a country...</option>
+<option value="AD" class="search-box">Andorra</option><option value="AF">Afghanistan</option><option value="AG">Antigua and Barbuda</option><option value="AI">Anguilla</option><option value="AL">Albania</option><option value="AM">Armenia</option><option value="AO">Angola</option><option value="AQ">Antarctica</option><option value="AR">Argentina</option><option value="AS">American Samoa</option><option value="AT">Austria</option><option value="AU">Australia</option><option value="AW">Aruba</option><option value="AZ">Azerbaijan</option><option value="BA">Bosnia and Herzegovina</option><option value="BB">Barbados</option><option value="BD">Bangladesh</option><option value="BE">Belgium</option><option value="BF">Burkina Faso</option><option value="BG">Bulgaria</option><option value="BH">Bahrain</option><option value="BI">Burundi</option><option value="BJ">Benin</option><option value="BM">Bermuda</option><option value="BN">Brunei Darussalam</option><option value="BO">Bolivia</option><option value="BQ">Bonaire</option><option value="BR">Brazil</option><option value="BS">Bahamas</option><option value="BT">Bhutan</option><option value="BW">Botswana</option><option value="BY">Belarus</option><option value="BZ">Belize</option><option value="CA">Canada</option><option value="CC">Cocos (Keeling) Islands</option><option value="CD">Congo</option><option value="CF">Central African Republic</option><option value="CG">Congo</option><option value="CH">Switzerland</option><option value="CK">Cook Islands</option><option value="CL">Chile</option><option value="CM">Cameroon</option><option value="CN">China</option><option value="CO">Colombia</option><option value="CR">Costa Rica</option><option value="CU">Cuba</option><option value="CV">Cape Verde</option><option value="CX">Christmas Island</option><option value="CY">Cyprus</option><option value="CZ">Czech Republic</option><option value="DE">Germany</option><option value="DJ">Djibouti</option><option value="DK">Denmark</option><option value="DM">Dominica</option><option value="DO">Dominican Republic</option><option value="DZ">Algeria</option><option value="EC">Ecuador</option><option value="EE">Estonia</option><option value="EG">Egypt</option><option value="EH">Western Sahara</option><option value="ER">Eritrea</option><option value="ES">Spain</option><option value="ET">Ethiopia</option><option value="FI">Finland</option><option value="FJ">Fiji</option><option value="FK">Falkland Islands (Malvinas)</option><option value="FM">Micronesia</option><option value="FO">Faroe Islands</option><option value="FR">France</option><option value="GA">Gabon</option><option value="GB">United Kingdom</option><option value="GD">Grenada</option><option value="GE">Georgia</option><option value="GF">French Guiana</option><option value="GG">Guernsey</option><option value="GH">Ghana</option><option value="GI">Gibraltar</option><option value="GL">Greenland</option><option value="GM">Gambia</option><option value="GN">Guinea</option><option value="GP">Guadeloupe</option><option value="GQ">Equatorial Guinea</option><option value="GR">Greece</option><option value="GT">Guatemala</option><option value="GU">Guam</option><option value="GW">Guinea-Bissau</option><option value="GY">Guyana</option><option value="HK">Hong Kong</option><option value="HN">Honduras</option><option value="HR">Croatia</option><option value="HT">Haiti</option><option value="HU">Hungary</option><option value="ID">Indonesia</option><option value="IE">Ireland</option><option value="IL">Israel</option><option value="IM">Isle of Man</option><option value="IN">India</option><option value="IQ">Iraq</option><option value="IR">Iran</option><option value="IS">Iceland</option><option value="IT">Italy</option><option value="JE">Jersey</option><option value="JM">Jamaica</option><option value="JO">Jordan</option><option value="JP">Japan</option><option value="KE">Kenya</option><option value="KG">Kyrgyzstan</option><option value="KH">Cambodia</option><option value="KI">Kiribati</option><option value="KM">Comoros</option><option value="KN">Saint Kitts and Nevis</option><option value="KP">North Korea</option><option value="KR">South Korea</option><option value="KW">Kuwait</option><option value="KY">Cayman Islands</option><option value="KZ">Kazakhstan</option><option value="LA">Lao People's Democratic Republic</option><option value="LB">Lebanon</option><option value="LC">Saint Lucia</option><option value="LI">Liechtenstein</option><option value="LK">Sri Lanka</option><option value="LR">Liberia</option><option value="LS">Lesotho</option><option value="LT">Lithuania</option><option value="LU">Luxembourg</option><option value="LV">Latvia</option><option value="LY">Libya</option><option value="MA">Morocco</option><option value="MC">Monaco</option><option value="MD">Moldova</option><option value="ME">Montenegro</option><option value="MG">Madagascar</option><option value="MH">Marshall Islands</option><option value="MK">Macedonia</option><option value="ML">Mali</option><option value="MM">Myanmar</option><option value="MN">Mongolia</option><option value="MO">Macao</option><option value="MP">Northern Mariana Islands</option><option value="MQ">Martinique</option><option value="MR">Mauritania</option><option value="MS">Montserrat</option><option value="MT">Malta</option><option value="MU">Mauritius</option><option value="MV">Maldives</option><option value="MW">Malawi</option><option value="MX">Mexico</option><option value="MY">Malaysia</option><option value="MZ">Mozambique</option><option value="NA">Namibia</option><option value="NC">New Caledonia</option><option value="NE">Niger</option><option value="NF">Norfolk Island</option><option value="NG">Nigeria</option><option value="NI">Nicaragua</option><option value="NL">Netherlands</option><option value="NO">Norway</option><option value="NP">Nepal</option><option value="NR">Nauru</option><option value="NU">Niue</option><option value="NZ">New Zealand</option><option value="OM">Oman</option><option value="PA">Panama</option><option value="PE">Peru</option><option value="PF">French Polynesia</option><option value="PG">Papua New Guinea</option><option value="PH">Philippines</option><option value="PK">Pakistan</option><option value="PL">Poland</option><option value="PM">Saint Pierre and Miquelon</option><option value="PN">Pitcairn</option><option value="PR">Puerto Rico</option><option value="PS">Palestine</option><option value="PT">Portugal</option><option value="PW">Palau</option><option value="PY">Paraguay</option><option value="QA">Qatar</option><option value="RO">Romania</option><option value="RS">Serbia</option><option value="RU">Russian Federation</option><option value="RW">Rwanda</option><option value="SA">Saudi Arabia</option><option value="SB">Solomon Islands</option><option value="SC">Seychelles</option><option value="SD">Sudan</option><option value="SE">Sweden</option><option value="SG">Singapore</option><option value="SH">Saint Helena</option><option value="SI">Slovenia</option><option value="SJ">Svalbard and Jan Mayen</option><option value="SK">Slovakia</option><option value="SL">Sierra Leone</option><option value="SM">San Marino</option><option value="SN">Senegal</option><option value="SO">Somalia</option><option value="SR">Suriname</option><option value="SS">South Sudan</option><option value="ST">Sao Tome and Principe</option><option value="SV">El Salvador</option><option value="SX">Sint Maarten (Dutch part)</option><option value="SY">Syrian Arab Republic</option><option value="SZ">Swaziland</option><option value="TC">Turks and Caicos Islands</option><option value="TD">Chad</option><option value="TG">Togo</option><option value="TH">Thailand</option><option value="TJ">Tajikistan</option><option value="TK">Tokelau</option><option value="TL">Timor-Leste</option><option value="TM">Turkmenistan</option><option value="TN">Tunisia</option><option value="TO">Tonga</option><option value="TR">Turkey</option><option value="TT">Trinidad and Tobago</option><option value="TV">Tuvalu</option><option value="TW">Taiwan</option><option value="TZ">Tanzania</option><option value="UA">Ukraine</option><option value="UG">Uganda</option><option value="AE">United Arab Emirates</option><option value="US">United States</option><option value="UY">Uruguay</option><option value="UZ">Uzbekistan</option><option value="VA">Holy See (Vatican City State)</option><option value="VC">Saint Vincent and the Grenadines</option><option value="VE">Venezuela</option><option value="VG">Virgin Islands</option><option value="VI">Virgin Islands</option><option value="VN">Viet Nam</option><option value="VU">Vanuatu</option><option value="WF">Wallis and Futuna</option><option value="WS">Samoa</option><option value="YE">Yemen</option><option value="YT">Mayotte</option><option value="ZA">South Africa</option><option value="ZM">Zambia</option><option value="ZW">Zimbabwe</option>
             </select>
-        </div>
-        <div id="div-url" class="form-text2 d-none">
+          </div>
+          <div id="div-url" class="form-text2 d-none">
             <select id="select-url"class="search-box" placeholder="Search by url..."></select>
+          </div>
+        </div><!--/col-md-11-->
+        <div class="col-md-1">
+          <span id="loading_spinner"></span>
         </div>
-        <div class="col-sm-offset-4 col-lg-offset-4"></div>
-    </div>
-    <div class="col-sm-offset-2 col-sm-3  country-affix d-none" style="margin-top: -150px;">
-        <div data-spy="affix"  class="affix-class affix" style="position: fixed; right: 0">
-            <ul class="affix-div">
-                <li id="summary" class="count-square ucase summary active"><a href="#summary-box" > quick summary</a></li>
-                <li id="blocked-websites" class="count-square ucase summary"><a href="#blocked-box" > Blocked websites by category</a></li>
-                <li id="news" class="count-square ucase blocked-websites" ><a href="#news-box"> NEWs</a></li>
-                <li id="highest-rank" class="count-square ucase highest-rank"><a href="#bolcked-web-box" >Blocked websites with highest global Rank</a></li>
-                <li id="blocked-category" class="count-square ucase blocked-category"><a href="#blocked-category-box" > Open vs Blocked by category</a></li>
-                <li id="general-info" class="count-square ucase general-info"><a href="#info-box" > General Information</a></li>
-            </ul>
-        </div>
-    </div>
-</div>
-<div class="row content">
-    <div class="col-sm-1 col-sm-2"style="margin-top:-55px">
-        <div class="col-md-1" style="padding-top:20px;">
-            <span id="loading_spinner"></span>
-        </div>
-    </div>
-    <div class="col-sm-offset-9"></div>
-</div>
+      </div><!--/row-->
 
-<div class="content">
-    <div class="row country d-all">
-        <div class="col-sm-8 " style="margin-top:-65px; margin-left: 10px">
-            <div class="title ucase m-top">or find it on the map</div>
-            <div><img src="img/map.png" class="img-responsive m-top"></div>
-        </div>
-        <div class="col-sm-offset-4"></div>
-    </div>
-    <div class="row url d-none" style="margin-left: 4px; margin-top: -65px">
-        <div class="col-sm-8 col-lg-12 url">
-            <div class="title ucase m-top m-410">top websites that are blocked</div>
-            <div class="url-list">
-                <p id="fb"><a href="#fb" >http://www.Facebook.com</a><span class=" url-hover d-none"><img src="img/logo.png" class="title">See accessibility status</span></p>
-                <p><a href="#google" id="google"> http://www.google.com</a></p>
-                <p><a href="#utube" id="utube">http://www.youtube.com</a></p>
-                <p><a href="#twitter" id="twitter">http://www.twitter.com</a></p>
-                <p><a href="#wiki" id="wiki">http://Wikipedia.com</a></p>
-            </div>
-            <div class="url-search">
+      <!-- OR FIND IT ON MAP -->
+      <div class="country">
+        <div class="title ucase m-top">or find it on the map</div>
+        <div><img src="img/map.png" class="img-responsive m-top"></div>
+      </div>
+      
+      
 
+      <!--=====================PANELS====================-->
+      
+      <div class="country-display">
+        
+        <!--bulletsin v=2 [QUICK SUMMARY]-->
+        <div id="summary-box" class="portlet panel-quicksummary" style="display:none">
+          <div class="box ucase">
+            <p class="caption-title">quick summary<span class="collapse-icon"></span></p>
+            <div class="clearfix"></div>
+          </div>
+          <div class="portlet-body">
+            <div class="table grey-title">
+              <ul class="list-group" id="bulletpoints2"></ul><!-- quick summary-->
+              <table class="table-content" style="margin-left: auto; margin-right: auto">
+                <tr>
+                  <td class="box1">
+                    <img  style="text-align: center;display: inline-block" src="img/countryName-01.png" class="img-responsive">
+                    <div class="bottom-header">Official country name</div>
+                    <div class="bottom" id="quick-summary-data-0">Nil</div>
+                  </td>
+                  <td class="box2">
+                    <img  style="text-align: center;display: inline-block"src="img/blockedOrInaccessible-01.png" class="img-responsive">
+                    <div class="bottom-header">Number of blocked and inaccessible websites</div>
+                    <div class="bottom" id="quick-summary-data-1">Nil</div>
+                  </td>
+                  <td class="box3">
+                    <img  style="text-align: center;display: inline-block" src="img/inconsistentlyBlocked-02.png" class="img-responsive">
+                    <div class="bottom-header">Number of websites partially or inconsistently blocked</div>
+                    <div class="bottom" id="quick-summary-data-2">Nil</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="box4">
+                    <img  style="text-align: center;display: inline-block" src="img/available-01.png" class="img-responsive">
+                    <div class="bottom-header">Number of open websites</div>
+                    <div class="bottom" id="quick-summary-data-3">Nil</div>
+                  </td>
+                  <td class="box5">
+                    <img  style="text-align: center;display: inline-block" src="img/reporters-01.png" class="img-responsive">
+                    <div class="bottom-header">Number of reporters from this country</div>
+                    <div class="bottom" id="quick-summary-data-4">Nil</div>
 
-            </div>
-        </div>
-        <div class="col-sm-offset-4"></div>
-    </div>
-</div>
+                    <!-- Modal -->
+                    <div class=" link" style="margin-top: 5px;font-size:15px;text-decoration: none " data-toggle="modal" data-target="#myModal">Who are reporters?</div>
 
-
-<!--=====================/Radio Buttons====================-->
-
-<!-- Country Panels
-===========================================================-->
-<div class="row content ">
-    <div class="col-sm-8 no-count-display">
-        <div class="country-display">
-            <div  class="country-panels d-none">
-                <!-- Graphs
-                =========================================================-->
-                <!--bulletsin v=2-->
-                <div id="summary-box" class="portlet">
-                    <div class="box ucase">
-                        <p class="caption-title">quick summary<span class="collapse-icon"></span></p>
-                        <div class="clearfix"></div>
-                    </div>
-                    <div class="portlet-body">
-                        <div class="table grey-title">
-                            <ul class="list-group" id="bulletpoints2"></ul><!-- quick summary-->
-                            <table class="table-content" style="margin-left: auto; margin-right: auto">
-                                <tr>
-                                    <td class="box1"><img  style="text-align: center;display: inline-block" src="img/countryName-01.png" class="img-responsive"><div class="bottom-header">Official country name</div><div class="bottom">Republic of<br>
-                                        Uzbekistan</div></td>
-                                    <td class="box2"><img  style="text-align: center;display: inline-block"src="img/blockedOrInaccessible-01.png" class="img-responsive"><div class="bottom-header">Number of blocked and
-                                        inaccessible websites</div><div class="bottom">120</div></td>
-                                    <td class="box3"><img  style="text-align: center;display: inline-block" src="img/inconsistentlyBlocked-02.png" class="img-responsive"><div class="bottom-header">Number of websites partially
-                                        or inconsistently blocked</div><div class="bottom">62</div></td>
-                                </tr>
-                                <tr>
-                                    <td class="box4"><img  style="text-align: center;display: inline-block" src="img/available-01.png" class="img-responsive"><div class="bottom-header">Number of open websites</div><div class="bottom">2876</div></td>
-                                    <td class="box5"><img  style="text-align: center;display: inline-block" src="img/reporters-01.png" class="img-responsive"><div class="bottom-header">Number of reporters from
-                                        this country</div><div class="bottom">2</div>
-                                        <div>
-                                            <!-- Modal -->
-                                            <div class=" link" style="margin-top: 5px;font-size:15px;text-decoration: none " data-toggle="modal" data-target="#myModal">
-                                                Who are reporters?
-                                            </div>
-
-                                            <!-- Modal -->
-                                            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                                <div class="modal-dialog">
-                                                    <div class="modal-content">
-                                                        <div class="modal-header" style="background-color: #b9ccd0; color: #ffffff">
-                                                            <h4 class="modal-title" id="myModalLabel" >Who are reporters?</h4>
-                                                        </div>
-                                                        <div class="modal-body">
-                                                            Reporters are volunteers who agreed to get our Chrome
-                                                            plugin ran our app and thereby reported on the internet
-                                                            situation in their countries. If you want to become a reporter
-                                                            too, please visit our Get Involved page get Chrome plugin
-                                                            or run our app.
-                                                        </div>
-                                                        <div class="btn-group">
-                                                            <button type="button" class="btn get-chrome-btn ucase"style=" margin:10px;font-size:17px"> Get CHrome PLUGIN</button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="box6"><img  style="text-align: center;display: inline-block" src="img/lastReport-01.png" class="img-responsive"><div class="bottom-header">Last report from the country</div><div class="bottom">3 months ago</div></td>
-                                </tr>
-                            </table>
+                    <!-- Modal -->
+                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header" style="background-color: #b9ccd0; color: #ffffff">
+                            <h4 class="modal-title" id="myModalLabel" >Who are reporters?</h4>
+                          </div>
+                          <div class="modal-body">
+                            Reporters are volunteers who agreed to get our Chrome
+                            plugin ran our app and thereby reported on the internet
+                            situation in their countries. If you want to become a reporter
+                            too, please visit our Get Involved page get Chrome plugin
+                            or run our app.
+                          </div>
+                          <div class="btn-group">
+                            <button type="button" class="btn get-chrome-btn ucase"style=" margin:10px;font-size:17px"> Get CHrome PLUGIN</button>
+                          </div>
                         </div>
-                    </div>
-                </div>
-                <div id="blocked-box" class="portlet panel-donutgraph">
-                    <div class="box ucase" >
-                        <p class="caption-title">Blocked Websites by category<span class="collapse-icon"></span></p>
-                        <div class="clearfix"></div>
-                    </div>
-                    <div class="portlet-body" id='donutgraph'>
-                        <svg></svg>
-                    </div>
-                </div>
-                <div id="news-box" class="portlet">
-                    <div class="box ucase m-top" >
-                        <p class="caption-title">News<span class="collapse-icon"></span></p>
-                        <div class="clearfix"></div>
-                    </div>
-                    <div class="portlet-body">
-                        <div class="sub-title m-top">
-                        <ul class="list-group" id="bulletpoints5"></ul><!--NEWS-->
-                            <ul>
-                                <li class="head "><span class="fa fa-chevron-right"></span> <span style="font-family: 'bebas_neueregular'; font-size: 21px "> Tashkent firm seeks to halt Internet censorship<br></span> Boston firm seeks to halt Internet censorship ... Users would receive a link to
-                                    “mirror” sites, copies of websites that governments are unable to block or
-                                    track. “What this could result in is a web that is essentially impossible to
-                                    censor,” ...Iraqis use Firechat messaging app to overcome net block</li>
-                                <li class="head "><span class="fa fa-chevron-right"></span> <span style="font-family: 'bebas_neueregular'; font-size: 21px"> US Religious Groups Concerned About Internet Censorship</span> Christianity has been growing rapidly in China, he says, and censorship ...
-                                    If the Internet block could be released, it would be very, very helpful for ... </li>
-                                <li class="head "><span class="fa fa-chevron-right"></span><span style="font-family: 'bebas_neueregular'; font-size: 21px "> Connecticut Schools Censors The Vatican, NRA, Republican, And Christian
-    Websites As ‘Hate Speech’</span> Christianity has been growing rapidly in China, he says, and censorship ...
-                                    If the Internet block could be released, it would be very, very helpful for ... </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div id="bolcked-web-box" class="portlet panel-bulletpoints3">
-                    <div class="box ucase" >
-                        <p class="caption-title">Blocked Websites with highest global rank<span class="collapse-icon"></span></p>
-                        <div class="clearfix"></div>
-                    </div>
-                    <div class="portlet-body">                        
-                        <ul class="m-top url-list grey-title" id="bulletpoints3" style="font-size: 21px; list-style-type: none; margin-left: -25px"><!--Blocked Websites with highest global rank-->
-                        
-                        </ul>
-                    </div>
-                </div>
-
-
-                <div id="blocked-category-box" class="portlet panel-stackedgraph">
-                    <div class="box ucase m-top" >
-                        <p class="caption-title">Open vs Blocked by category<span class="collapse-icon"></span></p>
-                        <div class="clearfix"></div>
-                    </div>
-                    <div class="portlet-body" id='stackedgraph'>
-                        <svg></svg>
-                    </div>
-                </div>
-                <div id="info-box" class="portlet panel-bulletpoints1">
-                    <div class="box ucase" >
-                        <p class="caption-title">General Information<span class="collapse-icon"></span></p>
-                        <div class="clearfix"></div>
-                    </div>
-                    <ul style="color:#000" id="bulletpoints1"></ul><!-- general information-->
-                    <div class="portlet-body">                     
-                        <div class="row circle-align">                        
-                            <div class="col-sm-3 col-md-2 vision-circles img-responsive">
-                                <img src="img/WebCountryCode.png" class="circles-img">
-                                <h2 class="circles-text circle-top"> Web country code</h2>
-                                <h3 class="circles-text circle-bottom">.UZ</h3></li>
-                            </div>
-                            <div class="col-sm-3 col-md-2 vision-circles img-responsive">
-                                <img src="img/population-01.png" class="circles-img">
-                                <h2 class="circles-text circle-top"> Country population</h2>
-                                <h3 class="circles-text circle-bottom">    28.4<br>
-                                    million</h3></li>
-                            </div>
-                            <div class="col-sm-3 col-md-2 vision-circles img-responsive">
-                                <img src="img/InternetAccess.png" class="circles-img">
-                                <h2 class="circles-text circle-top">Population with<br>
-                                    internet access</h2>
-                                <h3 class="circles-text circle-bottom">10.87<br>
-                                    million</h3></li>
-                            </div>
-                            <div class="col-sm-3 col-md-2 vision-circles img-responsive">
-                                <img src="img/InternetSpeed-02.png" class="circles-img">
-                                <h2 class="circles-text circle-top"> Country median age</h2>
-                                <h3 class="circles-text circle-bottom">24.7</h3></li>
-                            </div>
-                            <div class="col-sm-3 col-md-2 vision-circles img-responsive">
-                                <img src="img/CountryMedianAge-01.png" class="circles-img">
-                                <h2 class="circles-text circle-top"> Average internet speed</h2>
-                                <h3 class="circles-text circle-bottom">download: 1.9 Mb/s<br>Upload: 0.9 Mb/s</h3></li>
-                            </div>
-                            <div class="col-sm-3 col-md-2 vision-circles img-responsive">
-                                <img src="img/FreedomIndex.png" class="circles-img">
-                                <h2 class="circles-text circle-top"> Press Freedom Index<br>
-                                    (Reporters Without Borders)</h2>
-                                <h3 class="circles-text circle-bottom">166</h3></li>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
+                      </div>
+                    </div><!--/modal-->
+                    
+                  </td>
+                  <td class="box6">
+                    <img  style="text-align: center;display: inline-block" src="img/lastReport-01.png" class="img-responsive">
+                    <div class="bottom-header">Last report from the country</div>
+                    <div class="bottom" id="quick-summary-data-5">Nil</div>
+                  </td>
+                </tr>
+              </table>
             </div>
+          </div><!-- /portlet-body -->
+        </div><!-- /quick summary -->
+
+        <!--DONUT GRAPH [Blocked Websites by category]-->
+        <div id="blocked-box" class="portlet panel-donutgraph" style="display:none">
+          <div class="box ucase" >
+            <p class="caption-title">Blocked Websites by category<span class="collapse-icon"></span></p>
+            <div class="clearfix"></div>
+          </div>
+          <div class="portlet-body" id='donutgraph'><svg></svg></div>
         </div>
 
-        <!--/bulletins-->
+        <!--NEWS bullet v=5 -->
+        <div id="news-box" class="portlet panel-bulletpoints5" style="display:none">
+          <div class="box ucase m-top" >
+            <p class="caption-title">News<span class="collapse-icon"></span></p>
+            <div class="clearfix"></div>
+          </div>
+          <div class="portlet-body">
+            <div class="sub-title m-top">
+              <ul class="list-group" id="bulletpoints5"></ul><!--NEWS-->
+              <ul>
+                <li class="head "><span class="fa fa-chevron-right"></span> <span style="font-family: 'bebas_neueregular'; font-size: 21px "> Tashkent firm seeks to halt Internet censorship<br></span> Boston firm seeks to halt Internet censorship ... Users would receive a link to
+                    “mirror” sites, copies of websites that governments are unable to block or
+                    track. “What this could result in is a web that is essentially impossible to
+                    censor,” ...Iraqis use Firechat messaging app to overcome net block</li>
+                <li class="head "><span class="fa fa-chevron-right"></span> <span style="font-family: 'bebas_neueregular'; font-size: 21px"> US Religious Groups Concerned About Internet Censorship</span> Christianity has been growing rapidly in China, he says, and censorship ...
+                    If the Internet block could be released, it would be very, very helpful for ... </li>
+                <li class="head "><span class="fa fa-chevron-right"></span><span style="font-family: 'bebas_neueregular'; font-size: 21px "> Connecticut Schools Censors The Vatican, NRA, Republican, And Christian
+Websites As ‘Hate Speech’</span> Christianity has been growing rapidly in China, he says, and censorship ...
+                    If the Internet block could be released, it would be very, very helpful for ... </li>
+              </ul>
+            </div>
+          </div>
+        </div>
 
-    </div><!--/.country-panes-->
-    <div class="url-panels" style="padding-top:20px;">
+        <!--bullet v=3 [Blocked Websites with highest global rank] -->
+        <div id="bolcked-web-box" class="portlet panel-bulletpoints3" style="display:none">
+          <div class="box ucase" >
+            <p class="caption-title">Blocked Websites with highest global rank<span class="collapse-icon"></span></p>
+            <div class="clearfix"></div>
+          </div>
+          <div class="portlet-body">                        
+            <ul class="m-top url-list grey-title" id="bulletpoints3" style="font-size: 21px; list-style-type: none; margin-left: -25px"><!--Blocked Websites with highest global rank--></ul>
+          </div>
+        </div>
+
+        <!--STACKED GRAPH [Open vs Blocked by category]-->
+        <div id="blocked-category-box" class="portlet panel-stackedgraph" style="display:none">
+          <div class="box ucase m-top" >
+            <p class="caption-title">Open vs Blocked by category<span class="collapse-icon"></span></p>
+            <div class="clearfix"></div>
+          </div>
+          <div class="portlet-body" id='stackedgraph'><svg></svg></div>
+        </div>
+                
+        <!--bullet v=1 [General Information] -->
+        <div id="info-box" class="portlet panel-generalinfo" style="display:none">
+          <div class="box ucase" >
+            <p class="caption-title">General Information<span class="collapse-icon"></span></p>
+            <div class="clearfix"></div>
+          </div>
+
+          
+          <div class="portlet-body">                     
+            <!-- general information-->
+            <table class="table-content" style="margin-left: auto; margin-right: auto">
+              <tr>
+                <td class="box1">
+                  <img id="generalinfo-data-img0" style="text-align: center;display: inline-block" src="http://blockedonline.github.io/final/img/WebCountryCode.png" class="img-responsive">
+                  <div class="bottom-header" id="generalinfo-key0">Internet Code:</div>
+                  <div class="bottom" id="generalinfo-data-0">Nil</div>
+                </td>
+                <td class="box2">
+                  <img id="generalinfo-data-img1" style="text-align: center;display: inline-block"src="http://blockedonline.github.io/final/img/population-01.png" class="img-responsive">
+                  <div class="bottom-header" id="generalinfo-key1">Country population:</div>
+                  <div class="bottom" id="generalinfo-data-1">Nil</div>
+                </td>
+                <td class="box3">
+                  <img id="generalinfo-data-img2" style="text-align: center;display: inline-block" src="http://blockedonline.github.io/final/img/InternetAccess.png" class="img-responsive">
+                  <div class="bottom-header" id="generalinfo-key2">Population with internet access:</div>
+                  <div class="bottom" id="generalinfo-data-2">Nil</div>
+                </td>
+              </tr>
+              <tr>
+                <td class="box4">
+                  <img id="generalinfo-data-img3" style="text-align: center;display: inline-block" src="http://blockedonline.github.io/final/img/InternetSpeed-02.png" class="img-responsive">
+                  <div class="bottom-header" id="generalinfo-key3">Country median age:</div>
+                  <div class="bottom" id="generalinfo-data-3">Nil</div>
+                </td>
+                <td class="box5">
+                  <img id="generalinfo-data-img4" style="text-align: center;display: inline-block" src="http://blockedonline.github.io/final/img/CountryMedianAge-01.png" class="img-responsive">
+                  <div class="bottom-header" id="generalinfo-key4">Average Internet Speed:</div>
+                  <div class="bottom" id="generalinfo-data-4">Nil</div>
+                </td>
+                <td class="box6">
+                  <img  style="text-align: center;display: inline-block" src="http://blockedonline.github.io/final/img/FreedomIndex.png" class="img-responsive">
+                  <div class="bottom-header">Press Freedom Index according to Reporters Without Borders:</div>
+                  <div class="bottom" id="generalinfo-data-5">Nil</div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div><!--/.country-display-->
+
+      <div class="url-panels" style="padding-top:20px;">
+        <!--
+        <div class="title ucase m-top m-410">top websites that are blocked</div>
+          <div class="url-list">
+            <p id="fb"><a href="#fb" >http://www.Facebook.com</a><span class=" url-hover d-none"><img src="img/logo.png" class="title">See accessibility status</span></p>
+            <p><a href="#google" id="google"> http://www.google.com</a></p>
+            <p><a href="#utube" id="utube">http://www.youtube.com</a></p>
+            <p><a href="#twitter" id="twitter">http://www.twitter.com</a></p>
+            <p><a href="#wiki" id="wiki">http://Wikipedia.com</a></p>
+          </div>
+          <div class="url-search"></div>
+        </div>-->
         <div id="bulletpoints0-container" class="bulletpoints-container"></div>
         <div id="bulletpoints1-container" class="bulletpoints-container"></div>
         <div id="bulletpoints2-container" class="bulletpoints-container"></div>
       </div>
-</div>
-
-</div>
-<div class="col-sm-offset-4"></div>
-<footer id="footer">
+    </div><!--/col-md-9-->
+  </div><!--/row--> 
+  <footer id="footer">
     <div style="margin-top: 106px"></div>
     <div class="container text-center">
-        <p><small> * BlockedOnline is in beta mode at this time. Our servers are being tested to identify needed modifications. The data might not reflect the truth.</small></p>
+      <p><small> * BlockedOnline is in beta mode at this time. Our servers are being tested to identify needed modifications. The data might not reflect the truth.</small></p>
     </div>
-
-</footer>
-</div>
-
-
-    
-</div><!--/col-md-8 col-md-offset-2-->
-
-
-
-
+  </footer>  
 </div><!-- container-->
-
-
-
 
 <!-- AddThis Smart Layers BEGIN -->
 <!-- Go to http://www.addthis.com/get/smart-layers to customize -->
@@ -453,7 +448,6 @@
 <script src="./datamaps/datamaps.world.min.js"></script>
 <script src="js/custom.js"></script>
 <script type="text/javascript">
-
     //=======================================
     // ****************SPINNER **************
     //=======================================
@@ -464,7 +458,6 @@
         ajaxStop: function() {  spinner.stop(); }
     });
 </script>
-
 <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -534,9 +527,6 @@
             el.slideDown(500);
         }
     });
-
 </script>
-
-
-
-</body></html>
+</body>
+</html>
