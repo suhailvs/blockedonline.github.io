@@ -88,8 +88,8 @@ function drawCountryBulletin(data,box,box_name){
     });
   } else if (box == 'news') {
     data.data.forEach(function(news) {
-      str_html += '<li class="list-group-item"><strong><a href="' + news.link + '" target="_blank">' + news.news_title + 
-      '</a></strong><br>'+ news.description + '</li>';
+      str_html += '<li class="head"><span class="fa fa-chevron-right"></span> <span style="font-family: bebas_neueregular; font-size: 21px ">' + news.news_title + 
+      '</span><div style="padding-left:14px">'+ news.description + '</div></li>';
     });
   }
   $("#"+box_name).html(str_html);
@@ -207,13 +207,12 @@ function DoAjax_Url(urlname,opt){
         '</div>'+
         '<div class="portlet-body" id="'+cname+'"></div>'+
       '</div>';
-
       
       $('#bulletpoints' + opt + '-container').empty().append(html_panel_bulletpoints).css('opacity', 1);
       if (datas.v == '1'){
         createMap(cname,datas.data);
       }else if (datas.v == '0'){
-        var str_list='<ul>'; 
+        var str_list='<ul class="m-top url-list grey-title" style="font-size: 21px; list-style-type: none; margin-left: -25px">'; 
         jQuery.each(datas.bullets, function(index, item) {
           str_list+= "<li>"+item+"</li>"      
         });
