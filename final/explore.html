@@ -178,6 +178,7 @@
                     </div>
                     <div class="portlet-body">
                         <div class="table grey-title">
+                            <ul class="list-group" id="bulletpoints2"></ul><!-- quick summary-->
                             <table class="table-content" style="margin-left: auto; margin-right: auto">
                                 <tr>
                                     <td class="box1"><img  style="text-align: center;display: inline-block" src="img/countryName-01.png" class="img-responsive"><div class="bottom-header">Official country name</div><div class="bottom">Republic of<br>
@@ -241,6 +242,7 @@
                     </div>
                     <div class="portlet-body">
                         <div class="sub-title m-top">
+                        <ul class="list-group" id="bulletpoints5"></ul><!--NEWS-->
                             <ul>
                                 <li class="head "><span class="fa fa-chevron-right"></span> <span style="font-family: 'bebas_neueregular'; font-size: 21px "> Tashkent firm seeks to halt Internet censorship<br></span> Boston firm seeks to halt Internet censorship ... Users would receive a link to
                                     “mirror” sites, copies of websites that governments are unable to block or
@@ -255,23 +257,14 @@
                         </div>
                     </div>
                 </div>
-                <div id="bolcked-web-box" class="portlet">
+                <div id="bolcked-web-box" class="portlet panel-bulletpoints3">
                     <div class="box ucase" >
                         <p class="caption-title">Blocked Websites with highest global rank<span class="collapse-icon"></span></p>
                         <div class="clearfix"></div>
                     </div>
-                    <div class="portlet-body">
-                        <ul class="m-top url-list grey-title" style="font-size: 21px; list-style-type: none; margin-left: -25px">
-                            <li>http://www.scribd.com</li>
-                            <li>http://www.hardsextube.com</li>
-                            <li>http://issuu.com</li>
-                            <li>http://adultfriendfinder.com</li>
-                            <li>http://www.porn.com</li>
-                            <li>http://www.sex.com</li>
-                            <li>http://www.tigerdirect.com</li>
-                            <li>http://hellporno.com</li>
-                            <li>http://www.fling.com</li>
-                            <li>http://www.jw.org</li>
+                    <div class="portlet-body">                        
+                        <ul class="m-top url-list grey-title" id="bulletpoints3" style="font-size: 21px; list-style-type: none; margin-left: -25px"><!--Blocked Websites with highest global rank-->
+                        
                         </ul>
                     </div>
                 </div>
@@ -291,9 +284,9 @@
                         <p class="caption-title">General Information<span class="collapse-icon"></span></p>
                         <div class="clearfix"></div>
                     </div>
-                    <div class="portlet-body">
-                     <ul class="list-group" id="bulletpoints1"></ul>
-                        <div class="row circle-align">
+                    <ul style="color:#000" id="bulletpoints1"></ul><!-- general information-->
+                    <div class="portlet-body">                     
+                        <div class="row circle-align">                        
                             <div class="col-sm-3 col-md-2 vision-circles img-responsive">
                                 <img src="img/WebCountryCode.png" class="circles-img">
                                 <h2 class="circles-text circle-top"> Web country code</h2>
@@ -338,6 +331,11 @@
         <!--/bulletins-->
 
     </div><!--/.country-panes-->
+    <div class="url-panels" style="padding-top:20px;">
+        <div id="bulletpoints0-container" class="bulletpoints-container"></div>
+        <div id="bulletpoints1-container" class="bulletpoints-container"></div>
+        <div id="bulletpoints2-container" class="bulletpoints-container"></div>
+      </div>
 </div>
 
 </div>
@@ -352,13 +350,7 @@
 </div>
 
 
-<div class="url-panels" style="padding-top:20px;">
-
-
-
-    <div id="bulletpoints1-container" class="bulletpoints-container"></div>
-    <div id="bulletpoints2-container" class="bulletpoints-container"></div>
-</div>
+    
 </div><!--/col-md-8 col-md-offset-2-->
 
 
@@ -496,6 +488,7 @@
         $('.form-text1').removeClass('d-none');
         $('.form-text2').addClass('d-none');
         $(this).addClass('d-all');
+        $('.bulletpoints-container').empty();
     });
     $('.selectize-control input text').on('click',function(){
         $('.affix-class').removeClass('d-none');
@@ -529,7 +522,8 @@
         $('.affix-div li').removeClass('active');
         $(this).addClass('active');
     });
-    $('.portlet .box').click(function(e){
+    //$('.portlet .box').click(function(e){
+    $(document).on('click','.portlet .box',function(e){
         e.preventDefault();
         var el = $(this).parent(".portlet").children(".portlet-body");
         if ($(this).find('span').hasClass("collapse-icon")) {

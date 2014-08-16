@@ -29,6 +29,7 @@ var control2 = $selectize2[0].selectize;
 $('.btn-group input[type=radio]').change(function () { 
   if (this.value == 'country'){
     $('#div-url').hide();//Hide the Url selectize box
+    alert('contry');
     $('.bulletpoints-container').empty()
     control1.clear();
   }else{
@@ -83,18 +84,16 @@ function drawCountryBulletin(data,box,box_name){
   var str_html='';  
   if (box=='bullets'){
     jQuery.each(data.bullets, function(index, item) {
-      str_html+= "<li class='list-group-item'>"+item+"</li>"      
+      str_html+= "<li class='list-group-item'>"+item+"</li>"; 
     });    
   }else if (box=="websites"){
     jQuery.each(data.websites, function(index, item) {
-      str_html+= "<li class='list-group-item'>"+item+"</li>" 
+      str_html+= "<li>"+item+"</li>";
     });
   } else if (box == 'news') {
     data.data.forEach(function(news) {
-      str_html += '<ul class="list-group">' +
-            '<li class="list-group-item"><a href="' + news.link + '" target="_blank">' + news.news_title + '</a></li>' +
-            '<li class="list-group-item">' + news.description + '</li>' +
-            '</ul>';
+      str_html += '<li class="list-group-item"><strong><a href="' + news.link + '" target="_blank">' + news.news_title + 
+      '</a></strong><br>'+ news.description + '</li>';
     });
   }
   $("#"+box_name).html(str_html);
@@ -197,14 +196,15 @@ function DoAjax_Url(urlname,opt){
   .done(function(datas) {
     if (datas.status == 'OK'){      
       var html_panel_bulletpoints=''+
-      '<div class="panel panel-default panel-'+cname+'">'+
-        '<div class="panel-heading">'+
-          '<strong><span class="glyphicon glyphicon-th"></span>'+
-          '<label id="for_'+cname+'">'+datas.title+'</label></strong>'+
-          '<span class="pull-right clickable"><i class="glyphicon glyphicon-chevron-up"></i></span>'+
+      '<div class="portlet">'+
+        '<div class="box ucase">'+
+          '<p class="caption-title">'+datas.title+'<span class="collapse-icon"></span></p>'+
+          '<div class="clearfix"></div>'+
         '</div>'+
-        '<div class="panel-body" id="'+cname+'"></div>'+
+        '<div class="portlet-body" id="'+cname+'"></div>'+
       '</div>';
+
+      
       $('#bulletpoints' + opt + '-container').empty().append(html_panel_bulletpoints).css('opacity', 1);
       if (datas.v == '1'){
         createMap(cname,datas.data);
