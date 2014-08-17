@@ -22,6 +22,7 @@ var $selectize2=$('#select-url').selectize({
     });
   }
 });
+/*
 var control1 = $selectize1[0].selectize;
 var control2 = $selectize2[0].selectize;
 
@@ -29,6 +30,7 @@ var control2 = $selectize2[0].selectize;
 $('.btn-group input[type=radio]').change(function () { 
   if (this.value == 'country'){
     $('#div-url').hide();//Hide the Url selectize box
+    alert('contry');
     $('.bulletpoints-container').empty()
     control1.clear();
   }else{
@@ -37,7 +39,7 @@ $('.btn-group input[type=radio]').change(function () {
     control2.clear(); 
   }
   $('#div-' + this.value).show();
-});
+});*/
 
 //Donut graph
 function drawDonut(data){
@@ -81,20 +83,14 @@ function drawStacked(data){
 // Create Country Bulletins
 function drawCountryBulletin(data,box,box_name){
   var str_html='';  
-  if (box=='bullets'){
-    jQuery.each(data.bullets, function(index, item) {
-      str_html+= "<li class='list-group-item'>"+item+"</li>"      
-    });    
-  }else if (box=="websites"){
+  if (box=="websites"){
     jQuery.each(data.websites, function(index, item) {
-      str_html+= "<li class='list-group-item'>"+item+"</li>" 
+      str_html+= "<li>"+item+"</li>";
     });
   } else if (box == 'news') {
     data.data.forEach(function(news) {
-      str_html += '<ul class="list-group">' +
-            '<li class="list-group-item"><a href="' + news.link + '" target="_blank">' + news.news_title + '</a></li>' +
-            '<li class="list-group-item">' + news.description + '</li>' +
-            '</ul>';
+      str_html += '<li class="head"><span class="fa fa-chevron-right"></span> <span style="font-family: bebas_neueregular; font-size: 21px ">' + news.news_title + 
+      '</span><div style="padding-left:14px">'+ news.description + '</div></li>';
     });
   }
   $("#"+box_name).html(str_html);
@@ -103,7 +99,7 @@ function drawCountryBulletin(data,box,box_name){
 //Show or hide panel and also set Title of Panel
 function ShowHide_Box(datas,box_name){
   if (datas.status == 'OK'){
-    $("#for_"+box_name).text(datas.title);
+    //$("#for_"+box_name).text(datas.title);
     $(".panel-"+box_name).show();
   }else{
     $(".panel-"+box_name).hide();
@@ -121,13 +117,29 @@ function DoAjax_Country(country,opt,box){
         drawDonut(datas.data);        
       }else if (box == 'stackedgraph'){
         //draw stacked graph
-        drawStacked(datas.data);        
+        drawStacked(datas.data);
+      }else if (box =='generalinfo' || box == 'quicksummary'){
+        //jQuery.each(datas.bullets, function(index, item) {
+        //  $('#quick-summary-data-'+index).text(item['value']);            
+        //});
+     
+
+        var s='<tr>';
+        jQuery.each(datas.bullets, function(index, item) {          
+          s+='<td><img style="text-align: center;display: inline-block" src="'+item['logo']+'" class="img-responsive">'+
+            '<div class="bottom-header">'+item['key'] +'</div>'+
+            '<div class="bottom">'+item['value'] +'</div></td>';
+          if ((index+1)%3 == 0){
+            s+='</tr><tr>';
+          }
+        });
+        $('#'+box+'-data').html(s);
       }else{
         box_name='bulletpoints'+opt;
-        $('#quicklinksflag').attr('src',datas.flag);
+        //$('#quicklinksflag').attr('src',datas.flag);        
         drawCountryBulletin(datas,box,box_name);//box=bullets,websites..
         box=box_name;//bulletpoints1,bulletpoints2...etc
-      }      
+      }
     }
     ShowHide_Box(datas,box);
   });
@@ -154,8 +166,8 @@ $("#select-country").on('change',function() {
     //second ajax for stacked graph
     DoAjax_Country(cty,0,"stackedgraph");
     //ajax for bulletpoints
-    DoAjax_Country(cty,1,'bullets');  
-    DoAjax_Country(cty,2,'bullets');
+    DoAjax_Country(cty,1,'generalinfo');  
+    DoAjax_Country(cty,2,'quicksummary');
     DoAjax_Country(cty,3,'websites');
     DoAjax_Country(cty,5,'news');
   }
@@ -197,19 +209,19 @@ function DoAjax_Url(urlname,opt){
   .done(function(datas) {
     if (datas.status == 'OK'){      
       var html_panel_bulletpoints=''+
-      '<div class="panel panel-default panel-'+cname+'">'+
-        '<div class="panel-heading">'+
-          '<strong><span class="glyphicon glyphicon-th"></span>'+
-          '<label id="for_'+cname+'">'+datas.title+'</label></strong>'+
-          '<span class="pull-right clickable"><i class="glyphicon glyphicon-chevron-up"></i></span>'+
+      '<div class="portlet">'+
+        '<div class="box ucase">'+
+          '<p class="caption-title">'+datas.title+'<span class="collapse-icon"></span></p>'+
+          '<div class="clearfix"></div>'+
         '</div>'+
-        '<div class="panel-body" id="'+cname+'"></div>'+
+        '<div class="portlet-body" id="'+cname+'"></div>'+
       '</div>';
+      
       $('#bulletpoints' + opt + '-container').empty().append(html_panel_bulletpoints).css('opacity', 1);
       if (datas.v == '1'){
         createMap(cname,datas.data);
       }else if (datas.v == '0'){
-        var str_list='<ul>'; 
+        var str_list='<ul class="m-top url-list grey-title" style="font-size: 21px; list-style-type: none; margin-left: -25px">'; 
         jQuery.each(datas.bullets, function(index, item) {
           str_list+= "<li>"+item+"</li>"      
         });
