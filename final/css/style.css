@@ -160,12 +160,12 @@ a{
 .main-header{
     color: #58bdd0;
     text-transform: uppercase;
-    font-size:40px;
+    font-size:47px;
     font-family: 'bebas_neueregular';
 }
 .sub-header{
     color: #898989;
-    font-size: 16px;
+    font-size: 18px;
     font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
 }
 .map{
@@ -655,6 +655,7 @@ a{
 }
 .caption-title{
     cursor: pointer;
+    letter-spacing: .8px;
 }
 p{
     margin: 0;
