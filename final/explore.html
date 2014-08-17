@@ -35,16 +35,14 @@
       #select-country {
         display: none;
       }
-      body {
-        padding-top: 60px;
-      }
+      
     </style>
 </head>
 <body>
 <!-- 
   TOP NAVIGATION BAR
   =======================================-->
-<div class="navbar mainnav navbar-default navbar-fixed-top" role="navigation" id="mainnav">
+<div class="navbar mainnav navbar-default" role="navigation" id="mainnav">
   <div class="navbar-container">
     <div class="logo pull-left">
       <a href="#"><img class="img-responsive" src="img/header-logo.png"></a>
@@ -162,66 +160,8 @@
           <div class="portlet-body">
             <div class="table grey-title">
               <ul class="list-group" id="bulletpoints2"></ul><!-- quick summary-->
-              <table class="table-content" style="margin-left: auto; margin-right: auto">
-                <tr>
-                  <td class="box1">
-                    <img  style="text-align: center;display: inline-block" src="img/countryName-01.png" class="img-responsive">
-                    <div class="bottom-header">Official country name</div>
-                    <div class="bottom" id="quick-summary-data-0">Nil</div>
-                  </td>
-                  <td class="box2">
-                    <img  style="text-align: center;display: inline-block"src="img/blockedOrInaccessible-01.png" class="img-responsive">
-                    <div class="bottom-header">Number of blocked and inaccessible websites</div>
-                    <div class="bottom" id="quick-summary-data-1">Nil</div>
-                  </td>
-                  <td class="box3">
-                    <img  style="text-align: center;display: inline-block" src="img/inconsistentlyBlocked-02.png" class="img-responsive">
-                    <div class="bottom-header">Number of websites partially or inconsistently blocked</div>
-                    <div class="bottom" id="quick-summary-data-2">Nil</div>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="box4">
-                    <img  style="text-align: center;display: inline-block" src="img/available-01.png" class="img-responsive">
-                    <div class="bottom-header">Number of open websites</div>
-                    <div class="bottom" id="quick-summary-data-3">Nil</div>
-                  </td>
-                  <td class="box5">
-                    <img  style="text-align: center;display: inline-block" src="img/reporters-01.png" class="img-responsive">
-                    <div class="bottom-header">Number of reporters from this country</div>
-                    <div class="bottom" id="quick-summary-data-4">Nil</div>
-
-                    <!-- Modal -->
-                    <div class=" link" style="margin-top: 5px;font-size:15px;text-decoration: none " data-toggle="modal" data-target="#myModal">Who are reporters?</div>
-
-                    <!-- Modal -->
-                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                      <div class="modal-dialog">
-                        <div class="modal-content">
-                          <div class="modal-header" style="background-color: #b9ccd0; color: #ffffff">
-                            <h4 class="modal-title" id="myModalLabel" >Who are reporters?</h4>
-                          </div>
-                          <div class="modal-body">
-                            Reporters are volunteers who agreed to get our Chrome
-                            plugin ran our app and thereby reported on the internet
-                            situation in their countries. If you want to become a reporter
-                            too, please visit our Get Involved page get Chrome plugin
-                            or run our app.
-                          </div>
-                          <div class="btn-group">
-                            <button type="button" class="btn get-chrome-btn ucase"style=" margin:10px;font-size:17px"> Get CHrome PLUGIN</button>
-                          </div>
-                        </div>
-                      </div>
-                    </div><!--/modal-->
-                    
-                  </td>
-                  <td class="box6">
-                    <img  style="text-align: center;display: inline-block" src="img/lastReport-01.png" class="img-responsive">
-                    <div class="bottom-header">Last report from the country</div>
-                    <div class="bottom" id="quick-summary-data-5">Nil</div>
-                  </td>
-                </tr>
+              <table class="table-content" id ="quicksummary-data" style="margin-left: auto; margin-right: auto">
+                
               </table>
             </div>
           </div><!-- /portlet-body -->
@@ -280,41 +220,8 @@
           
           <div class="portlet-body">                     
             <!-- general information-->
-            <table class="table-content" style="margin-left: auto; margin-right: auto">
-              <tr>
-                <td class="box1">
-                  <img id="generalinfo-data-img0" style="text-align: center;display: inline-block" src="http://blockedonline.github.io/final/img/WebCountryCode.png" class="img-responsive">
-                  <div class="bottom-header" id="generalinfo-key0">Internet Code:</div>
-                  <div class="bottom" id="generalinfo-data-0">Nil</div>
-                </td>
-                <td class="box2">
-                  <img id="generalinfo-data-img1" style="text-align: center;display: inline-block"src="http://blockedonline.github.io/final/img/population-01.png" class="img-responsive">
-                  <div class="bottom-header" id="generalinfo-key1">Country population:</div>
-                  <div class="bottom" id="generalinfo-data-1">Nil</div>
-                </td>
-                <td class="box3">
-                  <img id="generalinfo-data-img2" style="text-align: center;display: inline-block" src="http://blockedonline.github.io/final/img/InternetAccess.png" class="img-responsive">
-                  <div class="bottom-header" id="generalinfo-key2">Population with internet access:</div>
-                  <div class="bottom" id="generalinfo-data-2">Nil</div>
-                </td>
-              </tr>
-              <tr>
-                <td class="box4">
-                  <img id="generalinfo-data-img3" style="text-align: center;display: inline-block" src="http://blockedonline.github.io/final/img/InternetSpeed-02.png" class="img-responsive">
-                  <div class="bottom-header" id="generalinfo-key3">Country median age:</div>
-                  <div class="bottom" id="generalinfo-data-3">Nil</div>
-                </td>
-                <td class="box5">
-                  <img id="generalinfo-data-img4" style="text-align: center;display: inline-block" src="http://blockedonline.github.io/final/img/CountryMedianAge-01.png" class="img-responsive">
-                  <div class="bottom-header" id="generalinfo-key4">Average Internet Speed:</div>
-                  <div class="bottom" id="generalinfo-data-4">Nil</div>
-                </td>
-                <td class="box6">
-                  <img  style="text-align: center;display: inline-block" src="http://blockedonline.github.io/final/img/FreedomIndex.png" class="img-responsive">
-                  <div class="bottom-header">Press Freedom Index according to Reporters Without Borders:</div>
-                  <div class="bottom" id="generalinfo-data-5">Nil</div>
-                </td>
-              </tr>
+            <table class="table-content" id="generalinfo-data" style="margin-left: auto; margin-right: auto">
+              
             </table>
           </div>
         </div>

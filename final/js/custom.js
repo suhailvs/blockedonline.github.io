@@ -22,6 +22,7 @@ var $selectize2=$('#select-url').selectize({
     });
   }
 });
+/*
 var control1 = $selectize1[0].selectize;
 var control2 = $selectize2[0].selectize;
 
@@ -38,7 +39,7 @@ $('.btn-group input[type=radio]').change(function () {
     control2.clear(); 
   }
   $('#div-' + this.value).show();
-});
+});*/
 
 //Donut graph
 function drawDonut(data){
@@ -117,14 +118,22 @@ function DoAjax_Country(country,opt,box){
       }else if (box == 'stackedgraph'){
         //draw stacked graph
         drawStacked(datas.data);
-      }else if (box == 'quicksummary'){
-        jQuery.each(datas.bullets, function(index, item) {
-          $('#quick-summary-data-'+index).text(item['value']);            
-        });
-      }else if (box == 'generalinfo'){
+      }else if (box =='generalinfo' || box == 'quicksummary'){
+        //jQuery.each(datas.bullets, function(index, item) {
+        //  $('#quick-summary-data-'+index).text(item['value']);            
+        //});
+     
+
+        var s='<tr>';
         jQuery.each(datas.bullets, function(index, item) {          
-          $('#generalinfo-data-'+index).text(item['value']);          
+          s+='<td><img style="text-align: center;display: inline-block" src="'+item['logo']+'" class="img-responsive">'+
+            '<div class="bottom-header">'+item['key'] +'</div>'+
+            '<div class="bottom">'+item['value'] +'</div></td>';
+          if ((index+1)%3 == 0){
+            s+='</tr><tr>';
+          }
         });
+        $('#'+box+'-data').html(s);
       }else{
         box_name='bulletpoints'+opt;
         //$('#quicklinksflag').attr('src',datas.flag);        
