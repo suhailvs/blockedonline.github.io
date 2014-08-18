@@ -20,7 +20,7 @@
     line-height: 20px!important;
 }
 .m-top{
-    margin-top: 15px;
+    margin-top: 25px;
 }
 .t-center{
     text-align: center;
@@ -160,12 +160,12 @@ a{
 .main-header{
     color: #58bdd0;
     text-transform: uppercase;
-    font-size:40px;
+    font-size:47px;
     font-family: 'bebas_neueregular';
 }
 .sub-header{
     color: #898989;
-    font-size: 16px;
+    font-size: 18px;
     font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
 }
 .map{
@@ -179,7 +179,7 @@ a{
     color: #898989;
     text-align: center;
     font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     margin-bottom: 10px;
 }
 .explore-data-btn{
@@ -454,9 +454,9 @@ a{
     background-color: #55BED1;
     color: #FFF;
     border: 5px solid #55BED1;
-    margin-top: 30px;
-    padding: 3px;
-    font-size: 21px;
+    margin: 25px 0;
+    padding: 4px;
+    font-size: 25px;
     line-height: 14px;
     padding-top: 8px;
 }
@@ -655,6 +655,7 @@ a{
 }
 .caption-title{
     cursor: pointer;
+    letter-spacing: .8px;
 }
 p{
     margin: 0;
