@@ -23,7 +23,7 @@
     <link href="css/responsive.css" rel="stylesheet">
 
     <style type="text/css">
-      svg {height:500px;margin:auto;}
+      svg {height:500px;margin:auto;padding-top:20px;}
       #urlbulletpoints1 {position: relative; width: 100%; max-height: 450px;}
       .clickable{cursor: pointer;}
       #loading_spinner {
@@ -97,7 +97,7 @@
 <!-- 
   COL-MD-9 ***** LEFT SIDE BOX
   =======================================-->
-<div class="content" id="invest-container" data-spy="scroll" data-target=".affix-div">
+<div class="content" id="invest-container" data-spy="scroll" data-target=".affix-div" style="min-height:540px;">
   <div class="row">
     <div class="col-md-8">
 
@@ -245,10 +245,10 @@
       </div>
     </div><!--/col-md-9-->
   </div><!--/row--> 
-<footer id="footer" style="margin-top: 106px; border-top:4px solid #ccc;color:#000">    
-  <p><small> * BlockedOnline is in beta mode at this time. Our servers are being tested to identify needed modifications. The data might not reflect the truth.</small></p>    
-</footer>  
 </div><!-- container-->
+<footer id="footer" style="margin-top:160px;padding:40px;color:#ccc">    
+   <p><small> * BlockedOnline is in beta mode at this time. Our servers are being tested to identify needed modifications. The data might not reflect the truth.</small></p>    
+ </footer>  
 
 <!-- AddThis Smart Layers BEGIN -->
 <!-- Go to http://www.addthis.com/get/smart-layers to customize -->
@@ -314,7 +314,7 @@
 <script>
     $(function() {
         $('#investigate').click(function(e){
-            document.getElementById("invest-container").style.height = '1100px';
+            //document.getElementById("invest-container").style.height = '1100px';
             e.preventDefault();
             $('html, body').animate({
                 scrollTop: $("#invest-container").offset().top
@@ -324,7 +324,7 @@
 </script>
 <script>
     $("#select-country").on('change',function(e) {
-        document.getElementById("invest-container").style.height = '1100px';
+        //document.getElementById("invest-container").style.height = '1100px';
         e.preventDefault();
         $('html, body').animate({
             scrollTop: $("#invest-container").offset().top
