@@ -101,15 +101,15 @@
     <div class="row">
         <div class="col-sm-6">
             <div class="title ucase">Latest news on online censorship around the world</div>
-            <div class="sub-title">
-                <ul class="fa-ul">
+            <div class="sub-title" id="news-box">
+                <!--<ul class="fa-ul">
                     <li><i class="fa-li fa fa-chevron-right"></i><span style="font-family: 'bebas_neueregular'; font-size: 21px "> BBC:</span> Iraqis use Firechat messaging app to overcome net block</li>
                     <li><i class="fa-li fa fa-chevron-right"></i> <span style="font-family: 'bebas_neueregular'; font-size: 21px"> INDEPENDENT ONLINE:</span> Iraqis use Firechat messaging app to overcome net block </li>
                     <li><i class="fa-li fa fa-chevron-right"></i><span style="font-family: 'bebas_neueregular'; font-size: 21px "> KNOXVILLE NEWS SENTINEL:</span> Google disruption in China seen as government crackdownqis use Firechat </li>
                     <li><i class="fa-li fa fa-chevron-right"></i><span style="font-family: 'bebas_neueregular'; font-size: 21px"> EFF:</span> Twitter Reverses Decision to Censor Content in Pakistan</li>
                     <li><i class="fa-li fa fa-chevron-right"></i><span style="font-family: 'bebas_neueregular'; font-size: 21px"> THE INQUISITR:</span> Connecticut Schools Censors The Vatican, NRA,Republican, And Christian Websites As \u2018Hate Speech </li>
                     <li class="see-more">See more</li>
-                </ul>
+                </ul>-->
             </div>
 
         </div>
@@ -144,7 +144,19 @@
 <!--<script src="js/jquery.localScroll.min.js"></script>-->
 <!--<script src="js/scrollspy.js"></script>-->
 <script type="text/javascript">
-
+$.get("http://blockedonline.com/blocked/data?homepage")
+  .done(function(datas) {
+    if (datas.status == 'OK'){   
+        var str_news='<ul class="fa-ul">';
+        datas.news.forEach(function(news) {   
+            //<ul class="fa-ul"> <li><i class="fa-li fa fa-chevron-right"></i>agency
+            str_news+='<li><i class="fa-li fa fa-chevron-right"></i><span style="font-family: bebas_neueregular; font-size: 21px ">'+
+            news.agency + '</span> - <a href="' + news.link + 
+            '" target="_blank">' + news.news_title + '</a></li>';
+        });   
+        $('#news-box').html(str_news+'</ul>');
+    }
+});
 </script>
 </body>
 </html>
