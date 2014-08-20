@@ -66,29 +66,28 @@
     <div class="clearfix"></div>
   </div>
 </div>
-
 <!-- 
   SIDE FIXED NAVIGATION BAR
   =======================================-->
 <div class="country-affix d-none">
   <div data-spy="affix"  class="affix-class affix" style="position: fixed; right: 0;margin-top:60px">
     <ul class="affix-div">
-      <li id="summary" class="square ucase summary active">
+      <li id="summary" class="square ucase summary active sidenav-quicksummary">
         <a href="#summary-box"> quick summary</a>
       </li>
-      <li id="blocked-websites" class="square ucase summary">
+      <li id="blocked-websites" class="square ucase summary sidenav-donutgraph">
         <a href="#blocked-box"> Blocked websites by category</a>
       </li>
-      <li id="news" class="square ucase blocked-websites">
+      <li id="news" class="square ucase blocked-websites sidenav-news">
         <a href="#news-box"> NEWs</a>
       </li>
-      <li id="highest-rank" class="square ucase highest-rank">
+      <li id="highest-rank" class="square ucase highest-rank sidenav-websites">
         <a href="#bolcked-web-box">Blocked websites with highest global Rank</a>
       </li>
-      <li id="blocked-category" class="square ucase blocked-category">
+      <li id="blocked-category" class="square ucase blocked-category sidenav-stackedgraph">
         <a href="#blocked-category-box"> Open vs Blocked by category</a>
       </li>
-      <li id="general-info" class="square ucase general-info">
+      <li id="general-info" class="square ucase general-info sidenav-generalinfo">
         <a href="#info-box"> General Information</a>
       </li>
     </ul>
@@ -177,21 +176,21 @@
         </div>
 
         <!--NEWS bullet v=5 -->
-        <div id="news-box" class="portlet panel-bulletpoints5" style="display:none">
+        <div id="news-box" class="portlet panel-news" style="display:none">
           <div class="box ucase m-top" >
             <p class="caption-title">News<span class="collapse-icon"></span></p>
             <div class="clearfix"></div>
           </div>
           <div class="portlet-body">
-            <div class="sub-title m-top">
-              <ul id="bulletpoints5"></ul><!--NEWS-->
+            <div class="sub-title m-top">              
+              <ul id="bulletpoints5" class="fa-ul"></ul><!--NEWS-->
               
             </div>
           </div>
         </div>
 
         <!--bullet v=3 [Blocked Websites with highest global rank] -->
-        <div id="bolcked-web-box" class="portlet panel-bulletpoints3" style="display:none">
+        <div id="bolcked-web-box" class="portlet panel-websites" style="display:none">
           <div class="box ucase" >
             <p class="caption-title">Blocked Websites with highest global rank<span class="collapse-icon"></span></p>
             <div class="clearfix"></div>
