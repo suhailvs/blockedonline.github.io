@@ -23,7 +23,7 @@
     <link href="css/responsive.css" rel="stylesheet">
 
     <style type="text/css">
-      svg {height:500px;margin:auto;padding-top:20px;}
+      svg {height:500px;margin:auto;/*padding-top:20px;*/}
       #urlbulletpoints1 {position: relative; width: 100%; max-height: 450px;}
       .clickable{cursor: pointer;}
       #loading_spinner {
@@ -31,10 +31,7 @@
         float: left;
         width: 40px;
         height: 40px;
-      }
-      #select-country {
-        display: none;
-      }
+      }      
       .nvtooltip{
         color:#000
       }
@@ -72,8 +69,8 @@
 <!-- 
   SIDE FIXED NAVIGATION BAR
   =======================================-->
-<div class="country-affix d-none">
-  <div data-spy="affix"  class="affix-class affix" style="position: fixed; right: 0;margin-top:60px">
+<div class="country-affix">
+  <div data-spy="affix" class="affix-class affix" style="position: fixed; right: 0;margin-top:60px">
     <ul class="affix-div">
       <li id="summary" class="square ucase summary active sidenav-quicksummary">
         <a href="#summary-box"> quick summary</a>
@@ -96,8 +93,10 @@
     </ul>
   </div>
 </div>
+
+
 <!-- 
-  COL-MD-9 ***** LEFT SIDE BOX
+  COL-MD-8 ***** LEFT SIDE BOX
   =======================================-->
 <div class="content" id="invest-container" data-spy="scroll" data-target=".affix-div" style="min-height:540px;">
   <div class="row">
@@ -107,179 +106,147 @@
       <div class="main-header">
         Select a country <span style="color: #898989">or</span>  Enter a WEbsite URL
       </div>
+      
       <div class="sub-header no-dis-480">
         and find out its internet situation  <span class="two-text"> to see where in the world it is blocked</span>
       </div>
       
-      <!-- BUTTONS -->
-      <div class="sub-title m-top ucase">
-        <ul class="nav nav-tabs page-tabs" role="tablist">
-          <li class="active by-count-web" id="by-country"><a href="#bycountry" role="tab" data-toggle="tab">by Country</a></li>
-          <li class="by-count-web" id="by-website" style="border-left: 1px solid ! important;"><a href="#bywebsite" role="tab" data-toggle="tab">by website</a></li>
-        </ul>
-        <div class="tab-content " style="z-index: 6">
-          <div class="tab-pane active" id="bycountry"></div>
-          <div class="tab-pane" id="bywebsite"></div>
-        </div>
-      </div>
+      <!-- BUTTONS -->      
+      <ul class="nav nav-tabs page-tabs m-top ucase" role="tablist">
+        <li class="active by-count-web" id="by-country">
+          <a href="#bycountry" role="tab" data-toggle="tab">by Country</a></li>
+        <li class="by-count-web" id="by-website" style="border-left: 1px solid ! important;">
+          <a href="#bywebsite" role="tab" data-toggle="tab">by website</a></li>
+      </ul>
 
-      <!-- SELECTIZE Select Boxes + SPINNER -->
-      <div class="row">
-        <div class="col-md-11">
-          <div id="div-country" class="form-text1">
-            <select id="select-country"  placeholder="Select a country...">
+      <div class="tab-content" style="z-index: 6">
+        <div class="tab-pane active" id="bycountry">
+          <!-- COUNTRY SPECIFIC TAB ITEMS
+          =================================================================== -->
+          <select id="select-country"  placeholder="Select a country...">
 <option value="" class="search-box">Select a country...</option>
 <option value="AD" class="search-box">Andorra</option><option value="AF">Afghanistan</option><option value="AG">Antigua and Barbuda</option><option value="AI">Anguilla</option><option value="AL">Albania</option><option value="AM">Armenia</option><option value="AO">Angola</option><option value="AQ">Antarctica</option><option value="AR">Argentina</option><option value="AS">American Samoa</option><option value="AT">Austria</option><option value="AU">Australia</option><option value="AW">Aruba</option><option value="AZ">Azerbaijan</option><option value="BA">Bosnia and Herzegovina</option><option value="BB">Barbados</option><option value="BD">Bangladesh</option><option value="BE">Belgium</option><option value="BF">Burkina Faso</option><option value="BG">Bulgaria</option><option value="BH">Bahrain</option><option value="BI">Burundi</option><option value="BJ">Benin</option><option value="BM">Bermuda</option><option value="BN">Brunei Darussalam</option><option value="BO">Bolivia</option><option value="BQ">Bonaire</option><option value="BR">Brazil</option><option value="BS">Bahamas</option><option value="BT">Bhutan</option><option value="BW">Botswana</option><option value="BY">Belarus</option><option value="BZ">Belize</option><option value="CA">Canada</option><option value="CC">Cocos (Keeling) Islands</option><option value="CD">Congo</option><option value="CF">Central African Republic</option><option value="CG">Congo</option><option value="CH">Switzerland</option><option value="CK">Cook Islands</option><option value="CL">Chile</option><option value="CM">Cameroon</option><option value="CN">China</option><option value="CO">Colombia</option><option value="CR">Costa Rica</option><option value="CU">Cuba</option><option value="CV">Cape Verde</option><option value="CX">Christmas Island</option><option value="CY">Cyprus</option><option value="CZ">Czech Republic</option><option value="DE">Germany</option><option value="DJ">Djibouti</option><option value="DK">Denmark</option><option value="DM">Dominica</option><option value="DO">Dominican Republic</option><option value="DZ">Algeria</option><option value="EC">Ecuador</option><option value="EE">Estonia</option><option value="EG">Egypt</option><option value="EH">Western Sahara</option><option value="ER">Eritrea</option><option value="ES">Spain</option><option value="ET">Ethiopia</option><option value="FI">Finland</option><option value="FJ">Fiji</option><option value="FK">Falkland Islands (Malvinas)</option><option value="FM">Micronesia</option><option value="FO">Faroe Islands</option><option value="FR">France</option><option value="GA">Gabon</option><option value="GB">United Kingdom</option><option value="GD">Grenada</option><option value="GE">Georgia</option><option value="GF">French Guiana</option><option value="GG">Guernsey</option><option value="GH">Ghana</option><option value="GI">Gibraltar</option><option value="GL">Greenland</option><option value="GM">Gambia</option><option value="GN">Guinea</option><option value="GP">Guadeloupe</option><option value="GQ">Equatorial Guinea</option><option value="GR">Greece</option><option value="GT">Guatemala</option><option value="GU">Guam</option><option value="GW">Guinea-Bissau</option><option value="GY">Guyana</option><option value="HK">Hong Kong</option><option value="HN">Honduras</option><option value="HR">Croatia</option><option value="HT">Haiti</option><option value="HU">Hungary</option><option value="ID">Indonesia</option><option value="IE">Ireland</option><option value="IL">Israel</option><option value="IM">Isle of Man</option><option value="IN">India</option><option value="IQ">Iraq</option><option value="IR">Iran</option><option value="IS">Iceland</option><option value="IT">Italy</option><option value="JE">Jersey</option><option value="JM">Jamaica</option><option value="JO">Jordan</option><option value="JP">Japan</option><option value="KE">Kenya</option><option value="KG">Kyrgyzstan</option><option value="KH">Cambodia</option><option value="KI">Kiribati</option><option value="KM">Comoros</option><option value="KN">Saint Kitts and Nevis</option><option value="KP">North Korea</option><option value="KR">South Korea</option><option value="KW">Kuwait</option><option value="KY">Cayman Islands</option><option value="KZ">Kazakhstan</option><option value="LA">Lao People's Democratic Republic</option><option value="LB">Lebanon</option><option value="LC">Saint Lucia</option><option value="LI">Liechtenstein</option><option value="LK">Sri Lanka</option><option value="LR">Liberia</option><option value="LS">Lesotho</option><option value="LT">Lithuania</option><option value="LU">Luxembourg</option><option value="LV">Latvia</option><option value="LY">Libya</option><option value="MA">Morocco</option><option value="MC">Monaco</option><option value="MD">Moldova</option><option value="ME">Montenegro</option><option value="MG">Madagascar</option><option value="MH">Marshall Islands</option><option value="MK">Macedonia</option><option value="ML">Mali</option><option value="MM">Myanmar</option><option value="MN">Mongolia</option><option value="MO">Macao</option><option value="MP">Northern Mariana Islands</option><option value="MQ">Martinique</option><option value="MR">Mauritania</option><option value="MS">Montserrat</option><option value="MT">Malta</option><option value="MU">Mauritius</option><option value="MV">Maldives</option><option value="MW">Malawi</option><option value="MX">Mexico</option><option value="MY">Malaysia</option><option value="MZ">Mozambique</option><option value="NA">Namibia</option><option value="NC">New Caledonia</option><option value="NE">Niger</option><option value="NF">Norfolk Island</option><option value="NG">Nigeria</option><option value="NI">Nicaragua</option><option value="NL">Netherlands</option><option value="NO">Norway</option><option value="NP">Nepal</option><option value="NR">Nauru</option><option value="NU">Niue</option><option value="NZ">New Zealand</option><option value="OM">Oman</option><option value="PA">Panama</option><option value="PE">Peru</option><option value="PF">French Polynesia</option><option value="PG">Papua New Guinea</option><option value="PH">Philippines</option><option value="PK">Pakistan</option><option value="PL">Poland</option><option value="PM">Saint Pierre and Miquelon</option><option value="PN">Pitcairn</option><option value="PR">Puerto Rico</option><option value="PS">Palestine</option><option value="PT">Portugal</option><option value="PW">Palau</option><option value="PY">Paraguay</option><option value="QA">Qatar</option><option value="RO">Romania</option><option value="RS">Serbia</option><option value="RU">Russian Federation</option><option value="RW">Rwanda</option><option value="SA">Saudi Arabia</option><option value="SB">Solomon Islands</option><option value="SC">Seychelles</option><option value="SD">Sudan</option><option value="SE">Sweden</option><option value="SG">Singapore</option><option value="SH">Saint Helena</option><option value="SI">Slovenia</option><option value="SJ">Svalbard and Jan Mayen</option><option value="SK">Slovakia</option><option value="SL">Sierra Leone</option><option value="SM">San Marino</option><option value="SN">Senegal</option><option value="SO">Somalia</option><option value="SR">Suriname</option><option value="SS">South Sudan</option><option value="ST">Sao Tome and Principe</option><option value="SV">El Salvador</option><option value="SX">Sint Maarten (Dutch part)</option><option value="SY">Syrian Arab Republic</option><option value="SZ">Swaziland</option><option value="TC">Turks and Caicos Islands</option><option value="TD">Chad</option><option value="TG">Togo</option><option value="TH">Thailand</option><option value="TJ">Tajikistan</option><option value="TK">Tokelau</option><option value="TL">Timor-Leste</option><option value="TM">Turkmenistan</option><option value="TN">Tunisia</option><option value="TO">Tonga</option><option value="TR">Turkey</option><option value="TT">Trinidad and Tobago</option><option value="TV">Tuvalu</option><option value="TW">Taiwan</option><option value="TZ">Tanzania</option><option value="UA">Ukraine</option><option value="UG">Uganda</option><option value="AE">United Arab Emirates</option><option value="US">United States</option><option value="UY">Uruguay</option><option value="UZ">Uzbekistan</option><option value="VA">Holy See (Vatican City State)</option><option value="VC">Saint Vincent and the Grenadines</option><option value="VE">Venezuela</option><option value="VG">Virgin Islands</option><option value="VI">Virgin Islands</option><option value="VN">Viet Nam</option><option value="VU">Vanuatu</option><option value="WF">Wallis and Futuna</option><option value="WS">Samoa</option><option value="YE">Yemen</option><option value="YT">Mayotte</option><option value="ZA">South Africa</option><option value="ZM">Zambia</option><option value="ZW">Zimbabwe</option>
-            </select>
-          </div>
-          <div id="div-url" class="form-text2 d-none">
-            <select id="select-url"class="search-box" placeholder="Search by url..."></select>
-          </div>
-        </div><!--/col-md-11-->
-        <div class="col-md-1">
-          <span id="loading_spinner"></span>
-        </div>
-      </div><!--/row-->
+          
+          </select>
 
-      <!-- OR FIND IT ON MAP -->
-      <div class="country">
-        <div class="title ucase m-top">or find it on the map</div>
-        <div><img src="img/map.png" class="img-responsive m-top"></div>
-      </div>
-      
-      
-
-      <!--=====================PANELS====================-->
-      
-      <div class="country-display">
-        
-        <!--bulletsin v=2 [QUICK SUMMARY]-->
-        <div id="summary-box" class="portlet panel-quicksummary" style="display:none">
-          <div class="box ucase">
-            <p class="caption-title">quick summary<span class="collapse-icon"></span></p>
-            <div class="clearfix"></div>
+          <!-- OR FIND IT ON MAP -->
+          <div class="country_map_image">
+            <div class="title ucase m-top">or find it on the map</div>
+            <img src="img/map.png" class="img-responsive m-top">
           </div>
-          <div class="portlet-body">
-            <div class="table grey-title">
-              <ul class="list-group" id="bulletpoints2"></ul><!-- quick summary-->
-              <table class="table-content" id ="quicksummary-data" style="margin-left: auto; margin-right: auto">
+
+          <!--bulletsin v=2 [QUICK SUMMARY]-->
+          <div id="summary-box" class="portlet panel-quicksummary" style="display:none">
+            <div class="box ucase">
+              <p class="caption-title">quick summary<span class="collapse-icon"></span></p>
+              <div class="clearfix"></div>
+            </div>
+            <div class="portlet-body">
+              <div class="table grey-title">
+                <ul class="list-group" id="bulletpoints2"></ul><!-- quick summary-->
+                <table class="table-content" id ="quicksummary-data" style="margin-left: auto; margin-right: auto">
+                  
+                </table>
+              </div>
+            </div><!-- /portlet-body -->
+          </div><!-- /quick summary -->
+
+          <!--DONUT GRAPH [Blocked Websites by category]-->
+          <div id="blocked-box" class="portlet panel-donutgraph" style="display:none">
+            <div class="box ucase" >
+              <p class="caption-title">Blocked Websites by category<span class="collapse-icon"></span></p>
+              <div class="clearfix"></div>
+            </div>
+            <div class="portlet-body" id='donutgraph'><svg></svg></div>
+          </div>
+
+          <!--NEWS bullet v=5 -->
+          <div id="news-box" class="portlet panel-news" style="display:none">
+            <div class="box ucase m-top" >
+              <p class="caption-title">News<span class="collapse-icon"></span></p>
+              <div class="clearfix"></div>
+            </div>
+            <div class="portlet-body">
+              <div class="sub-title m-top">              
+                <ul id="bulletpoints5" class="fa-ul"></ul><!--NEWS-->
+                
+              </div>
+            </div>
+          </div>
+
+          <!--bullet v=3 [Blocked Websites with highest global rank] -->
+          <div id="bolcked-web-box" class="portlet panel-websites" style="display:none">
+            <div class="box ucase" >
+              <p class="caption-title">Blocked Websites with highest global rank<span class="collapse-icon"></span></p>
+              <div class="clearfix"></div>
+            </div>
+            <div class="portlet-body">                        
+              <ul class="m-top url-list grey-title" id="bulletpoints3" style="font-size: 21px; list-style-type: none; margin-left: -25px"><!--Blocked Websites with highest global rank--></ul>
+            </div>
+          </div>
+
+          <!--STACKED GRAPH [Open vs Blocked by category]-->
+          <div id="blocked-category-box" class="portlet panel-stackedgraph" style="display:none">
+            <div class="box ucase m-top" >
+              <p class="caption-title">Open vs Blocked by category<span class="collapse-icon"></span></p>
+              <div class="clearfix"></div>
+            </div>
+            <div class="portlet-body" id='stackedgraph'><svg></svg></div>
+          </div>
+                  
+          <!--bullet v=1 [General Information] -->
+          <div id="info-box" class="portlet panel-generalinfo" style="display:none">
+            <div class="box ucase" >
+              <p class="caption-title">General Information<span class="collapse-icon"></span></p>
+              <div class="clearfix"></div>
+            </div>
+
+            
+            <div class="portlet-body">                     
+              <!-- general information-->
+              <table class="table-content" id="generalinfo-data" style="margin-left: auto; margin-right: auto">
                 
               </table>
             </div>
-          </div><!-- /portlet-body -->
-        </div><!-- /quick summary -->
-
-        <!--DONUT GRAPH [Blocked Websites by category]-->
-        <div id="blocked-box" class="portlet panel-donutgraph" style="display:none">
-          <div class="box ucase" >
-            <p class="caption-title">Blocked Websites by category<span class="collapse-icon"></span></p>
-            <div class="clearfix"></div>
           </div>
-          <div class="portlet-body" id='donutgraph'><svg></svg></div>
-        </div>
+                   
+        </div><!--/#bycountry tab-->
 
-        <!--NEWS bullet v=5 -->
-        <div id="news-box" class="portlet panel-news" style="display:none">
-          <div class="box ucase m-top" >
-            <p class="caption-title">News<span class="collapse-icon"></span></p>
-            <div class="clearfix"></div>
-          </div>
-          <div class="portlet-body">
-            <div class="sub-title m-top">              
-              <ul id="bulletpoints5" class="fa-ul"></ul><!--NEWS-->
-              
+        <div class="tab-pane" id="bywebsite">
+          <!-- URL SPECIFIC TAB ITEMS 
+          ===================================================================-->
+          <select id="select-url"class="search-box" placeholder="Search by url..."></select>
+          <div>
+            <div class="title ucase m-top m-410">top websites that are blocked</div>
+            <div class="url-list">
+              <p id="fb"><a href="#fb" >http://www.Facebook.com</a>
+                <span class=" url-hover d-none">
+                <img src="img/logo.png" class="title">See accessibility status</span>
+              </p>
+              <p><a href="#google" id="google"> http://www.google.com</a></p>
+              <p><a href="#utube" id="utube">http://www.youtube.com</a></p>
+              <p><a href="#twitter" id="twitter">http://www.twitter.com</a></p>
+              <p><a href="#wiki" id="wiki">http://Wikipedia.com</a></p>
             </div>
+            <div class="url-search"></div>
           </div>
-        </div>
+          <div id="bulletpoints0-container" class="bulletpoints-container"></div>
+          <div id="bulletpoints1-container" class="bulletpoints-container"></div>
+          <div id="bulletpoints2-container" class="bulletpoints-container"></div>
+        </div><!--/#bywebsite tab-->
 
-        <!--bullet v=3 [Blocked Websites with highest global rank] -->
-        <div id="bolcked-web-box" class="portlet panel-websites" style="display:none">
-          <div class="box ucase" >
-            <p class="caption-title">Blocked Websites with highest global rank<span class="collapse-icon"></span></p>
-            <div class="clearfix"></div>
-          </div>
-          <div class="portlet-body">                        
-            <ul class="m-top url-list grey-title" id="bulletpoints3" style="font-size: 21px; list-style-type: none; margin-left: -25px"><!--Blocked Websites with highest global rank--></ul>
-          </div>
-        </div>
-
-        <!--STACKED GRAPH [Open vs Blocked by category]-->
-        <div id="blocked-category-box" class="portlet panel-stackedgraph" style="display:none">
-          <div class="box ucase m-top" >
-            <p class="caption-title">Open vs Blocked by category<span class="collapse-icon"></span></p>
-            <div class="clearfix"></div>
-          </div>
-          <div class="portlet-body" id='stackedgraph'><svg></svg></div>
-        </div>
-                
-        <!--bullet v=1 [General Information] -->
-        <div id="info-box" class="portlet panel-generalinfo" style="display:none">
-          <div class="box ucase" >
-            <p class="caption-title">General Information<span class="collapse-icon"></span></p>
-            <div class="clearfix"></div>
-          </div>
-
-          
-          <div class="portlet-body">                     
-            <!-- general information-->
-            <table class="table-content" id="generalinfo-data" style="margin-left: auto; margin-right: auto">
-              
-            </table>
-          </div>
-        </div>
-      </div><!--/.country-display-->
-
-      <div class="url-panels" style="padding-top:20px;">
-        <!--
-        <div class="title ucase m-top m-410">top websites that are blocked</div>
-          <div class="url-list">
-            <p id="fb"><a href="#fb" >http://www.Facebook.com</a><span class=" url-hover d-none"><img src="img/logo.png" class="title">See accessibility status</span></p>
-            <p><a href="#google" id="google"> http://www.google.com</a></p>
-            <p><a href="#utube" id="utube">http://www.youtube.com</a></p>
-            <p><a href="#twitter" id="twitter">http://www.twitter.com</a></p>
-            <p><a href="#wiki" id="wiki">http://Wikipedia.com</a></p>
-          </div>
-          <div class="url-search"></div>
-        </div>-->
-        <div id="bulletpoints0-container" class="bulletpoints-container"></div>
-        <div id="bulletpoints1-container" class="bulletpoints-container"></div>
-        <div id="bulletpoints2-container" class="bulletpoints-container"></div>
-      </div>
-    </div><!--/col-md-9-->
-  </div><!--/row--> 
+      </div><!--/ .tab-content -->
+      
+    </div><!-- /COL-MD-8 -->
+    <div class="col-md-1">
+      <span style="padding-top:240px" id="loading_spinner"></span>
+    </div>
+  </div><!-- /ROW -->
 </div><!-- container-->
+
 <footer id="footer" style="margin-top:160px;padding:40px;color:#ccc;letter-spacing:.8px">    
    <p> * BlockedOnline is in beta mode at this time. Our servers are being tested to identify needed modifications. The data might not reflect the truth.</p>    
- </footer>  
-
-<!-- AddThis Smart Layers BEGIN -->
-<!-- Go to http://www.addthis.com/get/smart-layers to customize -->
-<script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5345fdde29a43c06"></script>
-<script type="text/javascript">
-    addthis.layers({
-        'theme' : 'transparent',
-        'share' : {
-            'position' : 'left',
-            'numPreferredServices' : 5,
-            'postShareTitle': "Thanks for sharing!",
-            'postShareFollowMsg': "Please also Like or Follow us.",
-            'desktop' : true,
-            'mobile' : true
-        },
-        'follow' : {
-            'services' : [
-                {'service' : 'facebook', 'id' : 'blockedonlinecom'},
-                {'service' : 'twitter', 'id' : 'blockageonline'}
-            ]
-        }
-    });
-</script>
-<script type="text/javascript">
-    var addthis_config = addthis_config||{};
-    addthis_config.data_track_addressbar = false;
-    addthis_config.data_track_clickback = false;
-</script>
-<!-- AddThis Smart Layers END -->
+</footer>  
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <!--<script src="js/jquery-1.10.2.min.js"></script>-->
@@ -292,126 +259,97 @@
 <script src="js/jquery.scrollTo.min.js"></script>
 <script src="js/jquery.localScroll.min.js"></script>
 <script src="js/scrollspy.js"></script>
-
-<script type="text/javascript">
-    $( document ).ready(function() {
-        $('body').localScroll();
-    });//<![CDATA[
-    $.get("http://kiarash.me/blocked/data",{homepage: 0})
-            .done(function(datas){
-                if (datas.status == 'OK'){
-                    var terms = datas.terms;
-                    console.log(terms.length);
-                    function rotateTerm() {
-                        var ct = $("#country").data("term") || 0;
-                        console.log(ct);
-                        $("#country").data("term", ct == terms.length - 1 ? 0 : ct + 1).text(terms[ct].c).fadeIn().delay(2000);
-                        $("#number").text(terms[ct].n).fadeIn().delay(2000).fadeOut(200, rotateTerm);
-                    }
-                    $(rotateTerm);
-                }
-            });
-
-</script>
-<script>
-    $(function() {
-        $('#investigate').click(function(e){
-            //document.getElementById("invest-container").style.height = '1100px';
-            e.preventDefault();
-            $('html, body').animate({
-                scrollTop: $("#invest-container").offset().top
-            }, 500);
-        });
-    });
-</script>
-<script>
-    $("#select-country").on('change',function(e) {
-        //document.getElementById("invest-container").style.height = '1100px';
-        e.preventDefault();
-        $('html, body').animate({
-            scrollTop: $("#invest-container").offset().top
-        }, 500);
-        $('.country').removeClass('d-all');
-        $('.country').addClass('d-none');
-        $('.country-affix').removeClass('d-none');
-        $('.country-affix').addClass('d-all');
-    });
-</script>
 <script type="text/javascript" src="js/d3.v3.js"></script>
 <script type="text/javascript" src="js/nv.d3.js"></script>
 <script src="js/spin.min.js"></script>
 <script src="./datamaps/topojson.v1.min.js"></script>
 <script src="./datamaps/datamaps.world.min.js"></script>
+
+<!-- Go to http://www.addthis.com/get/smart-layers to customize -->
+<script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5345fdde29a43c06"></script>
+<!-- AddThis Smart Layers END -->
+
 <script src="js/custom.js"></script>
 <script type="text/javascript">
+  //=======================================
+  // ***********GOOGLE ANALYTICS***********
+  //=======================================
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','http://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-50157618-1','blockedonline.com');
+  ga('send', 'pageview');
+
+
+  //=======================================
+  // ***********HASH TAG IN URL************
+  //=======================================
+  if(window.location.hash) {
+    var hash = window.location.hash.substring(1); //Puts hash in variable, and removes the # character
+    console.log(hash);      
+   // document.getElementById('select-country').value = hash;
+  } 
+
+
+  //=======================================
+  // ****************SPINNER **************
+  //=======================================
+  var target = document.getElementById('loading_spinner');
+  var spinner=new Spinner({lines: 9,length: 6});
+  
+  $(document).on({
+      ajaxStart: function() {  spinner.spin(target);},
+      ajaxStop: function() {  spinner.stop(); }
+  });
+
+
+  //=======================================
+  // ****************FACEBOOK LAYER********
+  //=======================================
+  addthis.layers({
+      'theme' : 'transparent',
+      'share' : {
+          'position' : 'left',
+          'numPreferredServices' : 5,
+          'postShareTitle': "Thanks for sharing!",
+          'postShareFollowMsg': "Please also Like or Follow us.",
+          'desktop' : true,
+          'mobile' : true
+      },
+      'follow' : {
+          'services' : [
+              {'service' : 'facebook', 'id' : 'blockedonlinecom'},
+              {'service' : 'twitter', 'id' : 'blockageonline'}
+          ]
+      }
+  });
+  var addthis_config = addthis_config||{};
+  addthis_config.data_track_addressbar = false;
+  addthis_config.data_track_clickback = false;
+
+  $( document ).ready(function() {
+    $('body').localScroll();   
+
     //=======================================
-    // ****************SPINNER **************
+    // ***********SHOW/HIDE AFFIX(sidebar)***
     //=======================================
-    var target = document.getElementById('loading_spinner');
-    var spinner=new Spinner({lines: 9,length: 6});
-    $(document).on({
-        ajaxStart: function() {  spinner.spin(target);},
-        ajaxStop: function() {  spinner.stop(); }
-    });
-</script>
-<script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','http://www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-50157618-1','blockedonline.com');
-    ga('send', 'pageview');
-
-</script>
-<script type="text/javascript">
-    $('#by-country a').on('click',function(){
-        $('.url').addClass('d-none');
-        $('.affix-class').removeClass('d-none');
-        $('.country').removeClass('d-none');
-        $('.affix-class-991').removeClass('d-none');
-        $('.country-display').removeClass('d-none');
-        $('.no-count-display-991').removeClass('d-none');
-        $('.no-count-display').removeClass('d-none');
-        $('.url-search').addClass('d-none');
-        $('.form-text1').removeClass('d-none');
-        $('.form-text2').addClass('d-none');
-        $(this).addClass('d-all');
-        $('.bulletpoints-container').empty();
-    });
-    $('.selectize-control input text').on('click',function(){
-        $('.affix-class').removeClass('d-none');
-        $('.country').removeClass('d-none');
-        $('.affix-class-991').removeClass('d-none');
-        $('.country-display').removeClass('d-none');
-        $('.no-count-display-991').removeClass('d-none');
-        $('.no-count-display').removeClass('d-none');
-        $(this).addClass('d-all');
-    });
-    $('#by-website a').on('click', function(){
-        $('.form-text2').removeClass('d-none');
-        $('.url').removeClass('d-none');
-        $('.url-search').removeClass('d-none');
-        $('.no-count-display').addClass('d-none');
-        $('.country-display').addClass('d-none');
-        $('.affix-class').addClass('d-none');
-        $('.no-count-display-991').addClass('d-none');
-        $('.affix-class-991').addClass('d-none');
-        $('.form-text1').addClass('d-none');
-        $('.country').addClass('d-none');
-
-        $(this).addClass('d-all');
-    });
-
-    $('.selectize-control.selectize-input.item').on('click',function(){
-        $('.country').removeClass('d-all');
-        $('.country').addClass('d-none');
+    $("ul.affix-div > li").hide();//hide the side bar links
+    $('#by-country > a').on('click',function(){
+      $('.country-affix').show();        
+    });    
+    $('#by-website > a').on('click', function(){  
+      $('.country-affix').hide();        
     });
     $('.affix-div li').on('click',function(){
         $('.affix-div li').removeClass('active');
         $(this).addClass('active');
     });
-    //$('.portlet .box').click(function(e){
+
+    //=======================================
+    // ***********SHOW/HIDE PANELS***********
+    //=======================================
     $(document).on('click','.portlet .box',function(e){
         e.preventDefault();
         var el = $(this).parent(".portlet").children(".portlet-body");
@@ -423,6 +361,7 @@
             el.slideDown(500);
         }
     });
+  });
 </script>
 </body>
 </html>

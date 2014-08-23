@@ -151,6 +151,9 @@ function DoAjax_Country(country,opt,box){
 
 //Selectize Country picker --> on Change function
 $("#select-country").on('change',function() {
+  $(".country_map_image").hide();//hide the map image
+  //$("ul.affix-div > li").hide();//hide the side bar links
+
   cty=this.value;
   cty=cty.toLowerCase();
   //console.log('selectize country change called'+cty);
