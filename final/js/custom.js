@@ -1,31 +1,28 @@
 $(window).load(function(){
-var Bullet_Boxes_v=[0, 1, 2];//add values in this array to create more boxes
-//Selectize select boxes
-var $selectize1=$('#select-country').selectize();
-var $selectize2=$('#select-url').selectize({
-  valueField: 'url',
-  labelField: 'url',
-  searchField: 'url',
-  create: false,
-  render: {
-    option: function (item, escape) {
-      return '<div><span class="url">' + escape(item.url) + '</span></div>';
+  //Selectize select boxes
+  var $selectize1=$('#select-country').selectize();
+  var $selectize2=$('#select-url').selectize({
+    valueField: 'url',
+    labelField: 'url',
+    searchField: 'url',
+    create: false,
+    render: {
+      option: function (item, escape) {
+        return '<div><span class="url">' + escape(item.url) + '</span></div>';
+      }
+    },
+    load: function (query, callback) {
+      if (!query.length) return callback();
+      $.ajax({
+        url: 'http://kiarash.me/blocked/data?url_query=' + encodeURIComponent(query),
+        type: 'GET',
+        error: function () { callback();},
+        success: function (res) { callback(res.result.slice(0, 10));}
+      });
     }
-  },
-  load: function (query, callback) {
-    if (!query.length) return callback();
-    $.ajax({
-      url: 'http://kiarash.me/blocked/data?url_query=' + encodeURIComponent(query),
-      type: 'GET',
-      error: function () { callback();},
-      success: function (res) { callback(res.result.slice(0, 10));}
-    });
-  }
-});
+  });
+});//document ready
 /*
-var control1 = $selectize1[0].selectize;
-var control2 = $selectize2[0].selectize;
-
 // Show Hide, Selectize select box based on the radio buttion clicks
 $('.btn-group input[type=radio]').change(function () { 
   if (this.value == 'country'){
@@ -40,7 +37,7 @@ $('.btn-group input[type=radio]').change(function () {
   }
   $('#div-' + this.value).show();
 });*/
-
+var Bullet_Boxes_v=[0, 1, 2];//add values in this array to create more boxes
 //Donut graph
 function drawDonut(data){
 	nv.addGraph(function () {
@@ -149,33 +146,61 @@ function DoAjax_Country(country,opt,box){
   });
 }
 
+function doCountrySearch(cty){
+  $(".country_map_image").hide();//hide the map image
+  // BUG Fix:  
+  $('.panel-donutgraph').hide();
+  $('.panel-stackedgraph').hide();
+  $('.panel-news').hide();
+  for (var i=1; i < 4; i++){
+    var bx_name = '.panel-bulletpoints' + i;
+    $(bx_name).hide();
+  } 
+  // End of BUG Fix
+  $(".country-panels").show();
+  //first ajax for donut
+  DoAjax_Country(cty,4,"donutgraph");
+  //second ajax for stacked graph
+  DoAjax_Country(cty,0,"stackedgraph");
+  //ajax for bulletpoints
+  DoAjax_Country(cty,1,'generalinfo');  //bulletpoints1
+  DoAjax_Country(cty,2,'quicksummary');//bulletpoints2
+  DoAjax_Country(cty,3,'websites');//bulletpoints3
+  DoAjax_Country(cty,5,'news');//bulletpoints5
+}
+
 //Selectize Country picker --> on Change function
-$("#select-country").on('change',function() {
-  cty=this.value;
-  cty=cty.toLowerCase();
+$("#select-country").on('change',function() {  
+  //$("ul.affix-div > li").hide();//hide the side bar links
+  var sel_cty=this.value;  
   //console.log('selectize country change called'+cty);
-  if (cty != ""){
-    // BUG Fix:  
-    $('.panel-donutgraph').hide();
-    $('.panel-stackedgraph').hide();
-    $('.panel-news').hide();
-    for (var i=1; i < 4; i++){
-      var bx_name = '.panel-bulletpoints' + i;
-      $(bx_name).hide();
-    } 
-    // End of BUG Fix
-    $(".country-panels").show();
-  	//first ajax for donut
-    DoAjax_Country(cty,4,"donutgraph");
-    //second ajax for stacked graph
-    DoAjax_Country(cty,0,"stackedgraph");
-    //ajax for bulletpoints
-    DoAjax_Country(cty,1,'generalinfo');  //bulletpoints1
-    DoAjax_Country(cty,2,'quicksummary');//bulletpoints2
-    DoAjax_Country(cty,3,'websites');//bulletpoints3
-    DoAjax_Country(cty,5,'news');//bulletpoints5
+  if (sel_cty != ""){
+    doCountrySearch(sel_cty.toLowerCase());
   }
 });
+
+
+//=======================================
+// ***********HASH TAG IN URL************
+//=======================================
+if(window.location.hash) {
+  var hash = window.location.hash.substring(1); //Puts hash in variable, and removes the # character
+  //var e = document.getElementById("select-country");
+  hash=hash.substr(0, 1).toUpperCase() + hash.substr(1); //hash.toLowerCase();
+  $('#select-country > option').each(function(){
+    if ($(this).text() == hash) {//sel_cty.toLowerCase()
+      doCountrySearch(this.value);      
+      return false
+    }
+    console.log(this.value);
+  });
+  
+
+  //control1.setValue(hash);
+  //control1.refreshItems(); 
+  //console.log(e.options[hash].value);
+  //document.getElementById('select-country').value = hash;
+} 
 
 //#######################################
 //*************** URL *******************
@@ -210,8 +235,8 @@ function createMap(ename,d){
 function DoAjax_Url(urlname,opt){
   var cname='urlbulletpoints'+opt;
   $.get("http://kiarash.me/blocked/data",{url: urlname,v:opt})
-  .done(function(datas) {
-    if (datas.status == 'OK'){      
+  .done(function(datas) {    
+    if (datas.status == 'OK'){   
       var html_panel_bulletpoints=''+
       '<div class="portlet">'+
         '<div class="box ucase">'+
@@ -252,4 +277,7 @@ $("#select-url").on('change',function() {
     jQuery.each(Bullet_Boxes_v, function(index, item) {DoAjax_Url(url,item)});
   }//else console.log('change url but empty');
 });
-});//document ready
+$(".tooltip-topsites").click(function(){
+  var urlsel=$(this).prev().text();  
+  jQuery.each(Bullet_Boxes_v, function(index, item) {DoAjax_Url(urlsel,item)});
+})
