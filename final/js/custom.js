@@ -222,7 +222,7 @@ function createMap(ename,d){
       }*/
     }
   });
-  map.legend();
+  //map.legend();
 }
 
 // Get and create bulletins for URL 
