@@ -138,11 +138,9 @@
 <!--<script src="js/jquery.scrollTo.min.js"></script>-->
 <!--<script src="js/jquery.localScroll.min.js"></script>-->
 <!--<script src="js/scrollspy.js"></script>-->
-  <script src="http://d3js.org/d3.v3.min.js"></script>
-  <script src="http://d3js.org/topojson.v1.min.js"></script>
-  <!-- I recommend you host this file on your own, since this will change without warning -->
-  <script src="http://datamaps.github.io/scripts/datamaps.world.min.js?v=1"></script>
-  
+<script type="text/javascript" src="js/d3.v3.js"></script>
+<script src="./datamaps/topojson.v1.min.js"></script>
+<script src="./datamaps/datamaps.world.min.js"></script>
 <script type="text/javascript">
 //DataMaps for url
 function createMap(ename,d){
@@ -164,16 +162,7 @@ function createMap(ename,d){
       highlightOnHover: false
     }
   });
-  map.legend({
-  legendTitle: "Where Have We Been",
-  defaultFillName: "Whats left",
-  labels: {
-     you: "Fred",
-     spouse: "Wilma",
-     together: "Together",
-     separately: "Separately",
-  },
-});
+
  // map.legend();
 }
 
