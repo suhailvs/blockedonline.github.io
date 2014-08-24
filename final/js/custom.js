@@ -222,15 +222,7 @@ function createMap(ename,d){
       }*/
     }
   });
-  map.legend({
-  defaultFillName: "No data",
-  labels: {
-    highlight: 'No Data',
-    open: 'Website Open',
-    partially_blocked: 'Website Inconsistantly Blocked',
-    blocked: 'Website Blocked'
-  },
-});
+
   //map.legend();
 }
 
