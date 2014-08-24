@@ -42,39 +42,19 @@
         vertical-align: top
       }
 
-      .tooltip-topsites{ 
+      .mytooltip{ 
         display: none;
       }
-      .tooltip-topsites:hover{ 
+      .mytooltip{ 
         text-decoration: underline;
-      }
-      
-      .top-sites-blocked li:hover .tooltip-topsites{
+      }      
+      .hastooltip li:hover .mytooltip{
         padding-left: 20px;
-      display : inline;
-      font-size: 16px;
-      color: #58bdd0;
-      cursor: pointer;                
+        display : inline;
+        font-size: 16px;
+        color: #58bdd0;
+        cursor: pointer;                
       }
-      /*.top-sites-blocked a{
-            display: inline;
-            position: relative;
-        }
-      .top-sites-blocked a:hover:after{
-          background: #333;
-          background: rgba(0,0,0,.8);
-          border-radius: 5px;
-          bottom: 0;
-          color: #58bdd0;
-          font-size: 16px;
-          content: "See accessibility status";
-          left: 100%;
-          padding: 5px 15px;
-          margin-left: 20px;
-          position: absolute;
-          z-index: 98;
-          width: 220px;
-      }*/
       
     </style>
 </head>
@@ -171,8 +151,21 @@
 
           <!-- OR FIND IT ON MAP -->
           <div class="country_map_image">
-            <div class="title ucase m-top">or find it on the map</div>
-            <img src="img/map.png" class="img-responsive m-top">
+            <div class="title ucase m-top">top countries</div>            
+            <div class="url-list">
+              <ul class="hastooltip top-countries-blocked">
+                <li><a>united states</a>
+                  <span data-countrycode="US" class="mytooltip"><img src="img/logo.png" height="20"> See country status</span></li>
+                <li><a>china</a>
+                  <span data-countrycode="AU" class="mytooltip"><img src="img/logo.png" height="20"> See country status</span></li>
+                <li><a>australia</a>
+                  <span data-countrycode="CN" class="mytooltip"><img src="img/logo.png" height="20"> See country status</span></li>
+                <li>
+                  <a>iran</a><span data-countrycode="IR" class="mytooltip">
+                  <img src="img/logo.png" height="20"> See country status</span>
+                </li>
+              </ul>
+            </div>
           </div>
 
           <!--bulletsin v=2 [QUICK SUMMARY]-->
@@ -256,22 +249,19 @@
           <!-- URL SPECIFIC TAB ITEMS 
           ===================================================================-->
           <select id="select-url"class="search-box" placeholder="Search by url..."></select>
-          <div>
+          <div class="url-list">
             <div class="title ucase m-top m-410">top websites that are blocked</div>
-            <div class="url-list">
-              <ul class="top-sites-blocked">
-              <li><a>http://www.Facebook.com</a><span class="tooltip-topsites"><img src="img/logo.png" height="20"> See accessibility status</span></li>
+            <ul class="hastooltip top-sites-blocked">
+              <li><a>http://www.Facebook.com</a><span class="mytooltip"><img src="img/logo.png" height="20"> See accessibility status</span></li>
               <li><a>http://www.google.com</a>
-                <span class="tooltip-topsites"><img src="img/logo.png" height="20"> See accessibility status</span></li>
+                <span class="mytooltip"><img src="img/logo.png" height="20"> See accessibility status</span></li>
               <li><a>http://www.youtube.com</a>
-                <span class="tooltip-topsites"><img src="img/logo.png" height="20"> See accessibility status</span></li>
+                <span class="mytooltip"><img src="img/logo.png" height="20"> See accessibility status</span></li>
               <li><a>http://www.twitter.com</a>
-                <span class="tooltip-topsites"><img src="img/logo.png" height="20"> See accessibility status</span></li>
+                <span class="mytooltip"><img src="img/logo.png" height="20"> See accessibility status</span></li>
               <li><a>https://uberspace.de</a>
-                <span class="tooltip-topsites"><img src="img/logo.png" height="20">see accessibility status</span></li>
-              </ul>
-            </div>
-            <div class="url-search"></div>
+                <span class="mytooltip"><img src="img/logo.png" height="20">see accessibility status</span></li>
+            </ul>
           </div>
           <div id="bulletpoints0-container" class="bulletpoints-container"></div>
           <div id="bulletpoints1-container" class="bulletpoints-container"></div>
