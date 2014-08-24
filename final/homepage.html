@@ -46,7 +46,7 @@
                 <ul class="nav navbar-nav topmenu">
                     <li class="line line-left active word"><a href="homepage.html">HOME</a></li>
                     <li class="line word"><a href="explore.html">EXPLORE DATA</a></li>
-                    <li class="line  word"><a href="get-involved.html">GET INVOLVED</a></li>
+                    <li class="line word"><a href="get-involved.html">GET INVOLVED</a></li>
                     <li class="line word"><a href="about.html">ABOUT</a></li>
                 </ul>
             </div>
@@ -147,7 +147,8 @@ $.get("http://blockedonline.com/blocked/data?homepage")
             '" target="_blank">' + news.news_title + '</a></li>';
         });   
         $('#news-box').html(str_news+'</ul>');
-        console.log(datas);
+        console.log(datas.data);
+        //datas.data--> {USA: {fillKey: "Hd5aa95"}, KGZ: {fillKey: "Hd5aa95"}, UZB:...}
     }
 });
 
@@ -156,7 +157,7 @@ $.get("http://kiarash.me/blocked/data", {homepage: 0}).done(function (datas) {
         var terms = datas.terms;
         function rotateTerm() {
             var ct = $("#country").data("term") || 0;
-            console.log(ct);
+            //console.log(ct);
             $("#country").data("term", ct == terms.length - 1 ? 0 : ct + 1).text(terms[ct].c).fadeIn().delay(2000);
             $("#number").text(terms[ct].n).fadeIn().delay(2000).fadeOut(200, rotateTerm);
         }

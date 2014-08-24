@@ -95,15 +95,14 @@ function drawCountryBulletin(data,box,box_name){
 
 //Show or hide panel and also set Title of Panel
 function ShowHide_Box(datas,box_name){
-  if (datas.status == 'OK'){
-    //$("#for_"+box_name).text(datas.title);
+  if (datas.status == 'OK'){    
     $(".panel-"+box_name).show();
     $("li.sidenav-"+box_name).show();
-    console.log('going to show-> .panel-'+box_name);
+    //console.log('going to show-> .panel-'+box_name);
   }else{
     $(".panel-"+box_name).hide();
     $("li.sidenav-"+box_name).hide();// hide sidebar button
-    console.log('going to hide-> .panel-'+box_name);    
+    //console.log('going to hide-> .panel-'+box_name);    
   }
 }
 
@@ -195,13 +194,7 @@ if(window.location.hash) {
     }
     console.log(this.value);
   });
-  
-
-  //control1.setValue(hash);
-  //control1.refreshItems(); 
-  //console.log(e.options[hash].value);
-  //document.getElementById('select-country').value = hash;
-} 
+}
 
 //#######################################
 //*************** URL *******************
@@ -278,7 +271,14 @@ $("#select-url").on('change',function() {
     jQuery.each(Bullet_Boxes_v, function(index, item) {DoAjax_Url(url,item)});
   }//else console.log('change url but empty');
 });
-$(".tooltip-topsites").click(function(){
+
+//hard coded COUNTRY & URL options 
+//==========================================
+$(".top-countries-blocked > li span").click(function(){
+  var countrycode=$(this).data('countrycode');  
+  doCountrySearch(countrycode);
+})
+$(".top-sites-blocked > li span").click(function(){
   var urlsel=$(this).prev().text();  
   jQuery.each(Bullet_Boxes_v, function(index, item) {DoAjax_Url(urlsel,item)});
 })
