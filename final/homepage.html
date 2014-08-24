@@ -162,6 +162,16 @@ function createMap(ename,d){
       highlightOnHover: false
     }
   });
+  map.legend({
+  legendTitle: "Where Have We Been",
+  defaultFillName: "Whats left",
+  labels: {
+     you: "Fred",
+     spouse: "Wilma",
+     together: "Together",
+     separately: "Separately",
+  },
+});
  // map.legend();
 }
 
