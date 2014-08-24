@@ -82,21 +82,13 @@
         </div>
     </div>
 </div>
-<div class="h-line"></div>
-<div class="content">
-    <div class="video-row">
-        <div class="row">
-            <div class="col-sm-7">
-                <div class="ucase pbottom" style="color: #000000; text-align: center; font-size: 15px">video</div>
-            </div>
-            <div class="col-sm-5 ptop">
-                <div class="title">Tim Berners-Lee introduces Blockedonline</div>
-                <div class="sub-title">The project BlockedOnline was initiated at MIT under the supervision of Professor Tim Berners-Lee. Our goal is to raise awareness about worldwideinternet censorship by providing accurate data. </div>
-            </div>
-        </div>
-    </div>
+
+
+<div class="container text-center" style="padding:40px;border-top:1px solid #ccc;border-bottom:1px solid #ccc;">
+    <h2 style="color:#58bdd0"><strong id="number">How many</strong> websites are blocked in <strong id="country">your country?</strong></h2>
 </div>
-<div class="h-line space"></div>
+
+
 <div class="content">
     <div class="row">
         <div class="col-sm-6">
@@ -155,6 +147,20 @@ $.get("http://blockedonline.com/blocked/data?homepage")
             '" target="_blank">' + news.news_title + '</a></li>';
         });   
         $('#news-box').html(str_news+'</ul>');
+        console.log(datas);
+    }
+});
+
+$.get("http://kiarash.me/blocked/data", {homepage: 0}).done(function (datas) {
+    if (datas.status == 'OK') {
+        var terms = datas.terms;
+        function rotateTerm() {
+            var ct = $("#country").data("term") || 0;
+            console.log(ct);
+            $("#country").data("term", ct == terms.length - 1 ? 0 : ct + 1).text(terms[ct].c).fadeIn().delay(2000);
+            $("#number").text(terms[ct].n).fadeIn().delay(2000).fadeOut(200, rotateTerm);
+        }
+        $(rotateTerm);
     }
 });
 </script>

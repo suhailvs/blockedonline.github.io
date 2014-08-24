@@ -185,8 +185,9 @@ $("#select-country").on('change',function() {
 //=======================================
 if(window.location.hash) {
   var hash = window.location.hash.substring(1); //Puts hash in variable, and removes the # character
-  //var e = document.getElementById("select-country");
-  hash=hash.substr(0, 1).toUpperCase() + hash.substr(1); //hash.toLowerCase();
+  hash = hash.split(" ").map(function (i) {
+    return i.substr(0, 1).toUpperCase() + i.substr(1)
+  }).join(" ");
   $('#select-country > option').each(function(){
     if ($(this).text() == hash) {//sel_cty.toLowerCase()
       doCountrySearch(this.value);      
