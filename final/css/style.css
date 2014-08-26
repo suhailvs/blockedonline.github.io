@@ -103,7 +103,7 @@ a{
 }
 .topmenu li{
     font-family: 'bebas_neueregular' !important;
-    font-weight: bold;
+    /*font-weight: bold;*/
     font-size: 31px;
 }
 .topmenu li a{
@@ -417,7 +417,7 @@ a{
 
 }
 .two-text{
-    margin-left: 35px;
+    margin-left: 62px;
 }
 .navbar-form>.d-none{
     display: none;
