@@ -21,6 +21,25 @@ $(window).load(function(){
       });
     }
   });
+
+  var ctselect = $selectize1[0].selectize;
+  var urlselect = $selectize2[0].selectize;
+  //hard coded COUNTRY & URL options 
+  //==========================================
+  $(".top-countries-blocked > li span").click(function(){
+    var countrycode=$(this).data('countrycode'); 
+    console.log(countrycode); 
+    ctselect.setValue(countrycode); 
+    //document.getElementById('select-country').value = countrycode;
+    //doCountrySearch(countrycode);
+  })
+  $(".top-sites-blocked > li span").click(function(){
+    var urlsel=$(this).prev().data('val');  
+    urlselect.setValue(urlsel); 
+    //jQuery.each(Bullet_Boxes_v, function(index, item) {DoAjax_Url(urlsel,item)});
+    $('#url-topsites').hide();
+  })
+
 });//document ready
 /*
 // Show Hide, Selectize select box based on the radio buttion clicks
@@ -189,10 +208,11 @@ if(window.location.hash) {
   }).join(" ");
   $('#select-country > option').each(function(){
     if ($(this).text() == hash) {//sel_cty.toLowerCase()
+      document.getElementById('select-country').value = this.value;
       doCountrySearch(this.value);      
       return false
     }
-    console.log(this.value);
+    //console.log(this.value);
   });
 }
 
@@ -272,13 +292,4 @@ $("#select-url").on('change',function() {
   }//else console.log('change url but empty');
 });
 
-//hard coded COUNTRY & URL options 
-//==========================================
-$(".top-countries-blocked > li span").click(function(){
-  var countrycode=$(this).data('countrycode');  
-  doCountrySearch(countrycode);
-})
-$(".top-sites-blocked > li span").click(function(){
-  var urlsel=$(this).prev().text();  
-  jQuery.each(Bullet_Boxes_v, function(index, item) {DoAjax_Url(urlsel,item)});
-})
+
