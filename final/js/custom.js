@@ -21,6 +21,13 @@ $(window).load(function(){
       });
     }
   });
+  var ctselect = $selectize1[0].selectize;
+  //hard coded COUNTRY & URL options 
+  //==========================================
+  $(".top-countries-blocked > li span").click(function(){
+    var countrycode=$(this).data('countrycode'); 
+    ctselect.setValue(countrycode);
+  })
 });//document ready
 /*
 // Show Hide, Selectize select box based on the radio buttion clicks
@@ -172,6 +179,7 @@ function doCountrySearch(cty){
 $("#select-country").on('change',function() {  
   //$("ul.affix-div > li").hide();//hide the side bar links
   var sel_cty=this.value;  
+  //alert($(this).html());
   //console.log('selectize country change called'+cty);
   if (sel_cty != ""){
     doCountrySearch(sel_cty.toLowerCase());
@@ -222,7 +230,8 @@ function createMap(ename,d){
       }*/
     }
   });
-
+  $("<span style='color:#d9ccd0'>In this map green is for open, red is for blocked and orange is for partially blocked</span>" ).prependTo("#"+ename );
+  
   //map.legend();
 }
 
@@ -244,19 +253,27 @@ function DoAjax_Url(urlname,opt){
       $('#bulletpoints' + opt + '-container').empty().append(html_panel_bulletpoints).css('opacity', 1);
       if (datas.v == '1'){
         createMap(cname,datas.data);
-      }else if (datas.v == '0'){
-        var str_list='<ul class="m-top url-list grey-title" style="font-size: 21px; list-style-type: none; margin-left: -25px">'; 
-        jQuery.each(datas.bullets, function(index, item) {
-          str_list+= "<li>"+item+"</li>"      
+      }else if (datas.v == '0'){//quicksummary
+        var str_list='<table class="table-content" id ="quicksummary-data" style="margin-left: auto; margin-right: auto"><tr>';
+        jQuery.each(datas.bullets, function(index, item) {          
+          str_list+='<td><img style="text-align: center;display: inline-block" src="'+item['logo']+'" class="img-responsive">'+
+            '<div class="bottom-header">'+item['key'] +'</div>'+
+            '<div class="bottom">'+item['value'] +'</div></td>';
+          if ((index+1)%3 == 0){
+            str_list+='</tr><tr>';
+          }
         });
-        $("#"+cname).html(str_list+"</ul>");
+        //alert(str_list);
+        $("#"+cname).html(str_list+"</tr></table>");
+
       } else if (datas.v == '2') {
+        var str_list='<ul class="fa-ul sub-title">';
         datas.data.forEach(function(news) {
-          $('<ul class="list-group">' +
-            '<li class="list-group-item"><a href="' + news.link + '" target="_blank">' + news.news_title + '</a></li>' +
-            '<li class="list-group-item">' + news.description + '</li>' +
-            '</ul>').appendTo($('#' + cname));
-        });
+          str_list+='<li><i class="fa-li fa fa-chevron-right"></i><a href="' + 
+          news.link + '" target="_blank" style="font-family: bebas_neueregular; font-size: 21px ">' +
+           news.news_title +'</a><br>'+ news.description + '</li>';
+          });
+        $('#' + cname).html(str_list+'</ul>');       
       }
     }
   });
@@ -265,7 +282,7 @@ function DoAjax_Url(urlname,opt){
 //Selectize URL picker --> on Change function
 $("#select-url").on('change',function() {   
   $('.bulletpoints-container').css('opacity', 0);
-  url=this.value;
+  url=this.value;  
   url=url.toLowerCase();
   if (url != ""){
     //console.log('change url but not empty');
@@ -273,12 +290,8 @@ $("#select-url").on('change',function() {
   }//else console.log('change url but empty');
 });
 
-//hard coded COUNTRY & URL options 
+//hard coded URL options 
 //==========================================
-$(".top-countries-blocked > li span").click(function(){
-  var countrycode=$(this).data('countrycode');  
-  doCountrySearch(countrycode);
-})
 $(".top-sites-blocked > li span").click(function(){
   var urlsel=$(this).prev().text();  
   jQuery.each(Bullet_Boxes_v, function(index, item) {DoAjax_Url(urlsel,item)});

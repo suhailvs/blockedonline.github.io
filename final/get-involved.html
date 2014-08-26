@@ -87,7 +87,7 @@
                             No installation is needed. All you need to do is to download and run this app
                             on your computer. You can run this app more than once on different days to
                             provide even more accurate data. But running it even once helps us a lot. </p>
-                        <p class="m-top text-justify">The last report came from <span style="font-family: 'bebas_neueregular'; font-size:21px"> Australia 6/28/2014</span></p>
+                        <p class="m-top text-justify">The last report came from <span style="font-family: 'bebas_neueregular'; font-size:21px" id="lastreporter"> </span></p>
                         <p class="m-top text-justify">
                             Become the next volunteer!</p>
                     </div>
@@ -96,10 +96,20 @@
                             <img class="mac" src="img/mac.png">
                         </div>
                         <div class="col-md-offset-1 col-md-5">
-                            <img src="img/windows.png">
-                        </div>
+                            <a id="download" href="http://blocked_report.s3.amazonaws.com/blockedonline.exe"> <img src="img/windows.png"></a>
+                        </div>                                            
                     </div>
-                </div>
+
+                </div>                
+            </div>
+            <div id="instruction" style="display: none;font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;font-size: 14px;line-height: 1.42857143;color: #333;">
+              <h2> Download Instruction</h2>
+              <h4> Because of the limited resources, our app is not certified yet. This means that after downloading it, you might get warning messages. The app is safe to run. </h4>
+              <p> 1)  If you get a warning from your antivirus, you will need to disable it temporarily. </p>
+              <p> 2) <strong>Windows 8</strong> users will get the warning shown in the following images. Please click on ‘More info’ and then ‘Run anyway’ </p>
+              <img src="http://blockedonline.github.io/index_files/moreinfo1.png" class="img-responsive" alt="">
+                </br>
+                <img src="http://blockedonline.github.io/index_files/moreinfo2.png" class="img-responsive" alt="">        
             </div>
         </div>        
     </div>
@@ -200,6 +210,21 @@
         $('.download').removeClass('d-none');
         $('.img1').removeClass('d-none');
         $(this).addClass('d-all');
+    });
+    $('#download').click(function(e){
+      $("#instruction").show();
+      document.getElementById("instruction").style.height = '700px';          
+      $('html, body').animate({
+          scrollTop: $("#instruction").offset().top
+      }, 500);
+    });
+
+    $.get("http://blockedonline.com/blocked/data?homepage")
+    .done(function(datas) {
+        if (datas.status == 'OK'){   
+            $("#lastreporter").html(datas.last_reporter);
+            //console.log(datas);
+        }
     });
 </script>
 </body>
