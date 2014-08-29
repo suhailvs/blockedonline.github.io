@@ -27,7 +27,9 @@ $(window).load(function(){
   $(".top-countries-blocked > li span").click(function(){
     var countrycode=$(this).data('countrycode'); 
     ctselect.setValue(countrycode);
-  })
+  });  
+
+  if (hash) $('#bycountry .selectize-input > input').val(hash);//if hash in url set the selectize text  
 });//document ready
 /*
 // Show Hide, Selectize select box based on the radio buttion clicks
@@ -126,19 +128,20 @@ function DoAjax_Country(country,opt,box){
         //draw stacked graph
         drawStacked(datas.data);
       }else if (box =='generalinfo' || box == 'quicksummary'){
-        //jQuery.each(datas.bullets, function(index, item) {
-        //  $('#quick-summary-data-'+index).text(item['value']);            
-        //});
-     
-
         var s='<tr>';
         jQuery.each(datas.bullets, function(index, item) {          
           s+='<td><img style="text-align: center;display: inline-block" src="'+item['logo']+'" class="img-responsive">'+
             '<div class="bottom-header">'+item['key'] +'</div>'+
-            '<div class="bottom">'+item['value'] +'</div></td>';
+            '<div class="bottom">'+item['value'];
+
+          if (box=='quicksummary' && item['key']=='Number of reporters from the country') {
+            s+= '<div class="link" style="margin-top: 5px;font-size:15px;text-decoration: none " data-toggle="modal" data-target="#myModal">Who are reporters?</div>'//alert('go it');
+          }
+
+          s += '</div></td>';
           if ((index+1)%3 == 0){
             s+='</tr><tr>';
-          }
+          } 
         });
         $('#'+box+'-data').html(s);
       }else{
@@ -173,6 +176,14 @@ function doCountrySearch(cty){
   DoAjax_Country(cty,2,'quicksummary');//bulletpoints2
   DoAjax_Country(cty,3,'websites');//bulletpoints3
   DoAjax_Country(cty,5,'news');//bulletpoints5
+
+  if (hash) {//sel_cty.toLowerCase() 
+    var country_name= hash;
+  }else{
+    var country_name=$('#bycountry .selectize-input > .item').text();
+  }
+  $('#country_nametext').text(country_name);
+
 }
 
 //Selectize Country picker --> on Change function
@@ -197,10 +208,11 @@ if(window.location.hash) {
   }).join(" ");
   $('#select-country > option').each(function(){
     if ($(this).text() == hash) {//sel_cty.toLowerCase()
-      doCountrySearch(this.value);      
+      doCountrySearch(this.value);
+      //$('#bycountry .selectize-input > input').val(hash);
       return false
     }
-    console.log(this.value);
+    //console.log(this.value);
   });
 }
 
@@ -258,10 +270,15 @@ function DoAjax_Url(urlname,opt){
         jQuery.each(datas.bullets, function(index, item) {          
           str_list+='<td><img style="text-align: center;display: inline-block" src="'+item['logo']+'" class="img-responsive">'+
             '<div class="bottom-header">'+item['key'] +'</div>'+
-            '<div class="bottom">'+item['value'] +'</div></td>';
+            '<div class="bottom">'+item['value'];
+          if (item['logo']=='http://blockedonline.github.io/final/img/reporters-01.png') {
+            str_list+= '<div class="link" style="margin-top: 5px;font-size:15px;text-decoration: none " data-toggle="modal" data-target="#myModal2">What does scanned mean?</div>'//alert('go it');
+          } 
+          str_list += '</div></td>';
+
           if ((index+1)%3 == 0){
             str_list+='</tr><tr>';
-          }
+          }                  
         });
         //alert(str_list);
         $("#"+cname).html(str_list+"</tr></table>");
@@ -285,6 +302,7 @@ $("#select-url").on('change',function() {
   url=this.value;  
   url=url.toLowerCase();
   if (url != ""){
+    $('#website_nametext').text(url); 
     //console.log('change url but not empty');
     jQuery.each(Bullet_Boxes_v, function(index, item) {DoAjax_Url(url,item)});
   }//else console.log('change url but empty');
@@ -292,7 +310,10 @@ $("#select-url").on('change',function() {
 
 //hard coded URL options 
 //==========================================
-$(".top-sites-blocked > li span").click(function(){
-  var urlsel=$(this).prev().text();  
+$(".top-sites-blocked > li span").click(function(){  
+  var urlsel=$(this).prev().text(); 
+  $('#website_nametext').text(urlsel); 
+  $('#bywebsite > .url-list').hide();
+  $('#bywebsite .selectize-input > input').val(urlsel);
   jQuery.each(Bullet_Boxes_v, function(index, item) {DoAjax_Url(urlsel,item)});
 })
