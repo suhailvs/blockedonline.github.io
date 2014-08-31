@@ -1,6 +1,6 @@
 
 var svg, worldObject, active; 
-var width = 1286, height = 500;
+var width = 1028, height = 400;
 
 var projection = d3.geo.equirectangular()
     .scale((width + 1) / 2 / Math.PI)
