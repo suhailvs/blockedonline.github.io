@@ -324,7 +324,7 @@
 <!--<script src="js/jquery.localScroll.min.js"></script>-->
 <!--<script src="js/scrollspy.js"></script>-->
 <script type="text/javascript">
-$.get("http://blockedonline.net/blocked/news/")
+$.get("http://api.blockedonline.com/blocked/news/")
   .done(function(datas) {
    var str_news='<ul class="fa-ul">';
    datas.news.forEach(function(news) {
