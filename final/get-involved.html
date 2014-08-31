@@ -219,7 +219,7 @@
       }, 500);
     });
 
-    $.get("http://blockedonline.com/blocked/data?homepage")
+    $.get("http://api.blockedonline.com/data?homepage")
     .done(function(datas) {
         if (datas.status == 'OK'){   
             $("#lastreporter").html(datas.last_reporter);

@@ -14,7 +14,7 @@ $(window).load(function(){
     load: function (query, callback) {
       if (!query.length) return callback();
       $.ajax({
-        url: 'http://kiarash.me/blocked/data?url_query=' + encodeURIComponent(query),
+        url: 'http://api.blockedonline.com/data?url_query=' + encodeURIComponent(query),
         type: 'GET',
         error: function () { callback();},
         success: function (res) { callback(res.result.slice(0, 10));}
@@ -118,7 +118,7 @@ function ShowHide_Box(datas,box_name){
 //Do Ajax Call. 
 // country=from Selectize select box,opt=1,2..,box=donutgraph,stacked.. 
 function DoAjax_Country(country,opt,box){
-  $.get("http://kiarash.me/blocked/data",{country: country,v:opt})
+  $.get("http://api.blockedonline.com/data",{country: country,v:opt})
   .done(function(datas) {    
     if (datas.status == 'OK'){
       if (box=='donutgraph'){
@@ -250,7 +250,7 @@ function createMap(ename,d){
 // Get and create bulletins for URL 
 function DoAjax_Url(urlname,opt){
   var cname='urlbulletpoints'+opt;
-  $.get("http://kiarash.me/blocked/data",{url: urlname,v:opt})
+  $.get("http://api.blockedonline.com/data",{url: urlname,v:opt})
   .done(function(datas) {    
     if (datas.status == 'OK'){   
       var html_panel_bulletpoints=''+
