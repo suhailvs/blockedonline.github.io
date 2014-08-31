@@ -166,7 +166,7 @@ function createMap(ename,d){
  // map.legend();
 }
 
-$.get("http://blockedonline.com/blocked/data?homepage")
+$.get("http://api.blockedonline.com/blocked/data?homepage")
   .done(function(datas) {
     if (datas.status == 'OK'){   
         var str_news='<ul class="fa-ul">';
@@ -182,7 +182,7 @@ $.get("http://blockedonline.com/blocked/data?homepage")
     }
 });
 
-$.get("http://kiarash.me/blocked/data", {homepage: 0}).done(function (datas) {
+$.get("http://api.blockedonline.com/blocked/data", {homepage: 0}).done(function (datas) {
     if (datas.status == 'OK') {
         var terms = datas.terms;
         function rotateTerm() {
