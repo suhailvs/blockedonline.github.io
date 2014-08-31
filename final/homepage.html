@@ -16,6 +16,7 @@
     <link href="css/responsive.css" rel="stylesheet">
     <link href="css/animate.css" rel="stylesheet">
     <link href="fonts/bebas-font.css" rel="stylesheet">
+		<link href="css/map.css" rel="stylesheet">
 
     <!-- FONTS -->
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
@@ -130,6 +131,19 @@
 <footer id="footer">
     <div style="margin-top: 106px"></div>
 </footer>
+
+<div class="news-tip">
+	<div class="tip-content">
+		<span id="count"></span> websites are blocked in <span id="name"></span>
+	</div>
+	<div class="tip-content-no-info">
+		<div class="status"> No Data is Available Yet </div>
+		<div> Do you live here? </div>
+		<div class="action"> <a href="./get-involved.html">Help Us Collect Data </a></div>
+	</div>
+	<div class="arrow-down"></div>
+</div>
+
 <!-- JavaScript -->
 <!--<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>-->
 <script src="js/jquery-1.10.2.min.js"></script>
@@ -141,30 +155,32 @@
 <script type="text/javascript" src="js/d3.v3.js"></script>
 <script src="./datamaps/topojson.v1.min.js"></script>
 <script src="./datamaps/datamaps.world.min.js"></script>
+<script src="js/d3.tip.js"></script>
+<script src="js/map.js"></script>
 <script type="text/javascript">
 //DataMaps for url
-function createMap(ename,d){
-  var map = new Datamap({
-    element: document.getElementById(ename),
-    fills: { Hdfbfa2: '#dfbfa2',
-             Hd5aa95: '#d5aa95',
-             Hca9587: '#ca9587',
-             Hc08079: '#c08079',
-             Hb56a6b: '#b56a6b',
-             Haa555d: '#aa555d',
-             Ha0404f: '#a0404f',
-             H952b42: '#952b42',
-             H8b1534: '#8b1534',
-             H800026:'#800026'
-          },
-    data: d,
-    geographyConfig: {
-      highlightOnHover: false
-    }
-  });
+// function createMap(ename,d){
+//   var map = new Datamap({
+//     element: document.getElementById(ename),
+//     fills: { Hdfbfa2: '#dfbfa2',
+//              Hd5aa95: '#d5aa95',
+//              Hca9587: '#ca9587',
+//              Hc08079: '#c08079',
+//              Hb56a6b: '#b56a6b',
+//              Haa555d: '#aa555d',
+//              Ha0404f: '#a0404f',
+//              H952b42: '#952b42',
+//              H8b1534: '#8b1534',
+//              H800026:'#800026'
+//           },
+//     data: d,
+//     geographyConfig: {
+//       highlightOnHover: false
+//     }
+//   });
 
  // map.legend();
-}
+// }
 
 $.get("http://api.blockedonline.com/data?homepage")
   .done(function(datas) {
@@ -178,7 +194,8 @@ $.get("http://api.blockedonline.com/data?homepage")
         });   
         $('#news-box').html(str_news+'</ul>');
         //datas.data--> {USA: {fillKey: "Hd5aa95"}, KGZ: {fillKey: "Hd5aa95"}, UZB:...}
-        createMap('d3map',datas.data);        
+        //createMap('d3map',datas.data);       
+				setupMap('d3map', datas);  
     }
 });
 
