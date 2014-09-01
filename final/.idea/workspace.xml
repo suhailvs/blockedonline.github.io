@@ -68,8 +68,8 @@
       <file leaf-file-name="homepage.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/homepage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.34343433" vertical-offset="0" max-vertical-offset="4148">
-              <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+            <state vertical-scroll-proportion="0.27474746" vertical-offset="0" max-vertical-offset="4182">
+              <caret line="8" column="76" selection-start-line="8" selection-start-column="76" selection-end-line="8" selection-end-column="76" />
               <folding>
                 <element signature="n#style#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -80,8 +80,8 @@
                 <element signature="n#style#0;n#div#2;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#button#0;n#div#3;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1409549943291" expanded="true" signature="9640:9688" placeholder="..." />
-                <marker date="1409549943291" expanded="true" signature="10031:10078" placeholder="..." />
+                <marker date="1409550309661" expanded="true" signature="9890:9938" placeholder="..." />
+                <marker date="1409550309661" expanded="true" signature="10281:10328" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -480,12 +480,12 @@
       <updated>1407836872009</updated>
       <workItem from="1407836879368" duration="11790000" />
       <workItem from="1408424719128" duration="619000" />
-      <workItem from="1409453127679" duration="12817000" />
+      <workItem from="1409453127679" duration="13187000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25226000" />
+    <option name="totallyTimeSpent" value="25596000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -552,8 +552,8 @@
             <element signature="n#style#0;n#div#2;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#button#0;n#div#3;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1409549943291" expanded="true" signature="9640:9688" placeholder="..." />
-            <marker date="1409549943291" expanded="true" signature="10031:10078" placeholder="..." />
+            <marker date="1409550309661" expanded="true" signature="9890:9938" placeholder="..." />
+            <marker date="1409550309661" expanded="true" signature="10281:10328" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -626,8 +626,8 @@
             <element signature="n#style#0;n#div#2;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#button#0;n#div#3;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1409549943291" expanded="true" signature="9640:9688" placeholder="..." />
-            <marker date="1409549943291" expanded="true" signature="10031:10078" placeholder="..." />
+            <marker date="1409550309661" expanded="true" signature="9890:9938" placeholder="..." />
+            <marker date="1409550309661" expanded="true" signature="10281:10328" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -795,8 +795,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/homepage.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34343433" vertical-offset="0" max-vertical-offset="4148">
-          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+        <state vertical-scroll-proportion="0.27474746" vertical-offset="0" max-vertical-offset="4182">
+          <caret line="8" column="76" selection-start-line="8" selection-start-column="76" selection-end-line="8" selection-end-column="76" />
           <folding>
             <element signature="n#style#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -807,8 +807,8 @@
             <element signature="n#style#0;n#div#2;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#button#0;n#div#3;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1409549943291" expanded="true" signature="9640:9688" placeholder="..." />
-            <marker date="1409549943291" expanded="true" signature="10031:10078" placeholder="..." />
+            <marker date="1409550309661" expanded="true" signature="9890:9938" placeholder="..." />
+            <marker date="1409550309661" expanded="true" signature="10281:10328" placeholder="..." />
           </folding>
         </state>
       </provider>
