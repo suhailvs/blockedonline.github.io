@@ -105,7 +105,7 @@
         <a href="#blocked-box"> Blocked websites by category</a>
       </li>
       <li id="news" class="square ucase blocked-websites sidenav-news">
-        <a href="#news-box"> NEWs</a>
+        <a href="#news-box"> News</a>
       </li>
       <li id="highest-rank" class="square ucase highest-rank sidenav-websites">
         <a href="#bolcked-web-box">Blocked websites with highest global Rank</a>
@@ -130,7 +130,7 @@
 
       <!-- HEADING -->
       <div class="main-header">
-        Select a country <span style="color: #898989">or</span>  Enter a WEbsite URL
+        Select a country <span style="color: #898989">or</span>  Enter a Website URL
       </div>
       
       <div class="sub-header no-dis-480">
@@ -142,7 +142,7 @@
         <li class="active by-count-web" id="by-country">
           <a href="#bycountry" role="tab" data-toggle="tab">by Country</a></li>
         <li class="by-count-web" id="by-website" style="border-left: 1px solid ! important;">
-          <a href="#bywebsite" role="tab" data-toggle="tab">by website</a></li>
+          <a href="#bywebsite" role="tab" data-toggle="tab">by Website</a></li>
       </ul>
 
       <div class="tab-content" style="z-index: 6">
@@ -157,14 +157,14 @@
           <p id="country_nametext" class="text-center" style="font-size: 25px; color: #898989; text-transform:uppercase; margin-top:25px"></p>
           <!-- OR FIND IT ON MAP -->
           <div class="country_map_image">
-            <div class="title ucase m-top">top countries</div>            
+            <div class="title ucase m-top">For example:</div>
             <div class="url-list">
               <ul class="hastooltip top-countries-blocked">
-                <li><a>united states</a>
-                  <span data-countrycode="US" class="mytooltip"><img src="img/logo.png" height="20"> See country status</span></li>
-                <li><a>china</a>
+                <li><a>Saudi Arabia</a>
+                  <span data-countrycode="SA" class="mytooltip"><img src="img/logo.png" height="20"> See country status</span></li>
+                <li><a>China</a>
                   <span data-countrycode="CN" class="mytooltip"><img src="img/logo.png" height="20"> See country status</span></li>
-                <li><a>australia</a>
+                <li><a>Australia</a>
                   <span data-countrycode="AU" class="mytooltip"><img src="img/logo.png" height="20"> See country status</span></li>
                 <li>
                   <a>iran</a><span data-countrycode="IR" class="mytooltip">
@@ -259,13 +259,11 @@
             <div class="title ucase m-top m-410">top websites that are blocked</div>
             <ul class="hastooltip top-sites-blocked">
               <li><a>http://www.facebook.com</a><span class="mytooltip"><img src="img/logo.png" height="20"> See accessibility status</span></li>
-              <li><a>http://www.google.com</a>
-                <span class="mytooltip"><img src="img/logo.png" height="20"> See accessibility status</span></li>
               <li><a>http://www.youtube.com</a>
                 <span class="mytooltip"><img src="img/logo.png" height="20"> See accessibility status</span></li>
-              <li><a>http://www.twitter.com</a>
+              <li><a>http://www.bbc.co.uk</a>
                 <span class="mytooltip"><img src="img/logo.png" height="20"> See accessibility status</span></li>
-              <li><a>https://uberspace.de</a>
+              <li><a>https://www.twitter.com</a>
                 <span class="mytooltip"><img src="img/logo.png" height="20">see accessibility status</span></li>
             </ul>
           </div>
@@ -306,6 +304,8 @@
         </div>
     </div>
 </div>
+
+<!--
 <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog" style="width:460px;border:1px solid #898989">
         <div class="modal-content">
@@ -324,10 +324,10 @@
         </div>
     </div>
 </div>
-
+-->
 
 <footer id="footer" style="margin-top:160px;padding:40px;color:#ccc;letter-spacing:.8px">    
-   <p> * BlockedOnline is in beta mode at this time. Our servers are being tested to identify needed modifications. The data might not reflect the truth.</p>    
+   <p> BlockedOnline is in beta mode at this time. Our servers are being tested to identify needed modifications. The data might not reflect the truth.</p>
 </footer>
 
 <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
@@ -344,9 +344,6 @@
 <script src="http://blockedonline.github.io/final/datamaps/topojson.v1.min.js"></script>
 <script src="http://blockedonline.github.io/final/datamaps/datamaps.world.min.js"></script>
 
-<!-- Go to http://www.addthis.com/get/smart-layers to customize -->
-<script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5345fdde29a43c06"></script>
-<!-- AddThis Smart Layers END -->
 <script>
   //=======================================
   // ****************SPINNER **************
@@ -361,41 +358,6 @@
 </script>
 <script src="http://blockedonline.github.io/final/js/custom.js"></script>
 <script type="text/javascript">
-  //=======================================
-  // ***********GOOGLE ANALYTICS***********
-  //=======================================
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','http://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-50157618-1','blockedonline.com');
-  ga('send', 'pageview');  
-
-
-  //=======================================
-  // ****************FACEBOOK LAYER********
-  //=======================================
-  addthis.layers({
-      'theme' : 'transparent',
-      'share' : {
-          'position' : 'left',
-          'numPreferredServices' : 5,
-          'postShareTitle': "Thanks for sharing!",
-          'postShareFollowMsg': "Please also Like or Follow us.",
-          'desktop' : true,
-          'mobile' : true
-      },
-      'follow' : {
-          'services' : [
-              {'service' : 'facebook', 'id' : 'blockedonlinecom'},
-              {'service' : 'twitter', 'id' : 'blockageonline'}
-          ]
-      }
-  });
-  var addthis_config = addthis_config||{};
-  addthis_config.data_track_addressbar = false;
-  addthis_config.data_track_clickback = false;
 
   $( document ).ready(function() {
     $('body').localScroll();   
@@ -430,6 +392,19 @@
         }
     });
   });
+</script>
+<script>
+//=======================================
+// ***********GOOGLE ANALYTICS***********
+//=======================================
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-50157618-1', 'auto');
+    ga('send', 'pageview');
+
 </script>
 </body>
 </html>
