@@ -4,17 +4,24 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Examine data on online blockage that we collect from around the world and help collect more">
+    <meta property="og:title" content="Monitor Internet Censorship" />
+    <meta property="og:description" content="Blocked Online: Examine data on online blockage that we collect from around the world and help collect more" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://www.blockedonline.com"/>
+    <meta property="og:image" content="http://cdn.blockedonline.com/icon128.png" />
 
     <title>BlockedOnline</title>
+    <link rel="shortcut icon" type="image/x-icon" href="http://cdn.blockedonline.com/favicon.ico">
 
     <!-- CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="font-awesome-4.0.3/css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/responsive.css" rel="stylesheet">
-    <link href="css/animate.css" rel="stylesheet">
+    <link href="http://cdn.blockedonline.com/css/style.css" rel="stylesheet">
+    <link href="http://cdn.blockedonline.com/css/responsive.css" rel="stylesheet">
+    <link href="http://cdn.blockedonline.com/css/animate.css" rel="stylesheet">
+    <!-- <link href="fonts/bebas-font.css" rel="stylesheet">-->
+    <link href="http://cdn.blockedonline.com/css/map.css" rel="stylesheet">
 
     <!-- FONTS -->
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
@@ -44,12 +51,12 @@
         <div class="collapse navbar-collapse pull-left mainnav-collapse">
             <ul class="nav navbar-nav topmenu">
                 <li>
-                    <span class="icon"><img class="header-logo" src="img/header-logo.png"></span>
+                    <span class="icon"><img class="header-logo" src="http://cdn.blockedonline.com/img/header-logo.png"></span>
                 </li>
-                <li class="line line-left word"><a href="homepage.html">HOME</a></li>
-                <li class="line word"><a href="explore.html">EXPLORE DATA</a></li>
-                <li class="line  word"><a href="get-involved.html">GET INVOLVED</a></li>
-                <li class="line active word"><a href="about.html">ABOUT</a></li>
+                <li class="line line-left word"><a href="http://www.blockedonline.com">HOME</a></li>
+                <li class="line word"><a href="explore">EXPLORE DATA</a></li>
+                <li class="line  word"><a href="getinvolved">GET INVOLVED</a></li>
+                <li class="line active word"><a href="">ABOUT</a></li>
             </ul>
         </div>
         <div class="clearfix"></div>
@@ -87,10 +94,9 @@
                         check in what countries is www.twitter.com cencored or we can see what
                         websites areblocked in China.</p>
                     <p>Blockedonline was started by MIT students under supervision of Professor Tim
-                        Berners-Lee. Under assumption that there is no way to understand an
-                        end-user’s internet situation from outside of their internet service, this approach
-                        requires volunteers to participate in gathering data from different locations. The
-                        process is developed to be as seamless as possible.</p>
+                        Berners-Lee. We collect raw data from via two methods:
+                        we invite volunteers to participate in gathering data from different locations using our apps and chrome extension; We also collect data through
+                        open proxies.</p>
                     <p>The long-term goal of the platform is to empower and raise awareness about
                         the worldwide internet censorship by providing accurate data. </p>
                 </div>
@@ -101,7 +107,7 @@
                 </div>
                 <div class="grey-title">Contact us</div>
                 <div class="sub-title l-height m-top">
-                    Feel free to contact us at <span style="font-family: 'bebas_neueregular';font-size:21px">blockedonline@mit.edu.</span>
+                    Feel free to contact us at <span style="font-family: 'bebas_neueregular';font-size:21px">inquiry@blockedonline.com.</span> We would love to hear your thoughts.
                 </div>            
             </div>
 
@@ -316,13 +322,11 @@
     <div style="margin-top: 200px"></div>
 </footer>
 <!-- JavaScript -->
-<!--<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>-->
-<script src="js/jquery-1.10.2.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.throttle.js"></script>
-<!--<script src="js/jquery.scrollTo.min.js"></script>-->
-<!--<script src="js/jquery.localScroll.min.js"></script>-->
-<!--<script src="js/scrollspy.js"></script>-->
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="http://cdn.blockedonline.com/js/jquery.throttle.js"></script>
+
+
 <script type="text/javascript">
 $.get("http://api.blockedonline.com/data/news/")
   .done(function(datas) {
@@ -344,5 +348,46 @@ $('.affix-div > li').on('click', function(){
     $(this).addClass('active');
 });
 </script>
+
+<script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5345fdde29a43c06"></script>
+
+<script>
+    //=======================================
+    // ****************FACEBOOK LAYER********
+    //=======================================
+    addthis.layers({
+        'domain' : 'www.blockedonline.com',
+        'theme' : 'transparent',
+        'share' : {
+            'position' : 'right',
+            'numPreferredServices' : 3,
+            'postShareTitle': "Thanks for sharing!",
+            'postShareFollowMsg': "Please also Like or Follow us.",
+            'desktop' : true,
+            'mobile' : true,
+            'offset' : {'bottom': '80px'}
+        },
+        'follow' : {
+            'services' : [
+                {'service' : 'facebook', 'id' : 'blockedonlinecom'},
+                {'service' : 'twitter', 'id' : 'blockageonline'}
+            ]
+        }
+    });
+    var addthis_config = addthis_config||{};
+    addthis_config.data_track_addressbar = false;
+    addthis_config.data_track_clickback = false;
+
+
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-50157618-1', 'auto');
+    ga('send', 'pageview');
+
+</script>
+
 </body>
 </html>

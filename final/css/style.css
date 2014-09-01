@@ -172,7 +172,7 @@ a{
     margin-top: 50px;
 }
 .button-row{
-    margin-top: 53px;
+    margin-top: 0px;
     margin-bottom: 73px;
 }
 .explore{
@@ -243,7 +243,7 @@ a{
     color:#58bdd0;
     font-size: 16px;
     font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
-    margin-left: -35px;
+    margin-top: 30px;
 }
 .see-more:hover{
     cursor: pointer;
@@ -305,7 +305,7 @@ a{
 .social{
     color: #000000;
     font-size: 27px;
-    margin-left: -40px;
+    margin-top: 20px;
 }
 .social ul li{
     text-decoration: none;
@@ -326,7 +326,7 @@ a{
 }
 .linksWrapper a.active:after
 {
-    content: url("../img/arrow.png");
+    content: url("http://cdn.blockedonline.com/img/arrow.png");
     position: relative;
     left: -40px;
     top: 26px;
@@ -643,7 +643,7 @@ a{
     margin: -3px 5px -3px;
     width: 20px;
     height: 20px;
-    background: url("../img/portlet-collapse-icon-white.png") top right no-repeat;
+    background: url("http://cdn.blockedonline.com/img/portlet-collapse-icon-white.png") top right no-repeat;
 }
 .expand-icon{
     float: right;
@@ -651,7 +651,7 @@ a{
     margin: -3px 5px -3px;
     width: 20px;
     height: 20px;
-    background: url("../img/portlet-expand-icon-white.png") top right no-repeat;
+    background: url("http://cdn.blockedonline.com/img/portlet-expand-icon-white.png") top right no-repeat;
 }
 .caption-title{
     cursor: pointer;

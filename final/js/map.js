@@ -1,6 +1,6 @@
 
 var svg, worldObject, active; 
-var width = 1000, height = 500; 
+var width = 1028, height = 400;
 
 var projection = d3.geo.equirectangular()
     .scale((width + 1) / 2 / Math.PI)
@@ -42,7 +42,7 @@ function setupMap(ename, data) {
 	
 	color.domain([0, maxBlockedPerCountry]);
 	
-	d3.json('js/world.geojson', function (world) {
+	d3.json('http://cdn.blockedonline.com/js/world.geojson', function (world) {
 		worldObject = world; 
 		createMap();
 	})
