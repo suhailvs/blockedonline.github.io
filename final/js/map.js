@@ -41,7 +41,7 @@ function setupMap(ename, data) {
 	
 	color.domain([0, maxBlockedPerCountry]);
 	
-	d3.json('js/world.geojson', function (world) {
+	d3.json('http://blockedonline.github.io/final/js/world.geojson', function (world) {
 		worldObject = world; 
 		createMap();
 	})

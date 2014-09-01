@@ -326,7 +326,7 @@ a{
 }
 .linksWrapper a.active:after
 {
-    content: url("../img/arrow.png");
+    content: url("http://blockedonline.github.io/final/img/arrow.png");
     position: relative;
     left: -40px;
     top: 26px;
@@ -643,7 +643,7 @@ a{
     margin: -3px 5px -3px;
     width: 20px;
     height: 20px;
-    background: url("../img/portlet-collapse-icon-white.png") top right no-repeat;
+    background: url("http://blockedonline.github.io/final/img/portlet-collapse-icon-white.png") top right no-repeat;
 }
 .expand-icon{
     float: right;
@@ -651,7 +651,7 @@ a{
     margin: -3px 5px -3px;
     width: 20px;
     height: 20px;
-    background: url("../img/portlet-expand-icon-white.png") top right no-repeat;
+    background: url("http://blockedonline.github.io/final/img/portlet-expand-icon-white.png") top right no-repeat;
 }
 .caption-title{
     cursor: pointer;
