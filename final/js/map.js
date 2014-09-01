@@ -38,11 +38,11 @@ function setupMap(ename, data) {
 		maxBlockedPerCountry = Math.max(maxBlockedPerCountry, parseInt(d.n)); 
 	});
   
-  terms = d3.shuffle(data.terms.filter(function (d) { console.log(parseInt(d.n) > 0); return parseInt(d.n) > 0}));
+  terms = d3.shuffle(data.terms.filter(function (d) {return parseInt(d.n) > 0}));
 	
 	color.domain([0, maxBlockedPerCountry]);
 	
-	d3.json('js/world.geojson', function (world) {
+	d3.json('http://cdn.blockedonline.com/js/world.geojson', function (world) {
 		worldObject = world; 
 		createMap();
     createLegend();
