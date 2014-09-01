@@ -186,11 +186,15 @@ $.get("http://api.blockedonline.com/data/news/")
   .done(function(datas) {
     if (datas.status == 'OK'){   
         var str_news='<ul class="fa-ul">';
-        datas.news.forEach(function(news, index) {
-            //<ul class="fa-ul"> <li><i class="fa-li fa fa-chevron-right"></i>agency
+        var THRESHOLD = 10;
+        datas.news.every(function(news, index, array) {
             str_news+='<li><i class="fa-li fa fa-chevron-right"></i><span style="font-family: bebas_neueregular; font-size: 21px ">'+
-            news.agency + '</span> - <a href="' + news.link + 
-            '" target="_blank">' + news.news_title + '</a></li>';
+                    news.agency + '</span> - <a href="' + news.link +
+                    '" target="_blank">' + news.news_title + '</a></li>';
+            if (index >= THRESHOLD) {
+                return false;
+            }
+            return true;
         });   
         $('#news-box').html(str_news+'</ul>');
         //datas.data--> {USA: {fillKey: "Hd5aa95"}, KGZ: {fillKey: "Hd5aa95"}, UZB:...}
