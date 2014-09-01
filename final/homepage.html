@@ -74,13 +74,13 @@
             <div class="col-sm-4 text-center pbottom">
                 <div class="explore"> Find out more about internet censorship worldwide</div>
                 <div class="btn-group">
-                    <button type="button" class="btn explore-data-btn ucase">explore data</button>
+                    <button onclick="location.href='http://www.blockedonline.com/explore/'" type="button" class="btn explore-data-btn ucase">explore data</button>
                 </div>
             </div>
             <div class="col-sm-offset-3 col-sm-5 get-involved text-center">
                 <div class="explore"> Your contribution can upgrade our knowledge about online censorhip in the world</div>
                 <div class="btn-group">
-                    <button type="button" class="btn get-involved-btn ucase">get involved</button>
+                    <button onclick="location.href='http://www.blockedonline.com/getinvolved/'" type="button" class="btn get-involved-btn ucase">get involved</button>
                 </div>
             </div>
 
@@ -115,13 +115,13 @@
                 in different countries or check where a website
                 is blocked around the world?</div>
             <div class="btn-group">
-                <button type="button" class="btn explore-data-btn ucase" style="margin-top: 10px">explore data</button>
+                <button type="button" onclick="location.href='http://www.blockedonline.com/explore/'" class="btn explore-data-btn ucase" style="margin-top: 10px">explore data</button>
             </div>
             <div class="sub-title block" style="margin-top: 65px">Like the project? You can increase the
                 accuracy of our data and help us gather more
                 statistics about internet blockage</div>
             <div class="btn-group">
-                <button type="button" class="btn get-involved-btn ucase" style="margin-top: 10px">get involved</button>
+                <button type="button" onclick="location.href='http://www.blockedonline.com/getinvolved/'" class="btn get-involved-btn ucase" style="margin-top: 10px">get involved</button>
             </div>
         </div>
     </div>
@@ -197,7 +197,7 @@ $.get("http://api.blockedonline.com/data/news/")
             }
             return true;
         });   
-        $('#news-box').html(str_news+'</ul>');
+        $('#news-box').html(str_news+'<li class="see-more"><a href="http://www.blockedonline.com/about/#news">See more news</a></li></ul>');
         //datas.data--> {USA: {fillKey: "Hd5aa95"}, KGZ: {fillKey: "Hd5aa95"}, UZB:...}
         //createMap('d3map',datas.data);
     }
