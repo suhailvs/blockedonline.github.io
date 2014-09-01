@@ -1,6 +1,6 @@
 
 var svg, worldObject, active; 
-var width = 1028, height = 400;
+var width = 1000, height = 500; 
 
 var projection = d3.geo.equirectangular()
     .scale((width + 1) / 2 / Math.PI)
@@ -20,7 +20,7 @@ var tip = d3.tip()
 var color = d3.scale.pow().exponent(0.5).range(['#FEF0D9', '#D7301F']);
 
 var blockedMap = d3.map();
-var terms; 
+var _terms; 
 
 var maxBlockedPerCountry = -1, currentCallId = null, currentIndex = 0;
 var INTERVAL_DELAY = 4000; 
@@ -33,18 +33,19 @@ function setupMap(ename, data) {
 		.append('g');
 	svg.call(tip);
   
-	terms = d3.shuffle(data.terms.filter(function (d) { return parseInt(d.n) > 0}));
-  
-	terms.forEach(function (d, i) {
+	data.terms.forEach(function (d, i) {
 		blockedMap.set(d.alpha2, parseInt(d.n));
 		maxBlockedPerCountry = Math.max(maxBlockedPerCountry, parseInt(d.n)); 
 	});
+  
+  terms = d3.shuffle(data.terms.filter(function (d) { console.log(parseInt(d.n) > 0); return parseInt(d.n) > 0}));
 	
 	color.domain([0, maxBlockedPerCountry]);
 	
-	d3.json('http://cdn.blockedonline.com/js/world.geojson', function (world) {
+	d3.json('js/world.geojson', function (world) {
 		worldObject = world; 
 		createMap();
+    createLegend();
 	})
 }
 
@@ -91,7 +92,43 @@ function createMap() {
 		
 		showTip();
 		currentCallId = setInterval(showTip, INTERVAL_DELAY);
-	
+}
+
+function createLegend() {
+  var g = svg.append('g')
+    .attr('class', 'legend')
+    .attr('transform', 'translate(10, ' +  (height - 220) + ')'); 
+  
+  g.selectAll('.legend-rect')
+    .data(d3.range(6))
+    .enter().append('rect')
+    .attr('x', 15)
+    .attr('y', function (d, i) {
+      if (i == 5) return i * 15 + 5; 
+      return i * 15; 
+    })
+    .attr('width', 15)
+    .attr('height', 15)
+    .attr('fill', function (d, i) { 
+      if (i == 5) return '#ccc';
+      return color((5-i) * maxBlockedPerCountry / 4);
+    })
+    .each(function (d, i) {
+      var text = g.append('text')
+        .attr('x', 35)
+        .attr('y', i * 15 + 12)
+        .attr('fill', '#ccc')
+      if (i == 0) {
+        text.text('Most Censorship')
+      } else if (i == 4) {
+        text.text('Least Censorship')
+      } else if (i == 5) {
+        text.text('No Data'); 
+        text.attr('y', i*15 + 17)
+      } else {
+        text.remove();
+      }
+    })
 }
 
 function showTip() {
