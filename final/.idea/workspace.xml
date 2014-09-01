@@ -26,8 +26,8 @@
       <file leaf-file-name="homepage.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/homepage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.93131316" vertical-offset="2973" max-vertical-offset="3893">
-              <caret line="202" column="1" selection-start-line="202" selection-start-column="1" selection-end-line="202" selection-end-column="1" />
+            <state vertical-scroll-proportion="0.5191919" vertical-offset="2259" max-vertical-offset="3893">
+              <caret line="148" column="51" selection-start-line="148" selection-start-column="51" selection-end-line="148" selection-end-column="51" />
               <folding>
                 <element signature="n#style#0;n#h2#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#h2#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -36,7 +36,7 @@
                 <element signature="n#style#0;n#div#2;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#button#0;n#div#3;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1409537258851" expanded="true" signature="8568:8616" placeholder="..." />
+                <marker date="1409537824608" expanded="true" signature="8579:8627" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -457,12 +457,12 @@
       <updated>1407836872009</updated>
       <workItem from="1407836879368" duration="11790000" />
       <workItem from="1408424719128" duration="619000" />
-      <workItem from="1409453127679" duration="4096000" />
+      <workItem from="1409453127679" duration="4636000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16505000" />
+    <option name="totallyTimeSpent" value="17045000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -527,7 +527,7 @@
             <element signature="n#style#0;n#div#2;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#button#0;n#div#3;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1409537258851" expanded="true" signature="8568:8616" placeholder="..." />
+            <marker date="1409537824608" expanded="true" signature="8579:8627" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -586,7 +586,7 @@
             <element signature="n#style#0;n#div#2;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#button#0;n#div#3;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1409537258851" expanded="true" signature="8568:8616" placeholder="..." />
+            <marker date="1409537824608" expanded="true" signature="8579:8627" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -730,8 +730,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/homepage.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.93131316" vertical-offset="2973" max-vertical-offset="3893">
-          <caret line="202" column="1" selection-start-line="202" selection-start-column="1" selection-end-line="202" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.5191919" vertical-offset="2259" max-vertical-offset="3893">
+          <caret line="148" column="51" selection-start-line="148" selection-start-column="51" selection-end-line="148" selection-end-column="51" />
           <folding>
             <element signature="n#style#0;n#h2#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#h2#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -740,7 +740,7 @@
             <element signature="n#style#0;n#div#2;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#button#0;n#div#3;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1409537258851" expanded="true" signature="8568:8616" placeholder="..." />
+            <marker date="1409537824608" expanded="true" signature="8579:8627" placeholder="..." />
           </folding>
         </state>
       </provider>

@@ -146,7 +146,7 @@
 
 <!-- JavaScript -->
 <!--<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>-->
-<script src="js/jquery-1.10.2.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/jquery.throttle.js"></script>
 <!--<script src="js/jquery.scrollTo.min.js"></script>-->
@@ -184,9 +184,9 @@
 
 $.get("http://api.blockedonline.com/data/news/")
   .done(function(datas) {
-    if (datas.status == 'OK'){   
+    if (datas.status == 'OK'){
         var str_news='<ul class="fa-ul">';
-        var THRESHOLD = 10;
+        var THRESHOLD = 8;
         datas.news.every(function(news, index, array) {
             str_news+='<li><i class="fa-li fa fa-chevron-right"></i><span style="font-family: bebas_neueregular; font-size: 21px ">'+
                     news.agency + '</span> - <a href="' + news.link +
