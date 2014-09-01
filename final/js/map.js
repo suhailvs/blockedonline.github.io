@@ -1,6 +1,6 @@
 
 var svg, worldObject, active; 
-var width = 1000, height = 500; 
+var width = 1028, height = 500; 
 
 var projection = d3.geo.equirectangular()
     .scale((width + 1) / 2 / Math.PI)
@@ -20,7 +20,7 @@ var tip = d3.tip()
 var color = d3.scale.pow().exponent(0.5).range(['#FEF0D9', '#D7301F']);
 
 var blockedMap = d3.map();
-var _terms; 
+var terms; 
 
 var maxBlockedPerCountry = -1, currentCallId = null, currentIndex = 0;
 var INTERVAL_DELAY = 4000; 
