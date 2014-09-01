@@ -271,7 +271,7 @@ function DoAjax_Url(urlname,opt){
           str_list+='<td><img style="text-align: center;display: inline-block" src="'+item['logo']+'" class="img-responsive">'+
             '<div class="bottom-header">'+item['key'] +'</div>'+
             '<div class="bottom">'+item['value'];
-          if (item['logo']=='http://blockedonline.github.io/final/img/reporters-01.png') {
+          if (item['logo']=='http://cdn.blockedonline.com/img/reporters-01.png') {
             str_list+= '<div class="link" style="margin-top: 5px;font-size:15px;text-decoration: none " data-toggle="modal" data-target="#myModal2">What does scanned mean?</div>'//alert('go it');
           } 
           str_list += '</div></td>';
