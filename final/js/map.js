@@ -33,7 +33,8 @@ function setupMap(ename, data) {
 		.append('g');
 	svg.call(tip);
   
-	terms = d3.shuffle(data.terms);
+	terms = d3.shuffle(data.terms.filter(function (d) { return parseInt(d.n) > 0}));
+  
 	terms.forEach(function (d, i) {
 		blockedMap.set(d.alpha2, parseInt(d.n));
 		maxBlockedPerCountry = Math.max(maxBlockedPerCountry, parseInt(d.n)); 
