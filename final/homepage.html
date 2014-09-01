@@ -186,7 +186,7 @@ $.get("http://api.blockedonline.com/data/news/")
   .done(function(datas) {
     if (datas.status == 'OK'){   
         var str_news='<ul class="fa-ul">';
-        loop.stop = false
+        loop.stop = false;
         datas.news.forEach(function(news, index) {
             if(loop.stop){ return; }
             if(index>=10){ loop.stop = true; }
@@ -197,13 +197,13 @@ $.get("http://api.blockedonline.com/data/news/")
         });   
         $('#news-box').html(str_news+'</ul>');
         //datas.data--> {USA: {fillKey: "Hd5aa95"}, KGZ: {fillKey: "Hd5aa95"}, UZB:...}
-        //createMap('d3map',datas.data);       
-				setupMap('d3map', datas);  
+        //createMap('d3map',datas.data);
     }
 });
 
 $.get("http://api.blockedonline.com/data", {homepage: 0}).done(function (datas) {
     if (datas.status == 'OK') {
+        setupMap('d3map', datas);
         var terms = datas.terms;
         function rotateTerm() {
             var ct = $("#country").data("term") || 0;
