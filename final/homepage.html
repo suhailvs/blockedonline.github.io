@@ -214,7 +214,8 @@ $.get("http://api.blockedonline.com/data", {homepage: 0}).done(function (datas) 
             while (terms[ct].n==0){
                 ct=ct+1;
             }
-            $("#country").data("term", ct == terms.length - 1 ? 0 : ct + 1).text(terms[ct].c).fadeIn().delay(2000);
+
+            $("#country").data("term", ct >= terms.length - 1 ? 0 : ct + 1).text(terms[ct].c).fadeIn().delay(2000);
             $("#number").text(terms[ct].n).fadeIn().delay(2000).fadeOut(200, rotateTerm);
         }
         $(rotateTerm);
