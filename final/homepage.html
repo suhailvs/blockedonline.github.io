@@ -186,10 +186,7 @@ $.get("http://api.blockedonline.com/data/news/")
   .done(function(datas) {
     if (datas.status == 'OK'){   
         var str_news='<ul class="fa-ul">';
-        loop.stop = false;
         datas.news.forEach(function(news, index) {
-            if(loop.stop){ return; }
-            if(index>=10){ loop.stop = true; }
             //<ul class="fa-ul"> <li><i class="fa-li fa fa-chevron-right"></i>agency
             str_news+='<li><i class="fa-li fa fa-chevron-right"></i><span style="font-family: bebas_neueregular; font-size: 21px ">'+
             news.agency + '</span> - <a href="' + news.link + 
