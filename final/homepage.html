@@ -182,11 +182,14 @@
  // map.legend();
 // }
 
-$.get("http://api.blockedonline.com/data?homepage")
+$.get("http://api.blockedonline.com/data/news/")
   .done(function(datas) {
     if (datas.status == 'OK'){   
         var str_news='<ul class="fa-ul">';
-        datas.news.forEach(function(news) {   
+        loop.stop = false
+        datas.news.forEach(function(news, index) {
+            if(loop.stop){ return; }
+            if(index>=10){ loop.stop = true; }
             //<ul class="fa-ul"> <li><i class="fa-li fa fa-chevron-right"></i>agency
             str_news+='<li><i class="fa-li fa fa-chevron-right"></i><span style="font-family: bebas_neueregular; font-size: 21px ">'+
             news.agency + '</span> - <a href="' + news.link + 
@@ -205,6 +208,10 @@ $.get("http://api.blockedonline.com/data", {homepage: 0}).done(function (datas) 
         function rotateTerm() {
             var ct = $("#country").data("term") || 0;
             //console.log(ct);
+            //console.log(terms[ct].n);
+            while (terms[ct].n==0){
+                ct=ct+1;
+            }
             $("#country").data("term", ct == terms.length - 1 ? 0 : ct + 1).text(terms[ct].c).fadeIn().delay(2000);
             $("#number").text(terms[ct].n).fadeIn().delay(2000).fadeOut(200, rotateTerm);
         }
