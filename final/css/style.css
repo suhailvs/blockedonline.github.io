@@ -20,7 +20,7 @@
     line-height: 20px!important;
 }
 .m-top{
-    margin-top: 25px;
+    margin-top: 15px;
 }
 .t-center{
     text-align: center;
@@ -253,7 +253,7 @@ a{
 .grey-title{
     color: #898989;
     font-size: 25px;
-    margin-top: 25px;
+    margin-top: 15px;
 }
 .link{
     cursor: pointer;
